@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Frame-Options" content="deny">
     
-    <title>Detalle Ruta Aérea - PromPeru</title>
+    <title>Detalle Ruta Terrestre - PromPeru</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="icon" href="img/iconos/icon.png">
 
@@ -90,12 +90,12 @@
                 <a class="menu-toggle">
                     <span class="icon-airplane"></span>Rutas Aéreas<span class="menu-caret"></span>
                 </a>
-                <ul class="menu-list" style="display:block;">
+                <ul class="menu-list" style="display:none;">
                     <li>
 						<a class="menu-toggle">
 							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
 						</a>
-						<ul class="menu-list" style="display:block;">
+						<ul class="menu-list" style="display:none;">
 							<li><a class="menu-option" href="RutaAerea.html">Rutas</a></li>
 						</ul>
 					</li>
@@ -117,13 +117,13 @@
                 <a class="menu-toggle">
                     <span class="icon-truck"></span>Rutas Terrestres<span class="menu-caret"></span>
                 </a>
-                <ul class="menu-list" style="display:none;">
+                <ul class="menu-list" style="display:block;">
                     <li>
 						<a class="menu-toggle">
 							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
 						</a>
-						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="RutaTerrestre.html">Rutas</a></li>
+						<ul class="menu-list" style="display:block;">
+							<li><a class="menu-option" href="RutaTerrestre.html" style="background-color: #777;">Rutas</a></li>
                             
 						</ul>
 					</li>
@@ -243,13 +243,13 @@
         <script src="Scripts/jquery.plugin.min.js"></script>
         <script src="Scripts/jquery.datepick.min.js"></script>
         <script src="Scripts/jquery.datepick-es.js"></script>
-        <script src="ScriptsForms/Admin/Mantenimientos/RutaAereaDetalle.js"></script>
+        <script src="ScriptsForms/Admin/Mantenimientos/RutaTerrestreDetalle.js"></script>
 
         <p id="idConcepto" visibility="" hidden=""></p>
         <div class="l-contents">
             <div class="cont-cont">
                 <div class="cont-header">
-                    <h1 class="cont-header-h1" style="padding-bottom:10px;">Detalle Ruta Maestra: </h1><h2> Norteamérica - Oeste</h2>
+                    <h1 class="cont-header-h1" style="padding-bottom:10px;">Detalle Ruta: </h1><h2> Tumbes-Piura</h2>
                 </div>
 
                 <div class="cont-boxes">
@@ -261,7 +261,7 @@
                     </div>-->
                     <nav class="cont-icons">
                         <a id="btnNuevaFactura" href="javascript:" class="cont-icons">
-                            <span class="fas fa-plus"></span><span>Nueva ruta</span>
+                            <span class="fas fa-plus"></span><span>Nuevo Operador Logístico</span>
                         </a>
                     </nav>
                     <div class="cont-table">
@@ -274,12 +274,6 @@
                                     </th>
                                     <th data-title="Correo" style="width:10%">
                                         <input type="text" id="gridUsuarios_txtB_Usua_Email">
-                                    </th>
-                                    <th data-title="Teléfono" style="width:10%">
-                                        <input type="text" id="gridUsuarios_txtB_Usua_Telefono">
-                                    </th>
-                                    <th data-title="Teléfono" style="width:10%">
-                                        <input type="text" id="gridUsuarios_txtB_Usua_Telefono">
                                     </th>
                                     <th data-title="" style="width:10%" align="center">
                                         <div class="accion-box">
@@ -294,15 +288,11 @@
                                         <a id="">Ordenº</a>
                                     </th>
                                     <th style="width:10%;">
-                                        <a id="">Destino</a>
+                                        <a id="">Operador</a>
                                     </th>
                                     <th style="width:10%;">
                                         <a id="">Frecuencia</a>
                                     </th>
-                                    <th style="width:5%;">
-                                        <a id="">Tiempo de viaje (horas)</a>
-                                    </th>
-                                    <th style="width:10%;"><a id="a_Usua_Email">Mapa</a></th>
                                     <th style="width:10%;">
                                         <a id=""></a>
                                     </th>
@@ -318,19 +308,15 @@
                                     <td data-title="Nº" style="width:5%" align="left">
                                         1
                                     </td>
-                                    <td data-title="Cliente" style="width:10%" align="center">Miami - EEUU</td>
+                                    <td data-title="Cliente" style="width:10%" align="center">CLT Transporte</td>
                                     <td data-title="Serie" style="width:10%" align="left">SEMANAL</td>
-                                    <td data-title="Teléfono" style="width:5%" align="left">10</td>
-                                    <td data-title="Teléfono" style="width:10%" align="left">
-                                        <img src="img/RutaAerea/Lima - Miami 1.jpg" alt="tipo carga" width="70" height="70">
-                                    </td>
                                     <td data-title="" style="width:10%" align="center">
                                         <div class="accion-box">
                                             <a href="javascript:EditarFactura(1);" title="Editar">
                                                 <span class="fas fa-edit">
                                                 </span>
                                             </a>
-                                            <a href="javascript:EliminarFactura('F003-00000135',1);" title="Eliminar">
+                                            <a href="javascript:EliminarFactura('CLT Transporte',1);" title="Eliminar">
                                                 <span class="fas icon-cross"></span>
                                             </a>
                                         </div>
@@ -338,18 +324,14 @@
                                 </tr>
                                 <tr>
                                     <td data-title="" style="width:5%" align="left">2</td>
-                                    <td data-title="Cliente" style="width:10%" align="center">Washington - EEUU</td>
-                                    <td data-title="Serie" style="width:10%" align="left">SEMANAL</td>
-                                    <td data-title="Teléfono" style="width:5%" align="left">2</td>
-                                    <td data-title="Teléfono" style="width:10%" align="left">
-                                        <img src="img/RutaAerea/Lima - Washington.jpg" alt="tipo carga" width="70" height="70">
-                                    </td>
+                                    <td data-title="Cliente" style="width:10%" align="center">Transportes Figueroa</td>
+                                    <td data-title="Serie" style="width:10%" align="left">Diario</td>
                                     <td data-title="" style="width:10%" align="center">
                                         <div class="accion-box">
                                             <a href="javascript:EditarFactura(2);" title="Editar">
                                                 <span class="fas fa-edit">
                                                 </span>
-                                            </a><a href="javascript:EliminarFactura('F005-00000130',2);" title="Eliminar">
+                                            </a><a href="javascript:EliminarFactura('Transportes Figueroa',2);" title="Eliminar">
                                                 <span class="fas icon-cross"></span>
                                             </a>
                                         </div>
@@ -357,18 +339,14 @@
                                 </tr>
                                 <tr>
                                     <td data-title="Nº" style="width:5%" align="left">3</td>
-                                    <td data-title="Usuario" style="width:10%" align="center">Los Angeles - EEUU</td>
-                                    <td data-title="Teléfono" style="width:10%" align="left">SEMANAL</td>
-                                    <td data-title="Teléfono" style="width:5%" align="left">3</td>
-                                    <td data-title="Teléfono" style="width:10%" align="left">
-                                        <img src="img/RutaAerea/Lima - Los Angeles.jpg" alt="tipo carga" width="70" height="70">
-                                    </td>
+                                    <td data-title="Usuario" style="width:10%" align="center">T&L Rov Sac</td>
+                                    <td data-title="Teléfono" style="width:10%" align="left">Interdiario</td>
                                     <td data-title="" style="width:10%" align="center">
                                         <div class="accion-box">
                                             <a href="javascript:EditarFactura(3);" title="Editar">
                                                 <span class="fas fa-edit"></span>
                                             </a>
-                                            <a href="javascript:EliminarFactura('F002-00000134',3);" title="Eliminar">
+                                            <a href="javascript:EliminarFactura('T&L Rov Sa',3);" title="Eliminar">
                                                 <span class="fas icon-cross"></span>
                                             </a>
                                         </div>
@@ -517,26 +495,20 @@
                         <div class="reveal-modal-bg2" style="transition: all 0.4s linear 0s; height: 0px; opacity: 0;">
                             <div class="modal-registrar modal-registrar-ancho700">
                                 <div class="cont-cont">
-                                    <h2 id="">Línea Aérea</h2>
+                                    <h2 id="">Flete</h2>
                                     <div class="section-check">
 
                                         <div style="width:470px" class="cont-box">
-                                            <label class="cont-box-label">Línea Aérea:</label>
+                                            <label class="cont-box-label">Tipo de contenedor:</label>
                                             <select id="ddlPerfil" class="cont-box-select">
                                                 <option value="0">Seleccione</option>
-                                                <option value="19">Latam Cargo</option>
-                                                <option value="20">KLM Cargo</option>
-                                                <option value="21">Delta Cargo</option>
+                                                <option value="19">CNT 20'</option>
+                                                <option value="20">CNT 40'</option>
                                             </select>
                                         </div>
                                         <div style="width:470px" class="cont-box">
-                                            <label class="cont-box-label">Frecuencia:</label>
-                                            <select id="ddlPerfil" class="cont-box-select">
-                                                <option value="0">Seleccione</option>
-                                                <option value="19">Diaria</option>
-                                                <option value="20">InterDiaria</option>
-                                                <option value="21">Semanal</option>
-                                            </select>
+                                            <label class="cont-box-label">Flete:</label>
+                                            <input id="txtProducto" type="text" class="cont-box-input" maxlength="25">
                                         </div>
                                     </div>
                                 </div>
@@ -555,37 +527,31 @@
                     </div>
                     <div class="reveal-modal-bg" style="transition: all 0.4s linear 0s; height: 0px; opacity: 0;">
                         <div style="width:700px" class="modal-registrar">
-                            <h2 id="lblRegistro">Crear Ruta</h2>
+                            <h2 id="lblRegistro">Crear Operador Logístico</h2>
 
                             
                             <div style="width:500px" class="cont-box">
-                                <label class="cont-box-label">Destino:</label>
+                                <label class="cont-box-label">Operador Logístico:</label>
                                 <select id="ddlPerfil" class="cont-box-select">
                                     <option value="0">Seleccione</option>
-                                    <option value="19">Miami - EEUU</option>
-                                    <option value="20">Los Angeles - EEUU</option>
-                                    <option value="21">Washington - EEUU</option>
+                                    <option value="19">Transportes Figueroa</option>
+                                    <option value="20">T&L Rov SAC</option>
+                                    <option value="21">CLT Transporte</option>
                                 </select>
                             </div>
                             <div style="width:500px" class="cont-box">
-                                <label class="cont-box-label">Tiempo viaje (horas):</label>
-                                <input id="txtTelefono" type="text" class="cont-box-input" maxlength="15">
+                                <label class="cont-box-label">Frecuencia de salida:</label>
+                                <select id="ddlPerfil" class="cont-box-select">
+                                    <option value="0">Seleccione</option>
+                                    <option value="19">Diaria</option>
+                                    <option value="20">InterDiaria</option>
+                                    <option value="21">Semanal</option>
+                                </select>
                             </div>
-                            <div style="width:500px" class="cont-box">
-                                <label class="cont-box-label">Orden:</label>
-                                <input id="txtTelefono" type="text" class="cont-box-input" maxlength="15">
-                            </div>
-                            <div style="width:500px" class="cont-box">
-                                <label class="cont-box-label">Ruta:</label>
-                                <input type="file" id="seleccionArchivo" class="cont-box-input" name="seleccionArchivo" style="border:0 !important;">
-                            </div>
-                            
-                            <img id="imagenPrevisualizacion" style="max-height:180px; max-width:180px;">
-                            
                             <div class="">
                                 <div class="cont-cont">
                                     <div class="cont-header">
-                                        Lista de Línea Aérea
+                                        Lista de Fletes
                                     </div>
                                     <div class="section-check">
                                         <nav class="cont-icons">
@@ -597,22 +563,18 @@
                                             <table id="" class="cont-left tableResponsive" style="width: 98%;">
                                                 <thead>
                                                     <tr>
-                                                        <th style="width:20%;">Línea Aérea</th>
-                                                        <th style="width:20%;">Frecuencia</th>
+                                                        <th style="width:20%;">Tipo de contenedor</th>
+                                                        <th style="width:20%;">Flete</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td data-title="Usuario" style="width:20%" align="left">Latam Cargo	</td>
-                                                        <td data-title="Correo" style="width:25%" align="left">Diaria</td>
+                                                        <td data-title="Usuario" style="width:20%" align="left">CNT 20'</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">$ 2,200</td>
                                                     </tr>
                                                     <tr>
-                                                        <td data-title="Usuario" style="width:20%" align="left">KLM Cargo	</td>
-                                                        <td data-title="Correo" style="width:25%" align="left">Diaria</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td data-title="Usuario" style="width:20%" align="left">Delta Cargo</td>
-                                                        <td data-title="Correo" style="width:25%" align="left">Diaria</td>
+                                                        <td data-title="Usuario" style="width:20%" align="left">CNT 40'</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">$ 3,200</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
