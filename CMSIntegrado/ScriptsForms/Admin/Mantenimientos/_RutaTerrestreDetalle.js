@@ -3,7 +3,8 @@
 
 $(document).ready(function () {
 
-    
+    //ListarUsuarios();
+
     $("#btnNuevoProveedor").click(function () {
         $('.reveal-modal-bg2').css({ transition: "all 0.4s linear", height: "100%", opacity: "1" });
     });
@@ -13,8 +14,6 @@ $(document).ready(function () {
     });
 
     $("#btnNuevaFactura").click(function () {
-        $('#btnGuardar').html('<label>Registrar</label>');
-        $('#lblRegistro').html('Crear Operador Logístico');
         $('.reveal-modal-bg').css({ transition: "all 0.4s linear", height: "100%", opacity: "1" });
     });
 
@@ -36,16 +35,16 @@ $(document).ready(function () {
 });
 
 function EditarFactura(usuaId) {
-   
+    if (usuaId != null && usuaId != '') {
         $('#btnGuardar').html('<label>Actualizar</label>');
-        $('#lblRegistro').html('Actualizar Operador Logístico');
+        $('#lblRegistro').html('Actualizar Tarifa');
         $('.reveal-modal-bg').css({ transition: "all 0.4s linear", height: "100%", opacity: "1" });
         //ShowPopUp('divPopup');
-    
+    }
 }
 
 function EliminarFactura(usuaNombre, usuaId) {
-    confirm('¿Está seguro de eliminar el operador logístico "' + usuaNombre + '"?', function (result) {
+    confirm('¿Está seguro de eliminar la tarifa "' + usuaNombre + '"?', function (result) {
         if (result) {
             var idUsuario = { Usua_Id: usuaId };
             $.ajax({
