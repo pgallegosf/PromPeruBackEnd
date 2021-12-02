@@ -211,9 +211,7 @@
 						</a>
 						<ul class="menu-list" style="display:block;">
 							<li><a class="menu-option" href="CLCostos.html" style="background-color: #777;">Costos</a></li>
-							<li><a class="menu-option" href="CLFleteA.html">Flete Aéreo</a></li>
-							<li><a class="menu-option" href="CLFleteMFCL.html">Flete Marítimo FCL</a></li>
-							<li><a class="menu-option" href="CLFleteMLCL.html">Flete Marítimo LCL</a></li>
+							
 							
 							
 						</ul>
@@ -223,7 +221,6 @@
 							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
 						</a>
 						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="CLMaestrosV.html">Maestros varios</a></li>
 							<li><a class="menu-option" href="CLAeropuerto.html">Aeropuerto</a></li>
 							<li><a class="menu-option" href="CLPuerto.html">Puerto</a></li>
 							
@@ -250,9 +247,9 @@
 					<div class="cont-box" style="width: 250px !important">
 						<select id="ddlTipoConcepto" class="cont-box-select">
 							<option value="0">--Seleccione--</option>
-                            <option value="1">Embalaje</option>
-                            <option value="2">Empaque</option>
-                            <option value="3">Envase</option>
+                            <option value="1">Costos y Gastos</option>
+                            <option value="2">Envases, empaques y embalajes</option>
+                            <option value="3">INCOTERMS</option>
 						</select>
 					</div>
 				</div>
@@ -289,8 +286,8 @@
                             </tr>
                             <tr>
                                 <th style="width:10%;"><a id="a_RowNumber">Nº</a></th>
-                                <th style="width:35%;"><a id="a_NombreCompleto">Concepto</a></th>
-                                <th style="width:25%;"><a id="a_Usua_Email">Sector</a></th>
+                                <th style="width:15%;"><a id="a_NombreCompleto">Concepto</a></th>
+                                <th style="width:35%;"><a id="a_Usua_Email">Descripción</a></th>
                                 <th style="width:10%;">
                                     <a id="a_Usua_ActivoDescripcion">Estado</a>
                                 </th>
@@ -326,13 +323,13 @@
                             <tr>
                                 <td data-title="Nº" style="width:10%" align="center">1<input id="gridPuertos_ccG_Id_0" type="hidden" value="1##6##undefined##undefined" style="visibility:hidden">
                                 </td>
-                                <td data-title="Ciudad" style="width:35%" align="left" >Embalaje palta</td>
-                                <td data-title="Pais" style="width:25%" align="left" >Servicios</td>
+                                <td data-title="Ciudad" style="width:35%" align="left" >Costos directos</td>
+                                <td data-title="Pais" style="width:25%" align="left" >Son los costos generales directamente relacionados con el proceso de fabricacion de un producto</td>
                                 <td data-title="Estado" style="width:10%" align="left">Activo</td>
                                 <td data-title="" style="width:10%" align="center">
                                     <div class="accion-box">
                                         <a href="javascript:EditarPuerto(6);" title="Editar"><span class="fas fa-edit"></span></a>
-                                        <a href="javascript:EliminarPuerto('Callao',6);" title="Eliminar">
+                                        <a href="javascript:EliminarPuerto('Costos directos',6);" title="Eliminar">
                                             <span class="fas icon-cross"></span>
                                         </a>
                                     </div>
@@ -340,15 +337,15 @@
                             </tr>
                             <tr>
                                 <td data-title="Nº" style="width:10%" align="center" >2<input id="gridPuertos_ccG_Id_1" type="hidden" value="2##5##undefined##undefined" style="visibility:hidden"></td>
-                                <td data-title="Puerto" style="width:35%" align="left" >FLETE LIMA-CALLAO</td>
-                                <td data-title="Pais" style="width:25%" align="left" >Agro y Agroindustria</td>
+                                <td data-title="Puerto" style="width:35%" align="left" >Costos indirectos</td>
+                                <td data-title="Pais" style="width:25%" align="left" >Son materiales y mano de obra que intervienen en el proceso productivo de materia indirecta</td>
                                 <td data-title="Estado" style="width:10%" align="left" >Activo</td>
                                 <td data-title="" style="width:10%" align="center" >
                                     <div class="accion-box">
                                         <a href="javascript:EditarPuerto(5);" title="Editar">
                                             <span class="fas fa-edit"></span>
                                         </a>
-                                        <a href="javascript:EliminarPuerto('Matarani',5);" title="Eliminar">
+                                        <a href="javascript:EliminarPuerto('Costos indirectos',5);" title="Eliminar">
                                             <span class="fas icon-cross"></span>
                                         </a>
                                     </div>
@@ -356,13 +353,13 @@
                             </tr>
                             <tr>
                                 <td data-title="Nº" style="width:10%" align="center" >3<input id="gridPuertos_ccG_Id_2" type="hidden" value="3##1##undefined##undefined" style="visibility:hidden"></td>
-                                <td data-title="Puerto" style="width:35%" align="left">pallet</td>
-                                <td data-title="Pais" style="width:25%" align="left" >Agro y Agroindustria</td>
+                                <td data-title="Puerto" style="width:35%" align="left">Gastos administrativos</td>
+                                <td data-title="Pais" style="width:25%" align="left" >Son los gastos en los que incurren para mantener las operaciones diaria como empresa como de servicios generales, contabilidad y salarios </td>
                                 <td data-title="Estado" style="width:10%" align="left" >Activo</td>
                                 <td data-title="" style="width:10%" align="center">
                                     <div class="accion-box">
                                         <a href="javascript:EditarPuerto(1);" title="Editar"><span class="fas fa-edit"></span></a>
-                                        <a href="javascript:EliminarPuerto('Arica',1);" title="Eliminar">
+                                        <a href="javascript:EliminarPuerto('Gastos administrativos',1);" title="Eliminar">
                                             <span class="fas icon-cross"></span>
                                         </a>
                                     </div>
@@ -383,13 +380,8 @@
                         <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
                     </div>
                     <div class="cont-box">
-                        <label class="cont-box-label">Sector:</label>
-                        <select id="ddlPais" class="cont-box-select">
-                            <option value="0">--Seleccione--</option>
-                            <option value="1">Agvro y agroindustria</option>
-                            <option value="2">Exportación de servicios</option>
-                            <option value="3">Manufactura diversas</option>
-                        </select>
+                        <label class="cont-box-label">Descripción:</label>
+                       <textarea class="cont-box-input" name="" id="" cols="30" rows="10"></textarea>
                     </div>
                     <div class="cont-box" style="width:186px">
                         <label class="cont-box-label">Activo:</label>
