@@ -1,0 +1,295 @@
+﻿.btnNew, .btnSave, .btnBack, .btnEdit, .btnDelete, .btnConfig, .btnCall, .btnCancel, .btnCreate, .btnHomework, .btnNotifications, .btnUser, .btnSeach, .btnPrint, .btnExtorno, .btnTools, .btnEnEdicion, .btnPermisoGuardado, .btnEliminar, .btnListado {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 24px;
+    width: 24px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: 0px none;
+    cursor: pointer;
+}
+
+    .btnNew:hover, .btnSave:hover, .btnBack:hover, .btnEdit:hover, .btnDelete:hover, .btnConfig:hover, .btnCall, .btnCancel, .btnCreate, .btnHomework, .btnNotifications, .btnUser, .btnSeach, .btnPrint:hover, .btnExtorno, .btnTools, .btnEliminar, .btnListado:hover {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        height: 26px;
+        width: 28px;
+    }
+
+
+
+.btnNew {
+    background-image: url(../img/iconos/new.svg);
+}
+
+.btnListado {
+    background-image: url(../img/iconos/listado.png);
+}
+
+.btnSave {
+    background-image: url(../img/iconos/save.svg);
+}
+
+.btnBack {
+    background-image: url(../img/iconos/back.svg);
+}
+
+.btnEdit {
+    background-image: url(../img/iconos/edit.svg);
+}
+
+/*Modelo de boton para eliminar en la grilla*/
+.btnDelete {
+    background-image: url(../img/iconos/can.png);
+}
+
+/*Modelo de boton para eliminar docuemntos*/
+.btnEliminar {
+    background-image: url(../img/iconos/delete.png);
+}
+
+.btnConfig {
+    background-image: url(../img/iconos/config.svg);
+}
+
+.btnCall {
+    background-image: url(../img/iconos/call.png);
+}
+
+.btnCancel {
+    background-image: url(../img/iconos/error.png);
+}
+
+.btnCreate {
+    background-image: url(../img/iconos/create.png);
+}
+
+.btnSeach {
+    background-image: url(../img/iconos/find.png);
+}
+
+.btnTools {
+    background-image: url(../img/iconos/tools.png);
+}
+
+.btnExtorno {
+    background-image: url(../img/iconos/extornar.png);
+}
+
+.btnHomework {
+    background-image: url(../img/iconos/homework.png);
+}
+
+.btnNotifications {
+    background-image: url(../img/iconos/notifications.png);
+}
+
+.btnUser {
+    background-image: url(../img/iconos/user.png);
+}
+
+.btnPrint {
+    background-image: url(../img/iconos/print.png);
+}
+
+.btnEnEdicion {
+    background-image: url(../img/iconos/enedicion.png);
+}
+
+.btnPermisoGuardado {
+    background-image: url(../img/iconos/permisoguardado.png);
+}
+
+.btnSi {
+    background-color: #D52B1E;
+    border-color: #D52B1E;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    padding: 5px 12px 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+    .btnSi:hover {
+        background-color: #05658e;
+        border-color: #05658e;
+    }
+
+.btnNo {
+    background-color: #fff;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #009fe1;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #0094ff;
+}
+
+.btnNuevo {
+    background-color: RGB(0,105,170);
+    border-color: RGB(0,105,170);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    padding: 5px 12px 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+    .btnNuevo:hover {
+        background-color: #055374;
+        border-color: #055374;
+    }
+
+
+.btnReporteP {
+    background-color: RGB(0,105,170);
+    border-color: RGB(0,105,170);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    padding: 5px 12px 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+    .btnReporteP:hover {
+        background-color: #055374;
+        border-color: #055374;
+    }
+
+.btnInicio {
+    min-width: 150px;
+    padding: 15px;
+    background: #009fe1;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #009fe1;
+    box-shadow: inset -1px -1px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+    .btnInicio:hover {
+        background: #05658e;
+        border: 1px solid #05658e;
+    }
+
+.btnGuardar {
+    font-size: 14px;
+    min-width: 150px;
+    padding: 10px;
+    background: #009fe1;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #009fe1;
+    box-shadow: inset -1px -1px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+    .btnGuardar:hover {
+        background-color: #05658e;
+        border: 1px solid #05658e;
+    }
+
+.btnCancelar {
+    font-size: 14px;
+    min-width: 150px;
+    padding: 10px;
+    background: #009fe1;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #009fe1;
+    box-shadow: inset -1px -1px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    /*min-width: 150px;
+	background: #fff;
+	color: #009fe1;
+	border: 1px solid #009fe1;
+	padding: 15px;
+	margin: 5px 5px 0px 5px;
+	border-radius: 4px;
+	box-shadow: inset -1px -1px 15px rgba(0, 0, 0, 0.3);
+	cursor: pointer;*/
+}
+
+    .btnCancelar:hover {
+        background-color: #05658e;
+        border: 1px solid #05658e;
+        /*background: #fff;
+		color: #000;
+		border: 1px solid #000;*/
+    }
+
+.btnfiltro {
+    font-size: 14px;
+    min-width: 150px;
+    padding: 10px;
+    background: #009fe1;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #009fe1;
+    box-shadow: inset -1px -1px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+    .btnfiltro:hover {
+        background-color: #05658e;
+        border: 1px solid #05658e;
+    }
+
+.btnAcepto {
+    min-width: 150px;
+    color: #fff;
+    background: #98cb00;
+    border: 1px solid #98cb00;
+    padding: 15px;
+    margin: 5px 5px 0px 5px;
+    border-radius: 4px;
+    box-shadow: inset -1px -1px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.btnNoAcepto {
+    min-width: 150px;
+    color: #fff;
+    background: #ff0000;
+    border: 1px solid #98cb00;
+    padding: 15px;
+    margin: 5px 5px 0px 5px;
+    border-radius: 4px;
+    box-shadow: inset -1px -1px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.btnCalendar {
+    border: 0px none;
+    background-image:url(../img/iconos/calendar.png);
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.btnSearch {
+    border: 0px none;
+    background-image: url(../img/iconos/lupa2p.png);
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 10px;
+}

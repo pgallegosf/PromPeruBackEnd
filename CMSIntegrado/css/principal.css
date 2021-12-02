@@ -1,0 +1,477 @@
+﻿@font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+    font-family: Roboto-Regular;
+    font-size: 14px;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+/*PANEL*****************************/
+.container {
+    padding: 10px;
+    width: 100%;
+}
+
+.panel {
+    border: 2px solid #e7e7e7;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.panel-header {
+    width: 100%;
+    padding: 10px;
+    background-color: #ddd;
+    color: #000;
+    font-family: Roboto-Bold;
+    margin-bottom: 5px;
+}
+
+.line {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+}
+/*FIN PANEL*************************/
+
+/*CONTROLES************************/
+.label {
+    padding-top: 10px;
+    text-align: right;
+}
+
+input[type="text"], input[type="password"], select {
+    padding-left: 5px;
+    padding-right: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 4px;
+    border: 1px solid #888;
+}
+
+
+input[type="button"], input[type="submit"] {
+    padding: 6px 8px 6px 8px;
+    background-color: #D52B1E;
+    border-radius: 4px;
+    border: 1px solid;
+    color: #fff;
+    cursor: pointer;
+    border-color: #888;
+    margin-left: 5px;
+    font-family: Roboto-Bold;
+}
+
+    input[type="button"]:hover, input[type="submit"]:hover, button:hover {
+        background-color: #D52B1E;
+    }
+
+input:focus {
+    border-color: #1e7bd5;
+}
+input[type="file"] {
+    display:none;
+}
+/*Estilo para los botones que tienen sólo icono*/
+
+button {
+    /*position: relative;*/
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: #888;
+    background-color: #D52B1E;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 1px;
+    margin-right: 2px;
+    padding: 6px 8px 6px 8px;
+}
+
+    button > span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+        button > span + span {
+            height: 100%;
+            margin-left: 8px;
+            vertical-align: middle;
+            font-family: Roboto-Bold;
+        }
+
+a {
+    text-decoration: underline;
+    color: #D52B1E;
+}
+
+.botonera {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+/*checkbox***/
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+        position: relative;
+        padding-left: 1.95em;
+        cursor: pointer;
+    }
+
+        /* checkbox aspect */
+        [type="checkbox"]:not(:checked) + label:before,
+        [type="checkbox"]:checked + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 1.8em;
+            height: 1.8em;
+            border: 2px solid #ccc;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+        }
+        /* checked mark aspect */
+        [type="checkbox"]:not(:checked) + label:after,
+        [type="checkbox"]:checked + label:after {
+            content: '✔';
+            position: absolute;
+            top: .36em;
+            left: .3em;
+            font-size: 1.3em;
+            line-height: 0.8;
+            color: #09ad7e;
+            transition: all .2s;
+        }
+        /* checked mark aspect changes */
+        [type="checkbox"]:not(:checked) + label:after {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        [type="checkbox"]:checked + label:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+[type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+}
+
+[type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+    border: 2px solid #888;
+}
+
+/* hover style just for information */
+label:hover:before {
+    border: 2px solid #4778d9 !important;
+}
+/*fin checkbox*/
+.requerido {
+    background-color: #fcf9d5;
+}
+/*FIN CONTROLES********************/
+
+/*LAYOUT***************************/
+.banner {
+    border-bottom: 1px solid #888;
+    background-color: #D52B1E;
+    padding: 10px 10px;
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    color: #fff;
+}
+
+.banner-left {
+    display: inline-block;
+}
+
+.banner-right {
+    float: right;
+    display: inline-block;
+}
+
+.text-banner, .text-banner a {
+    color: #fff !important;
+}
+
+.footer {
+    bottom: 0px;
+    padding: 10px;
+    background-color: #ccc;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.overlayPrincipal {
+    position: fixed;
+    top: 0;
+    left: 0; /*background: rgb(200, 200, 200);*/
+    /*background-image: url(../img/fondos/transparente.png);*/
+    background-color: transparent;
+    display: none; /*-moz-opacity: 0.3;     opacity: 0.3;*/
+}
+
+.overlayPopup {
+    position: fixed;
+    top: 0;
+    left: 0; /*background: rgb(200, 200, 200);*/
+    background-image: url(../img/fondos/transparente.png);
+    display: none; /*-moz-opacity: 0.3;     opacity: 0.3;*/
+}
+/*FIN LAYOUT***************************/
+
+.titulo1 {
+    font-family: Roboto-Bold;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+}
+/*TABLE***********************************/
+.tableContainer {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow-x: auto;    
+    padding:5px 5px 10px 5px;
+}
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;    
+}
+
+    .table thead tr {
+        background-color: #ccc;
+    }
+
+    .table tr th {
+        font-family: Roboto-Bold;
+        text-align: center;
+        position: relative;
+        padding: 5px;
+    }
+
+    .table tr[class="filter"] {
+        background-color: #aaa;
+    }
+
+        .table tr[class="filter"] th {
+            padding: 2px 2px 2px 2px;
+            
+        }
+
+    .table th input {
+        width: 100%;
+        padding: 4px;
+        border: none;
+        /*background-color: transparent;*/
+    }
+
+    .table td, .table th {
+        border: 1px solid #aaa;
+    }
+
+    .table td {
+        padding: 5px;
+        min-height: 25px;
+        cursor: pointer;
+    }
+
+    .table > thead > tr > th > a {
+        cursor: pointer;
+        color: #000;
+    }
+
+
+    .table > tbody > tr:nth-of-type(odd) {
+        background-color: #efeeee;
+    }
+
+    .table .selected td {
+        background-color: #cae7f7;
+    }
+
+/*FIN TABLE*******************************/
+
+/*POPUP**********************************/
+.popup {
+    position: absolute;
+    overflow: auto;
+    min-width: 500px;
+    display: none; /*box-shadow: 0px 3px 7px #333;*/
+    background-color: #fff;
+    border: 2px solid #D52B1E;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, -0%);
+    padding-bottom: 20px;
+    /*box-shadow: 0px 0px 6px 6px RGB(140,140,140);
+	-webkit-box-shadow: 0px 0px 6px 6px RGB(140,140,140);
+	-moz-box-shadow: 0px 0px 6px 6px RGB(140,140,140);
+	filter: shadow(color=#999999, direction=135, strength=2);*/
+}
+
+    .popup .titulo {
+        font-family: Roboto-Bold;
+        padding: 10px 10px 10px 15px;
+        font-size: 16px;
+        width: 100%;
+        border-bottom: 1px solid #e7e7e7;
+        background-color: #D52B1E;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+/*FIN POPUP******************************/
+.imgPreview {
+    border:1px solid #888;
+    border-radius:3px;
+    max-width:90%;
+    min-width:80px;
+    min-height:80px;
+    padding:3px;
+}
+
+@media (max-width: 640px) {
+    * {
+        font-size: 12px;
+    }
+
+    .banner {
+        width: 100%;
+        z-index: 3;
+    }
+
+    .table {
+        width: 95%;
+    }
+
+
+    /*TABLE RESPONSIBLE*/
+
+    .tableResponsive table,
+    .tableResponsive thead,
+    .tableResponsive tbody,
+    .tableResponsive th,
+    .tableResponsive td,
+    .tableResponsive tr {
+        display: block;
+    }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        .tableResponsive thead tr:not([class="filter"]) {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        .tableResponsive th input {
+            width: 180px;
+        }
+
+        .tableResponsive tr[class="filter"] th {
+            padding-left: 40%;
+            /*position: absolute;
+            top: -9999px;
+            left: -9999px;*/
+        }
+
+    .tableResponsive tr {
+        border: 1px solid #ccc;
+    }
+
+    .tableResponsive thead tr th {
+        color: #fff;
+    }
+
+    .tableResponsive tbody tr td, .tableResponsive thead tr th {
+        border: none;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        position: relative;
+        padding-left: 40%;
+        white-space: normal;
+        text-align: left;
+        min-width: 100%;
+    }
+
+        .tableResponsive tbody tr td:before, .tableResponsive thead tr th:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 50%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .tableResponsive tbody tr td:before, .tableResponsive thead tr th:before {
+            content: attr(data-title);
+        }
+
+    .tableResponsive tfoot tr td {
+        border: none;
+    }
+    /*FIN TABLE RESPONSIVE*/
+    .label {
+        text-align: left;
+    }
+
+    /*.popup {
+        width:94%;
+        min-width:94%;
+        left: 3%;
+        right: 3%;
+        overflow: auto;
+    }*/
+    .popup {
+        width: 98%;
+        min-width: 98%;
+        z-index:204;
+    }
+}

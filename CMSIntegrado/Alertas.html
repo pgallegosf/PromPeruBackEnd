@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-Frame-Options" content="deny">
+		
+		<title>[Nombre maestro] - PromPeru</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="icon" href="img/iconos/icon.png">
+		
+		<link href="css/Menu.css" rel="stylesheet">
+		<link href="iconmoon/iconmoon.css" rel="stylesheet">
+		<link href="css/apprise.css" rel="stylesheet">
+		<link href="css/botones.css" rel="stylesheet">
+		
+		<script src="Scripts/jquery-2.1.0.min.js"></script>
+		<script src="Scripts/helper.js"></script>
+		<script src="Scripts/apprise.js"></script>
+		<script src="Scripts/ccGrid.js"></script>
+		
+		<link href="../css/jquery.datepick.min.css" rel="stylesheet">
+        <script src="../Scripts/jquery.plugin.min.js"></script>
+        <script src="../Scripts/jquery.datepick.min.js"></script>
+        <script src="../Scripts/jquery.datepick-es.js"></script>
+        <script src="ScriptsForms/Admin/Seguridad/Usuario.js"></script>
+		<script>
+			var urlRaiz = "../";
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<div class="l-contents header-cont">
+					<div class="header-logo2">
+						<a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a><h2>[Nombre del sistema]</h2>
+					</div>
+					<div class="header-logo3"><a href="Login.html" class="header-close"><span>Cerrar Sesión</span><span class="fas fa-power-off"></span></a></div>
+					
+				</div>
+			</div>
+		</header>
+		
+		<div class="side-menu">
+			
+			<ul class="menu">
+				<li>
+					<a class="menu-toggle">
+						<span class="icon-key"></span>[Nombre del menú]<span class="menu-caret"></span>
+					</a>
+					<ul class="menu-list">
+						<li><a class="menu-option" href="Alertas.html"><span class="icon-profile"></span>Alertas</a></li>
+                        <li><a class="menu-option" href="BotonesRectangulares.html"><span class="icon-profile"></span>Botones Rectangulares</a></li>
+                        <li><a class="menu-option" href="BotonesCirculares.html"><span class="icon-profile"></span>Botones circulares</a></li>
+						<li><a class="menu-option" href="Mantenimiento.html"><span class="icon-user"></span>Mantenimiento Simple</a></li>
+						<li><a class="menu-option" href="CabeceraDetalle.html"><span class="icon-profile"></span>Cabecera detalle</a></li>
+						<li><a class="menu-option" href="Flujo/Listado.html"><span class="icon-profile"></span>Flujo</a></li>
+					</ul>
+				</li>
+				<li><div class="divider"></div></li>
+				<li>
+					<a class="menu-toggle">
+						<span class="icon-newspaper"></span>[Nombre del menú]<span class="menu-caret"></span>
+					</a>
+					<ul class="menu-list">
+						<li><a class="menu-option" href="Seguridad/Producto.html"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option" href="Seguridad/Inventario.html"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="menu-toggle">
+						<span class="icon-table"></span>[Nombre del menú]<span class="menu-caret"></span>
+					</a>
+					<ul class="menu-list">
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+						<li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre submenú]</a></li>
+					</ul>
+				</li>
+				<li><div class="divider"></div></li>
+			</ul>
+			
+		</div>
+		
+		
+		<!-- Main Content -->
+		<div class="side-body" id="divContenido" style="min-height:500px;">
+			<div class="l-contents">
+				<div class="cont-cont">
+					<div class="cont-header">
+						<h1 class="cont-header-h1">Mensajes de alerta</h1>
+					</div>
+					<div style="height:1100px;">
+						<div>
+							<div class="appriseOuter" style="position:relative; width: 350px; left: 20px; z-index: 411; top: 20px; display: block;">
+								<div class="appriseInner">
+									<table class="appriseMensaje">
+										<tbody>
+											<tr>
+												<td style="width:10%; text-align:center; background-color:#fff;" class="alert_info"><span class="icon-info"></span></td>
+												<td style="width:90%; align:left; padding-left:10px;font-family: Arial;">[Mensaje aquí]</td>
+											</tr>
+										</tbody>
+									</table>
+								<div class="aButtons"><button id="appriseOk" value="ok">Aceptar</button></div></div>
+							</div>
+						</div>
+						<div>
+							<div class="appriseOuter" style="position:relative; width: 350px; left: 20px; z-index: 411; top: 40px; display: block;">
+								<div class="appriseInner">
+									<table class="appriseMensaje">
+										<tbody>
+											<tr>
+												<td style="width:10%; text-align:center; background-color:#fff;" class="alert_warning"><span class="icon-warning"></span></td>
+												<td style="width:90%; align:left; padding-left:10px;font-family: Arial;">[Mensaje aquí]</td>
+											</tr>
+										</tbody>
+									</table>
+								<div class="aButtons"><button id="appriseOk" value="ok">Aceptar</button></div></div>
+							</div>
+						</div>
+						<div>
+							<div class="appriseOuter" style="position:relative; width: 350px; left: 20px; z-index: 411; top: 60px; display: block;">
+								<div class="appriseInner">
+									<table class="appriseMensaje">
+										<tbody>
+											<tr>
+												<td style="width:10%; text-align:center; background-color:#fff;" class="alert_check"><span class="icon-checkmark"></span></td>
+												<td style="width:90%; align:left; padding-left:10px;font-family: Arial;">[Mensaje aquí]</td>
+											</tr>
+										</tbody>
+									</table>
+								<div class="aButtons"><button id="appriseOk" value="ok">Aceptar</button></div></div>
+							</div>
+						</div>
+						<div>
+							<div class="appriseOuter" style="position:relative; width: 350px; left: 20px; z-index: 411; top: 80px; display: block;">
+								<div class="appriseInner">
+									<table class="appriseMensaje">
+										<tbody>
+											<tr>
+												<td style="width:10%; text-align:center; background-color:#fff;" class="alert_error"><span class="icon-cancel-circle"></span></td>
+												<td style="width:90%; align:left; padding-left:10px;font-family: Arial;">[Mensaje aquí]</td>
+											</tr>
+										</tbody>
+									</table>
+								<div class="aButtons"><button id="appriseOk" value="ok">Aceptar</button></div></div>
+							</div>
+						</div>
+						<div>
+							<div class="appriseOuter" style="position:relative; width: 350px; left: 20px; z-index: 411; top: 100px; display: block;">
+								<div class="appriseInner">
+									<table class="appriseMensaje">
+										<tbody>
+											<tr>
+												<td style="width:10%; text-align:center; background-color:#fff;" class="alert_question"><span class="icon-question"></span></td>
+												<td style="width:90%; align:left; padding-left:10px;font-family: Arial;">¿Pregunta aquí"?</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="aButtons">
+										<button id="appriseOk" value="ok" onblur="$('#appriseCancel').focus();">Sí</button>
+										<button id="appriseCancel" value="cancel" onblur="$('#appriseOk').focus();">No</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			<!--<footer>
+				<div class="footer2">
+				<div class="l-contents">
+                <div class="footer-box">
+				<div class="footer-logo"><img src="/PROMPERU.SIMCOS.Web/Content/img/logos//logo-promperu.jpg" alt="Logo PromPerú"></div>
+				
+                </div>
+                <div class="footer-box2">
+				<div class="footer-logo">
+				<img src="/PROMPERU.SIMCOS.Web/Content/img/logos//logo.png" alt="Marca Perú">
+				</div>
+                </div>
+				</div>
+				</div>
+				</footer>
+			-->
+			
+			<script>
+				
+				$(function () {
+					$('#btnMenu').click(function () {
+						$('.side-menu').toggleClass('slide-menu');
+						if ($("#divOverlayPopUp").length == 0) {
+							$('body').append('<div class="overlayPopup" id="divOverlayPopUp"></div>');
+						}
+						
+						$('#divOverlayPopUp').width(screen.width * 4 + "px");
+						$('#divOverlayPopUp').height(screen.height * 4 + "px");
+						$('#divOverlayPopUp').css({ 'z-index': (200),'margin-top':60 });
+						$('#divOverlayPopUp').toggle();
+					});
+					$('.menu-option').click(function () {
+						$('.side-menu').toggleClass('slide-menu');
+						$('#divOverlayPopUp').hide();
+					});
+				});
+				
+			</script>
+			
+			<!-- Visual Studio Browser Link -->
+			<script type="application/json" id="__browserLink_initializationData">
+				{"appName":"Chrome","requestId":"8d3e12dda6cb4f0690d67980c5942011"}
+			</script>
+			<script type="text/javascript" src="http://localhost:25324/e7505fd5178543018959cdac3c96e012/browserLink" async="async"></script>
+			<!-- End Browser Link -->
+			
+			
+			
+		</body>
+	</html>

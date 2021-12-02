@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <title>CMS Herramientas Logisticas - PROMPERÚ</title>
+    <meta name="robots" content="noindex,nofollow,noodp,noarchive,NOSNIPPET">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <!-- End Google Tag Manager -->
+    <base href="">
+    <link rel="icon" href="img/iconos/icon.png">
+    <link href="iconmoon/iconmoon.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/apprise.css" rel="stylesheet">
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/helper.js"></script>
+    <script src="Scripts/apprise.js"></script>
+
+    <script>
+        var urlRaizLogin = '/Simulador';
+        var urlRaiz = "/PROMPERU.PLANTILLA/";
+
+        function openContacto() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open(/PROMPERU.PLANTILLA/ + 'Simulador/Seguridad/Contacto', '_blank');
+        }
+    </script>
+    <script src="ScriptsForms/Simulador/Seguridad/Login.js"></script>
+</head>
+<body>    
+    <header>
+        <div class="header">
+            <div class="l-contents header-cont">
+                <div class="header-logo header-logo-center">
+                    <div class="marcaperu">
+                        <img src="img/logos/LogoMarcaPeru.svg" style="width:90px" alt="Marca Perú">
+                    </div>
+
+                </div>
+                <div class="header-logo3"><a href="Contacto.html" class="header-close"><span>Contacto</span><span class="fas fa-envelope"></span></a></div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="mv-background">
+
+            <div class="l-contents flex-index">
+                <div class="login-index">
+                    <div class="login-title">
+                        <h1 class="login-title-h1">CMS Herramientas Logisticas</h1>
+                    </div>
+                    <div class="login-content">
+
+                        <div class="login-h1">Iniciar Sesión</div>
+                        <p class="login-p"></p>
+                        <div class="login-input">
+                            <label><i class="fa fa-envelope"></i></label>
+                            <input id="txtUsuario" type="email" placeholder="Usuario" value="">
+                        </div>
+                        <div class="login-input">
+                            <label><i class="fa fa-lock"></i></label>
+                            <input id="txtContrasenia" type="password" autocomplete="off" placeholder="Contraseña" value="">
+                            <label id="lblmensaje" style="display: none; color: #DC4A4F; font-weight: bold; padding-bottom: 6px"></label>
+                        </div>
+                       
+                            <button id="btnIngresar" type="button" value="Ingresar" class="input-submit"><label>Ingresar</label></button>
+
+                            
+
+
+                        </div>
+                </div>
+            </div>
+            <div class="aside-index">
+                <aside class="red-social"><a href="https://www.facebook.com/promperu" target="_blank" class="fab fa-facebook-square"></a><a href="https://twitter.com/promperu" target="_blank" class="fab fa-twitter-square"></a><a href="https://www.youtube.com/channel/UCveRrj9wB1L5BOQV-9pvqfQ" target="_blank" class="fab fa-youtube"></a></aside>
+            </div>
+        </div>
+        <div class="reveal-modal-bg">
+            <div class="modal-registrar">
+                <form action="#">
+                    <h2>Crear una Cuenta</h2>
+                    <div class="cont-box">
+                        <input id="txtRUC" type="text" placeholder="RUC" class="cont-box-input">
+                    </div>
+                    <div class="cont-box">
+                        <input id="txtRazonSocial" type="text" placeholder="Nombre Comercial" class="cont-box-input">
+                    </div>
+                    <div class="cont-box">
+                        <select id="ddlSector" class="cont-box-select">
+                            <option value="0">--Seleccione--</option>
+                        </select>
+                    </div>
+                    <div class="cont-box">
+                        <input id="txtNombre" type="text" placeholder="Nombres" class="cont-box-input" maxlength="30">
+                    </div>
+                    <div class="cont-box">
+                        <input id="txtAPaterno" type="text" placeholder="Apellido paterno" class="cont-box-input" maxlength="30">
+                    </div>
+                    <div class="cont-box">
+                        <input id="txtAMaterno" type="text" placeholder="Apellido materno" class="cont-box-input" maxlength="30">
+                    </div>
+
+                    <div class="cont-box">
+                        <input id="txtTelefono" type="text" placeholder="Teléfono" class="cont-box-input" maxlength="20" onkeypress="return ValidarSoloNumeros(event)">
+                    </div>
+                    <div class="cont-box">
+                        <input id="txtEmail" type="text" placeholder="Correo electrónico" class="cont-box-input" maxlength="100">
+                    </div>
+                    <div class="cont-box">
+                        <input id="txtClave" type="password" autocomplete="off" placeholder="Contraseña" class="cont-box-input" maxlength="100">
+                    </div>
+                    <div class="cont-box">
+                        <input id="txtConfirmarClave" type="password" autocomplete="off" placeholder="Confirmar contraseña" class="cont-box-input" maxlength="100">
+                    </div>
+                    <div class="cont-box">
+                        <button id="btnEnviarCodigo" class="cont-box-submit"><label>Enviar</label></button>
+                    </div>
+                    <div class="cont-box">
+                    <button id="btnCancelar" style="cursor: pointer" class="cont-box-cancel close"><label>Cancelar</label></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="reveal-modal-bg2">
+            <div class="modal-contrasena">
+                <h2>Recuperar Contraseña</h2>
+                <p>Podemos ayudarte a recuperar tu contraseña, <br>ésta será enviada al correo ingresado.</p>
+                <div class="cont-box">
+                    <input id="txtCorreo" type="text" placeholder="Correo electrónico" class="cont-box-input">
+                </div>
+                <div class="cont-box">
+                    <button id="btnEnviarCodigo" class="cont-box-submit"><label>Enviar</label></button>
+                </div>
+                <div class="cont-box"><button id="btnCancelar" style="cursor: pointer" class="cont-box-cancel close"><label>Cancelar</label></button></div>
+            </div>
+        </div>
+    </main>
+    <!--<footer>
+        <div class="footer2">
+            <div class="l-contents">
+                <div class="footer-box">
+                    <div class="footer-logo"><img src="/../img/logos//logo-promperu.jpg" alt="Logo PromPerú"></div>
+
+                </div>
+                <div class="footer-box2">
+                    <div class="footer-logo">
+                        <img src="../img/logos//logo.png" alt="Marca Perú">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    -->    
+</body>
+</html>

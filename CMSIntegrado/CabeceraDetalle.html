@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    
+    <title>Factura - PromPeru</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="../img/iconos/icon.png">
+
+    <link href="css/Menu.css" rel="stylesheet">
+    <link href="iconmoon/iconmoon.css" rel="stylesheet">
+    <link href="css/apprise.css" rel="stylesheet">
+    <link href="css/botones.css" rel="stylesheet">
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/helper.js"></script>
+    <script src="Scripts/apprise.js"></script>
+    <script src="Scripts/ccGrid.js"></script>
+    <script>
+        var urlRaiz = "../";
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="l-contents header-cont">
+                <div class="header-logo2">
+                    <h2>[Nombre del sistema]</h2>
+                </div>
+                <div class="header-logo3"><a href="Seguridad/Login.html" class="header-close"><span>Cerrar Sesión</span><span class="fas fa-power-off"></span></a><a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a></div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu">
+        <ul class="menu">
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-key"></span>[Nombre del menú]<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+						<li><a class="menu-option" href="Alertas.html"><span class="icon-profile"></span>Alertas</a></li>
+                    <li><a class="menu-option" href="BotonesRectangulares.html"><span class="icon-profile"></span>Botones Rectangulares</a></li>
+                    <li><a class="menu-option" href="BotonesCirculares.html"><span class="icon-profile"></span>Botones circulares</a></li>
+
+						<li><a class="menu-option" href="Mantenimiento.html"><span class="icon-user"></span>Mantenimiento Simple</a></li>
+						<li><a class="menu-option" href="CabeceraDetalle.html"><span class="icon-profile"></span>Cabecera detalle</a></li>
+						<li><a class="menu-option" href="Flujo/Listado.html"><span class="icon-profile"></span>Flujo</a></li>
+					</ul>
+            </li>
+            <li><div class="divider"></div></li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-newspaper"></span>Configuración<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+                    <li><a class="menu-option" href="Seguridad/Producto.html"><span class="icon-newspaper"></span>Producto</a></li>
+                    <li><a class="menu-option" href="Seguridad/Inventario.html"><span class="icon-newspaper"></span>Inventario</a></li>
+                    <li><a class="menu-option" href="Seguridad/RegistrarFactura.html"><span class="icon-newspaper"></span>Factura</a></li>
+                    <li><a class="menu-option" href="Seguridad/MantenimientoProducto.html"><span class="icon-newspaper"></span>Producto</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+        </ul>
+
+    </div>
+
+    <div class="side-body" id="divContenido" style="min-height:500px;">
+
+        <link href="css/jquery.datepick.min.css" rel="stylesheet">
+        <script src="Scripts/jquery.plugin.min.js"></script>
+        <script src="Scripts/jquery.datepick.min.js"></script>
+        <script src="Scripts/jquery.datepick-es.js"></script>
+        <script src="ScriptsForms/Admin/Mantenimientos/RegistrarFactura.js"></script>
+
+        <p id="idConcepto" visibility="" hidden=""></p>
+        <div class="l-contents">
+            <div class="cont-cont">
+                <div class="cont-header">
+                    <h1 class="cont-header-h1">Factura</h1>
+                </div>
+
+                <div class="cont-boxes">
+                    <!--<div id="divCombo" class="cont-box" style="width: 330px !important; display: ;">
+                    </div>
+                    <div id="divCombo" class="cont-box" style="width: 330px !important; display: ;">
+                    </div>
+                    <div id="divCombo" class="cont-box" style="width: 400px !important">
+                    </div>-->
+                    <nav class="cont-icons">
+                        <a id="btnNuevaFactura" href="javascript:" class="cont-icons">
+                            <span class="fas fa-plus"></span><span>Nuevo</span>
+                        </a>
+                    </nav>
+                    <div class="cont-table">
+                        <table id="gridUsuarios" class="cont-left tableResponsive" style="width: 100%; min-width: 400px; max-width: 700px;">
+                            <thead>
+                                <tr class="filter">
+                                    <th data-title="Nº" style="width:10%"></th>
+                                    <th data-title="Usuario" style="width:35%">
+                                        <input type="text" id="gridUsuarios_txtB_NombreCompleto">
+                                    </th>
+                                    <th data-title="Correo" style="width:25%">
+                                        <input type="text" id="gridUsuarios_txtB_Usua_Email">
+                                    </th>
+                                    <th data-title="Teléfono" style="width:10%">
+                                        <input type="text" id="gridUsuarios_txtB_Usua_Telefono">
+                                    </th>
+
+                                    <th data-title="" style="width:10%" align="center">
+                                        <div class="accion-box">
+                                            <a href="" title="Editar"><span class="fas fa-search"></span></a>                                          
+                                                                                          
+                                        </div>
+                                    </th>
+
+                                </tr>
+                                <tr>
+                                    <th style="width:10%;">
+                                        <a id="">Nº</a>
+                                    </th>
+                                    <th style="width:10%;">
+                                        <a id="">Nº Documento</a>
+                                    </th>
+                                    <th style="width:60%;">
+                                        <a id="">Cliente</a>
+                                    </th>
+
+                                    <th style="width:8%;">
+                                        <a id="">Estado</a>
+                                    </th>
+                                    <th style="width:10%;">
+                                        <a id=""></a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6"></td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Nº" style="width:10%" align="left">
+                                        1<input id="" type="hidden" value="1##6##undefined##undefined" style="visibility:hidden">
+                                    </td>
+                                    <td data-title="Cliente" style="width:35%" align="center">F003-00000135</td>
+                                    <td data-title="Comprador" style="width:25%" align="left">Kimberly Clark Perú S.R.L.</td>
+                                    <td data-title="Serie" style="width:10%" align="left">Emitido</td>
+                                    <td data-title="" style="width:10%" align="center">
+                                        <div class="accion-box">
+                                            <a href="javascript:EditarFactura(1);" title="Editar">
+                                                <span class="fas fa-edit">
+                                                </span>
+                                            </a>
+                                            <a href="javascript:EliminarFactura('F003-00000135',1);" title="Eliminar">
+                                                <span class="fas icon-cross"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="" style="width:10%" align="left">2<input id="gridUsuarios_ccG_Id_1" type="hidden" value="2##5##undefined##undefined" style="visibility:hidden"></td>
+                                    <td data-title="Cliente" style="width:35%" align="center">F005-00000130</td>
+                                    <td data-title="Comprador" style="width:25%" align="left">SOTESA SAC</td>
+                                    <td data-title="Serie" style="width:10%" align="left">Emitido</td>
+                                    <td data-title="" style="width:10%" align="center">
+                                        <div class="accion-box">
+                                            <a href="javascript:EditarFactura(2);" title="Editar">
+                                                <span class="fas fa-edit">
+                                                </span>
+                                            </a><a href="javascript:EliminarFactura('F005-00000130',2);" title="Eliminar">
+                                                <span class="fas icon-cross"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nº" style="width:10%" align="left">3<input id="gridUsuarios_ccG_Id_2" type="hidden" value="3##1##undefined##undefined" style="visibility:hidden"></td>
+                                    <td data-title="Usuario" style="width:35%" align="center">F002-00000134</td>
+                                    <td data-title="Correo" style="width:25%" align="left">Compañía Minera Antamina S.A</td>
+                                    <td data-title="Teléfono" style="width:10%" align="left">Pagado</td>
+                                    <td data-title="" style="width:10%" align="center">
+                                        <div class="accion-box">
+                                            <a href="javascript:EditarFactura(3);" title="Editar">
+                                                <span class="fas fa-edit"></span>
+                                            </a>
+                                            <a href="javascript:EliminarFactura('F002-00000134',3);" title="Eliminar">
+                                                <span class="fas icon-cross"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="reveal-modal-bg2" style="transition: all 0.4s linear 0s; height: 0px; opacity: 0;">
+                            <div class="modal-registrar modal-registrar-ancho700">
+                                <div class="cont-cont">
+                                    <h2 id="">Lista de proveedores</h2>
+                                    <div class="section-check">
+
+                                        <div class="cont-table">
+
+                                            <table id="gridUsuarios" class="cont-left tableResponsive" style="width: 100%; min-width: 400px; max-width: 700px;">
+                                                <thead>
+                                                    <tr class="filter">
+                                                        <th data-title="Nº" style="width:10%"></th>
+                                                        <th data-title="Usuario" style="width:35%">
+                                                            <input type="text" id="gridUsuarios_txtB_NombreCompleto">
+                                                        </th>
+                                                        <th data-title="Correo" style="width:25%">
+                                                            <input type="text" id="">
+                                                        </th>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width:10%;"><a id="a_RowNumber">Nº</a></th>
+                                                        <th style="width:20%;"><a id="a_NombreCompleto">RUC/DNI</a></th>
+                                                        <th style="width:25%;"><a id="a_Usua_Email">Empresa</a></th>
+                                                        <th style="width:5%;"><a id="a_Usua_Email"></a></th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <div id="gridUsuarios_divPaginacion" style="display: none;">
+                                                                <nav class="cont-nav">
+                                                                    <a href="">
+                                                                        <span class="fas fa-angle-double-left"></span>
+                                                                    </a>
+                                                                    <a href="">
+                                                                        <span class="fas fa-angle-left"></span>
+                                                                    </a><a href="">
+                                                                        <span class="fas fa-angle-right"></span>
+                                                                    </a>
+                                                                    <a href="">
+                                                                        <span class="fas fa-angle-double-right"></span>
+                                                                    </a><input id="gridUsuarios_TextboxPaginaActual" type="text" value="1" class="cont-nav-n">
+                                                                    <p>
+                                                                        de <label id="gridUsuarios_LabelTotalPaginas"></label> páginas, N° de registros: <label id="gridUsuarios_LabelTotalRegistros">
+                                                                        </label>
+                                                                    </p>
+                                                                </nav>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                    <tr>
+                                                        <td data-title="Nº" style="width:10%" align="center">
+                                                            1<input id="gridUsuarios_ccG_Id_0" type="hidden" value="1##6##undefined##undefined" style="visibility:hidden">
+                                                        </td>
+                                                        <td data-title="Usuario" style="width:20%" align="left">20515691562	</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">	A.F.A.P. REPUBLICA S.A.</td>
+
+
+                                                        <td data-title="" style="width:10%" align="center">
+                                                            <div class="accion-box">
+                                                                <a href="javascript:EditarUsuario(6);" title="Editar"><span class="fas fa-edit"></span></a>
+                                                                <a href="javascript:EliminarUsuario('Fernando Mestanza Robles',6);" title="Eliminar">
+                                                                    <span class="fas icon-cross"></span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-title="Nº" style="width:10%" align="center">2<input id="gridUsuarios_ccG_Id_1" type="hidden" value="2##5##undefined##undefined" style="visibility:hidden"></td>
+                                                        <td data-title="Usuario" style="width:35%" align="left">20512178881</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">ALMACENES PARIS S.A.C.</td>
+
+
+                                                        <td data-title="" style="width:10%" align="center">
+                                                            <div class="accion-box">
+                                                                <a href="javascript:EditarUsuario(5);" title="Editar">
+                                                                    <span class="fas fa-edit"></span>
+                                                                </a>
+                                                                <a href="javascript:EliminarUsuario('Pedro Rivera Castro',5);" title="Eliminar">
+                                                                    <span class="fas icon-cross"></span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-title="Nº" style="width:10%" align="center">3<input id="gridUsuarios_ccG_Id_2" type="hidden" value="3##1##undefined##undefined" style="visibility:hidden"></td>
+                                                        <td data-title="Usuario" style="width:35%" align="left">20159969156	</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">Amerop Peru</td>
+
+
+                                                        <td data-title="" style="width:10%" align="center">
+                                                            <div class="accion-box">
+                                                                <a href="javascript:EditarUsuario(1);" title="Editar"><span class="fas fa-edit"></span></a>
+                                                                <a href="javascript:EliminarUsuario('Alex Sandoval Caro',1);" title="Eliminar">
+                                                                    <span class="fas icon-cross"></span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-title="Nº" style="width:10%" align="left">2<input id="gridUsuarios_ccG_Id_1" type="hidden" value="2##5##undefined##undefined" style="visibility:hidden"></td>
+                                                        <td data-title="Usuario" style="width:35%" align="left">20187787870</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">ALMACENES PARIS S.A.C.</td>
+
+
+                                                        <td data-title="" style="width:10%" align="center">
+                                                            <div class="accion-box">
+                                                                <a href="javascript:EditarUsuario(5);" title="Editar">
+                                                                    <span class="fas fa-edit"></span>
+                                                                </a>
+                                                                <a href="javascript:EliminarUsuario('Pedro Rivera Castro',5);" title="Eliminar">
+                                                                    <span class="fas icon-cross"></span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav class="cont-icons">
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="cont-box">
+                                    <button id="btnGuardar" class="cont-box-submit" value="Registrar">
+                                        <label>Seleccionar</label>
+                                    </button>
+                                </div>
+                                <div class="cont-box">
+                                    <button id="btnCancelarProveedor" class="cont-box-cancel close">
+                                        <label>Cancelar</label>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reveal-modal-bg2" style="transition: all 0.4s linear 0s; height: 0px; opacity: 0;">
+                            <div class="modal-registrar modal-registrar-ancho700">
+                                <div class="cont-cont">
+                                    <h2 id="">Nombre del listado</h2>
+                                    <div class="section-check">
+
+                                        <div class="cont-table">
+                                            <table id="gridProductos" class="cont-left tableResponsive" style="width: 100%; max-width: 700px;"><thead><tr class="filter"><th data-title="Nº" style="width:8%"></th><th data-title="Nombre" style="width:42%"><input type="text" onkeypress=" ccGrid['gridProductos'].FiltrarGrid(event); " id="gridProductos_txtB_Prod_Nombre"></th><th data-title="Nombre Técnico" style="width:40%"><input type="text" onkeypress=" ccGrid['gridProductos'].FiltrarGrid(event); " id="gridProductos_txtB_Prod_NombreTecnico"></th> <th data-title="" style="width:10%" align="center">
+    <div class="accion-box">
+        <a href="" title="Editar"><span class="fas fa-search"></span></a>
+
+    </div>
+</th>
+                                                  </tr><tr><th style="width:8%;"><a id="a_RowNumber" onclick="ccGrid['gridProductos'].OrdenarGrid('RowNumber')">Nº</a></th><th style="width:42%;"><a id="a_Prod_Nombre" onclick="ccGrid['gridProductos'].OrdenarGrid('Prod_Nombre')">Nombre</a></th><th style="width:40%;"><a id="a_Prod_NombreTecnico" onclick="ccGrid['gridProductos'].OrdenarGrid('Prod_NombreTecnico')">Nombre Técnico</a></th><th style="width:10%;"><a id="a_" onclick="ccGrid['gridProductos'].OrdenarGrid('')"></a></th></tr></thead><tfoot><tr><td colspan="4"><div id="gridProductos_divPaginacion"><nav class="cont-nav"></nav></div></td></tr></tfoot><tbody><tr><td data-title="Nº" style="width:8%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); ">1<input id="gridProductos_ccG_Id_6" type="hidden" value="7##1242" style="visibility:hidden"></td><td data-title="Nombre" style="width:42%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); ">Abolones Congelados</td><td data-title="Nombre Técnico" style="width:40%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); "></td><td data-title="" style="width:10%" align="center" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); "><div class="accion-box"><a href="javascript:EditarProducto(1242);" title="Editar"><span class="fas fa-edit"></span></a><a href="javascript:EliminarProducto(1242);" title="Eliminar"><span class="fas fa-trash-alt"></span></a></div></td></tr><tr><td data-title="Nº" style="width:8%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); ">2<input id="gridProductos_ccG_Id_7" type="hidden" value="8##1253" style="visibility:hidden"></td><td data-title="Nombre" style="width:42%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); ">Abrig</td><td data-title="Nombre Técnico" style="width:40%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); "></td><td data-title="" style="width:10%" align="center" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); "><div class="accion-box"><a href="javascript:EditarProducto(1253);" title="Editar"><span class="fas fa-edit"></span></a><a href="javascript:EliminarProducto(1253);" title="Eliminar"><span class="fas fa-trash-alt"></span></a></div></td></tr><tr><td data-title="Nº" style="width:8%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); ">3<input id="gridProductos_ccG_Id_8" type="hidden" value="9##3" style="visibility:hidden"></td><td data-title="Nombre" style="width:42%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); ">Abrigo de Alpaca</td><td data-title="Nombre Técnico" style="width:40%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); "></td><td data-title="" style="width:10%" align="center" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); "><div class="accion-box"><a href="javascript:EditarProducto(3);" title="Editar"><span class="fas fa-edit"></span></a><a href="javascript:EliminarProducto(3);" title="Eliminar"><span class="fas fa-trash-alt"></span></a></div></td></tr><tr><td data-title="Nº" style="width:8%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); ">4<input id="gridProductos_ccG_Id_9" type="hidden" value="10##1243" style="visibility:hidden"></td><td data-title="Nombre" style="width:42%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); ">Aceite</td><td data-title="Nombre Técnico" style="width:40%" align="left" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); "></td><td data-title="" style="width:10%" align="center" onclick="ccGrid['gridProductos'].__SeleccionarFila(this); "><div class="accion-box"><a href="javascript:EditarProducto(1243);" title="Editar"><span class="fas fa-edit"></span></a><a href="javascript:EliminarProducto(1243);" title="Eliminar"><span class="fas fa-trash-alt"></span></a></div></td></tr></tbody></table>
+                                        </div>
+                                        <nav class="cont-icons">
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="cont-box">
+                                    <button id="btnGuardar" class="cont-box-submit" value="Registrar">
+                                        <label>Seleccionar</label>
+                                    </button>
+                                </div>
+                                <div class="cont-box">
+                                    <button id="btnCancelarProducto" class="cont-box-cancel close">
+                                        <label>Cancelar</label>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal-modal-bg" style="transition: all 0.4s linear 0s; height: 0px; opacity: 0;">
+                        <div style="width:600px" class="modal-registrar">
+                            <h2 id="lblRegistro">Crear factura</h2>
+                            <div style="width:470px" class="cont-box">
+                                <label class="cont-box-label">Código:</label>
+                                <input id="txtNombre" type="text" class="cont-box-input" maxlength="1" placeholder="" disabled="disabled">
+                            </div>
+
+                            <div style="width:470px" class="cont-box">
+                                <label class="cont-box-label">Origen:</label>
+                                <select id="ddlPerfil" class="cont-box-select">
+                                    <option value="0">Seleccione</option>
+                                    <option value="19">Orden de Compra</option>
+                                    <option value="20">Cotización</option>
+                                    <option value="21">Pedido</option>
+                                </select>
+                            </div>
+                            <div style="width:470px" class="cont-box">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="cont-box-label">Proveedor:</label>
+                                <input id="txtAMaterno" type="text" class="cont-box-input" maxlength="30"><a href="javascript:" id="btnNuevoProveedor" class="cont-box-new"><span class="fas fa-search" title="Seleccionar proveedor"></span></a>
+                            </div>
+                            <div style="width:470px" class="cont-box">
+                                <label class="cont-box-label">Dirección:</label>
+                                <input id="txtTelefono" type="text" class="cont-box-input" maxlength="15">
+                            </div>
+
+                            <div style="width:470px" class="cont-box">
+                                <label class="cont-box-label">Comprador:</label>
+                                <select id="ddlPerfil" class="cont-box-select">
+                                    <option value="0">Seleccione</option>
+                                    <option value="230">Alex Payano Pillaca</option>
+                                    <option value="153">Alex Santiago Rojas</option>
+                                    <option value="192">Alexandra Salé Huaraz</option>
+                                    <option value="181">Ana  Alvarado Mejia</option>
+                                    <option value="195">Aracely Martel Casas</option>
+                                    <option value="228">bob Increible Increible</option>
+                                    <option value="170">Carolina  Rodriguez Mendoza</option>
+                                    <option value="224">deco deco deco</option>
+                                    <option value="190">Diego  Cáceres Benites</option>
+                                    <option value="184">Edwin David Chara Inca</option>
+                                    <option value="159">Emily Pareja Libia</option>
+                                    <option value="186">Harlet Jenny Pernia Espinoza</option>
+                                    <option value="154">Javier Solano Santos</option>
+                                    <option value="196">Jose Campos Reyes</option>
+                                    <option value="171">Juliana Sanchez Valeriano</option>
+                                    <option value="180">Karina Solorzano Latours</option>
+                                    <option value="148">Luz María Fernandez De la Cruz</option>
+                                    <option value="225">Mario Rodas Pillaca</option>
+                                    <option value="198">Mitchel Coronel Casas</option>
+                                    <option value="191">Oscar Rodolfo Mejía Fernandez</option>
+                                    <option value="231">Pepe Díaz Pillaca</option>
+                                    <option value="168">Rolando Torres Roque</option>
+                                    <option value="10">Ruben Salas Quispe</option>
+                                    <option value="185">Ruth Vanessa Machaca Ccahui</option>
+                                    <option value="197">Willy Paredes Palomino</option>
+                                </select>
+                            </div>
+                            <div style="width:470px" class="cont-box">
+                                <label class="cont-box-label">Moneda:</label>
+                                <select id="ddlPerfil" class="cont-box-select">
+                                    <option value="0">Seleccione</option>
+                                    <option value="2">Soles</option>
+                                    <option value="4">Dólares</option>
+
+
+
+
+
+
+                                </select>
+                            </div>
+                            <div class="">
+                                <div class="cont-cont">
+                                    <div class="cont-header">
+                                        Lista de productos
+                                    </div>
+                                    <div class="section-check">
+                                        <nav class="cont-icons">
+                                            <a id="btnNuevaProducto" href="javascript:" class="cont-icons-new">
+                                                <span class="fas fa-plus"></span><span>Añadir</span>
+                                            </a>
+                                        </nav>
+                                        <div class="cont-table">
+                                            <table id="" class="cont-left tableResponsive" style="width: 98%;"><thead><tr><th style="width:8%;">Nº</th><th style="width:5%;">Código</th><th style="width:50%;">Producto y/o servicio</th><th style="width:5%;">Medida</th><th style="width:20%;">Precio</th></tr></thead><tbody></tbody></table>
+                                        </div>
+                                        <nav class="cont-icons">
+
+                                        </nav>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="cont-box">
+
+
+                            </div>
+                            <div class="cont-box">
+
+
+                            </div>
+                            <div class="cont-box">
+                                <button id="btnGuardar" class="cont-box-submit" value="Registrar"><label>Registrar</label></button>
+                            </div>
+                            <div class="cont-box"><button id="btnCancelar" class="cont-box-cancel close"><label>Cancelar</label></button></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var editar = true;
+        var eliminar = true;
+    </script>
+ 
+    <script>
+
+        $(function () {
+            $('#btnMenu').click(function () {
+                $('.side-menu').toggleClass('slide-menu');
+            });
+            $('.menu-option').click(function () {
+                $('.side-menu').toggleClass('slide-menu');
+            });
+        });
+    </script>
+</body>
+
+</html>

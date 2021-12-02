@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    
+    <title>Detalle Ruta Aérea - PromPeru</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/iconos/icon.png">
+
+    <link href="css/Menu.css" rel="stylesheet">
+    <link href="iconmoon/iconmoon.css" rel="stylesheet">
+    <link href="css/apprise.css" rel="stylesheet">
+    <link href="css/botones.css" rel="stylesheet">
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/helper.js"></script>
+    <script src="Scripts/apprise.js"></script>
+    <script src="Scripts/ccGrid.js"></script>
+    <script>
+        var urlRaiz = "../";
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="l-contents header-cont">
+                <div class="header-logo2">
+                    <h2>CMS Herramientas logisticas</h2>
+                </div>
+                <div class="header-logo3"><a href="Seguridad/Login.html" class="header-close"><span>Cerrar Sesión</span><span class="fas fa-power-off"></span></a><a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a></div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu">
+        <ul class="menu">
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-office"></span>CMS General<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li><a class="menu-option" href="Usuario.html">Usuario</a></li>
+                    <li><a class="menu-option" href="Perfil.html" >Perfil</a></li>
+					<li><a class="menu-option" href="UsuarioEmpresa.html" >Usuario Empresa</a></li>
+					<li><a class="menu-option" href="Logos.html" >Logo</a></li>
+					<li><a class="menu-option" href="Notificacion.html" >Notificaciones</a></li>
+					<li><a class="menu-option" href="CTipoContenedor.html" >Tipo de Contenedor</a></li>
+					<li><a class="menu-option" href="CLPartida.html">Subpartida Nacional</a></li>
+                    <li><a class="menu-option" href="CLProducto.html" >Producto</a></li>
+					<li><a class="menu-option" href="RAPais.html" >País</a></li>
+					<li><a class="menu-option" href="TextoSugerencia.html" >Texto Sugerencia</a></li>
+					<li><a class="menu-option" href="TextoRegistroEmpresa.html" >Texto Registro</a></li>
+					<li><a class="menu-option" href="CLMaestrosV.html" >Maestros Varios</a></li>
+                    <li><a class="menu-option" href="Sugerencia.html">Sugerencia</a></li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-earth"></span>Rutas Maritimas<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option"  href="RutaMaritima.html" style="background-color: #777;">Rutas</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option"  href="RMPuerto.html">Puerto</a></li>
+							<li><a class="menu-option" href="RMLineaN.html">Linea Naviera</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-airplane"></span>Rutas Aéreas<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:block;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:block;">
+							<li><a class="menu-option" href="RutaAerea.html">Rutas</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="RAAeropuerto.html">Aeropuerto</a></li>
+							<li><a class="menu-option" href="RALineaA.html">Linea Aérea</a></li>
+                            <li><a class="menu-option" href="RAEscala.html">Escala</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-truck"></span>Rutas Terrestres<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="RutaTerrestre.html">Rutas</a></li>
+                            <li><a class="menu-option" href="RTTarifa.html">Tarifa</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="RTCiudad.html">Ciudad</a></li>
+							<li><a class="menu-option" href="RTOperadorL.html">Operador Logístico</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-users"></span>Directorio Logistico<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="DirectorioLogistico.html">Directorio Logistico</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="DLProducto.html">Producto</a></li>
+							<li><a class="menu-option" href="DLServicio.html">Servicios</a></li>
+                            <li><a class="menu-option" href="DLMercadoE.html">Mercado Exportación</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-insert-template"></span>Simulador de Cubicaje<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                	<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="CTipoCarga.html" >Tipo Carga</a></li>
+                            <li><a class="menu-option" href="CCarga.html" >Carga</a></li>
+							<li><a class="menu-option" href="CProducto.html">Producto</a></li>
+                            <li><a class="menu-option" href="Sugerencia.html">Sugerencia</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-clipboard"></span>Simulador de Drawback<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="DipoProduccion.html">Tipo de producción</a></li>
+							<li><a class="menu-option" href="DInsumos.html">Insumos</a></li>
+							<li><a class="menu-option" href="DModalidad.html">Modalidad</a></li>
+                            <li><a class="menu-option" href="DDeclaraciónA.html">Consignación del código 13</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-coin-dollar"></span>Costos de Exportación<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="CLCostos.html">Costos</a></li>
+							<li><a class="menu-option" href="CLFleteA.html">Flete Aéreo</a></li>
+							<li><a class="menu-option" href="CLFleteMFCL.html">Flete Marítimo FCL</a></li>
+							<li><a class="menu-option" href="CLFleteMLCL.html">Flete Marítimo LCL</a></li>
+							<li><a class="menu-option" href="CLTasaA.html">Tasa Arancelaria</a></li>
+							<li><a class="menu-option" href="CLGasto.html">Gasto</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="CLMaestrosV.html">Maestros varios</a></li>
+							<li><a class="menu-option" href="CLAeropuerto.html">Aeropuerto</a></li>
+							<li><a class="menu-option" href="CLPuerto.html">Puerto</a></li>
+							<li><a class="menu-option" href="CLGlosario.html">Glosario</a></li>
+							<li><a class="menu-option" href="CLSector.html">Sector</a></li>
+							<li><a class="menu-option" href="Sugerencia.html">Sugerencia</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+        </ul>
+
+    </div>
+
+    <div class="side-body" id="divContenido" style="min-height:500px;">
+
+        <link href="css/jquery.datepick.min.css" rel="stylesheet">
+        <script src="Scripts/jquery.plugin.min.js"></script>
+        <script src="Scripts/jquery.datepick.min.js"></script>
+        <script src="Scripts/jquery.datepick-es.js"></script>
+        <script src="ScriptsForms/Admin/Mantenimientos/RutaAereaDetalle.js"></script>
+
+        <p id="idConcepto" visibility="" hidden=""></p>
+        <div class="l-contents">
+            <div class="cont-cont">
+                <div class="cont-header">
+                    <h1 class="cont-header-h1" style="padding-bottom:10px;">Detalle Ruta Maestra: </h1><h2> Norteamérica - Oeste</h2>
+                </div>
+
+                <div class="cont-boxes">
+                    <!--<div id="divCombo" class="cont-box" style="width: 330px !important; display: ;">
+                    </div>
+                    <div id="divCombo" class="cont-box" style="width: 330px !important; display: ;">
+                    </div>
+                    <div id="divCombo" class="cont-box" style="width: 400px !important">
+                    </div>-->
+                    <nav class="cont-icons">
+                        <a id="btnNuevaFactura" href="javascript:" class="cont-icons">
+                            <span class="fas fa-plus"></span><span>Nueva ruta</span>
+                        </a>
+                    </nav>
+                    <div class="cont-table">
+                        <table id="gridUsuarios" class="cont-left tableResponsive" style="width: 100%; min-width: 400px; max-width: 1200px;">
+                            <thead>
+                                <tr class="filter">
+                                    <th data-title="Nº" style="width:5%"></th>
+                                    <th data-title="Usuario" style="width:10%">
+                                        <input type="text" id="gridUsuarios_txtB_NombreCompleto">
+                                    </th>
+                                    <th data-title="Correo" style="width:10%">
+                                        <input type="text" id="gridUsuarios_txtB_Usua_Email">
+                                    </th>
+                                    <th data-title="Teléfono" style="width:10%">
+                                        <input type="text" id="gridUsuarios_txtB_Usua_Telefono">
+                                    </th>
+                                    <th data-title="Teléfono" style="width:10%">
+                                        <input type="text" id="gridUsuarios_txtB_Usua_Telefono">
+                                    </th>
+                                    <th data-title="" style="width:10%" align="center">
+                                        <div class="accion-box">
+                                            <a href="" title="Editar"><span class="fas fa-search"></span></a>                                          
+                                                                                          
+                                        </div>
+                                    </th>
+
+                                </tr>
+                                <tr>
+                                    <th style="width:5%;">
+                                        <a id="">Ordenº</a>
+                                    </th>
+                                    <th style="width:10%;">
+                                        <a id="">Destino</a>
+                                    </th>
+                                    <th style="width:10%;">
+                                        <a id="">Frecuencia</a>
+                                    </th>
+                                    <th style="width:5%;">
+                                        <a id="">Tiempo de viaje (horas)</a>
+                                    </th>
+                                    <th style="width:10%;"><a id="a_Usua_Email">Mapa</a></th>
+                                    <th style="width:10%;">
+                                        <a id=""></a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6"></td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Nº" style="width:5%" align="left">
+                                        1
+                                    </td>
+                                    <td data-title="Cliente" style="width:10%" align="center">Miami - EEUU</td>
+                                    <td data-title="Serie" style="width:10%" align="left">SEMANAL</td>
+                                    <td data-title="Teléfono" style="width:5%" align="left">10</td>
+                                    <td data-title="Teléfono" style="width:10%" align="left">
+                                        <img src="img/RutaAerea/Lima - Miami 1.jpg" alt="tipo carga" width="70" height="70">
+                                    </td>
+                                    <td data-title="" style="width:10%" align="center">
+                                        <div class="accion-box">
+                                            <a href="javascript:EditarFactura(1);" title="Editar">
+                                                <span class="fas fa-edit">
+                                                </span>
+                                            </a>
+                                            <a href="javascript:EliminarFactura('F003-00000135',1);" title="Eliminar">
+                                                <span class="fas icon-cross"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="" style="width:5%" align="left">2</td>
+                                    <td data-title="Cliente" style="width:10%" align="center">Washington - EEUU</td>
+                                    <td data-title="Serie" style="width:10%" align="left">SEMANAL</td>
+                                    <td data-title="Teléfono" style="width:5%" align="left">2</td>
+                                    <td data-title="Teléfono" style="width:10%" align="left">
+                                        <img src="img/RutaAerea/Lima - Washington.jpg" alt="tipo carga" width="70" height="70">
+                                    </td>
+                                    <td data-title="" style="width:10%" align="center">
+                                        <div class="accion-box">
+                                            <a href="javascript:EditarFactura(2);" title="Editar">
+                                                <span class="fas fa-edit">
+                                                </span>
+                                            </a><a href="javascript:EliminarFactura('F005-00000130',2);" title="Eliminar">
+                                                <span class="fas icon-cross"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Nº" style="width:5%" align="left">3</td>
+                                    <td data-title="Usuario" style="width:10%" align="center">Los Angeles - EEUU</td>
+                                    <td data-title="Teléfono" style="width:10%" align="left">SEMANAL</td>
+                                    <td data-title="Teléfono" style="width:5%" align="left">3</td>
+                                    <td data-title="Teléfono" style="width:10%" align="left">
+                                        <img src="img/RutaAerea/Lima - Los Angeles.jpg" alt="tipo carga" width="70" height="70">
+                                    </td>
+                                    <td data-title="" style="width:10%" align="center">
+                                        <div class="accion-box">
+                                            <a href="javascript:EditarFactura(3);" title="Editar">
+                                                <span class="fas fa-edit"></span>
+                                            </a>
+                                            <a href="javascript:EliminarFactura('F002-00000134',3);" title="Eliminar">
+                                                <span class="fas icon-cross"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="reveal-modal-bg2" style="transition: all 0.4s linear 0s; height: 0px; opacity: 0;">
+                            <div class="modal-registrar modal-registrar-ancho700">
+                                <div class="cont-cont">
+                                    <h2 id="">Lista de proveedores</h2>
+                                    <div class="section-check">
+
+                                        <div class="cont-table">
+
+                                            <table id="gridUsuarios" class="cont-left tableResponsive" style="width: 100%; min-width: 400px; max-width: 700px;">
+                                                <thead>
+                                                    <tr class="filter">
+                                                        <th data-title="Nº" style="width:10%"></th>
+                                                        <th data-title="Usuario" style="width:35%">
+                                                            <input type="text" id="gridUsuarios_txtB_NombreCompleto">
+                                                        </th>
+                                                        <th data-title="Correo" style="width:25%">
+                                                            <input type="text" id="">
+                                                        </th>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width:10%;"><a id="a_RowNumber">Nº</a></th>
+                                                        <th style="width:20%;"><a id="a_NombreCompleto">RUC/DNI</a></th>
+                                                        <th style="width:25%;"><a id="a_Usua_Email">Empresa</a></th>
+                                                        <th style="width:5%;"><a id="a_Usua_Email"></a></th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <div id="gridUsuarios_divPaginacion" style="display: none;">
+                                                                <nav class="cont-nav">
+                                                                    <a href="">
+                                                                        <span class="fas fa-angle-double-left"></span>
+                                                                    </a>
+                                                                    <a href="">
+                                                                        <span class="fas fa-angle-left"></span>
+                                                                    </a><a href="">
+                                                                        <span class="fas fa-angle-right"></span>
+                                                                    </a>
+                                                                    <a href="">
+                                                                        <span class="fas fa-angle-double-right"></span>
+                                                                    </a><input id="gridUsuarios_TextboxPaginaActual" type="text" value="1" class="cont-nav-n">
+                                                                    <p>
+                                                                        de <label id="gridUsuarios_LabelTotalPaginas"></label> páginas, N° de registros: <label id="gridUsuarios_LabelTotalRegistros">
+                                                                        </label>
+                                                                    </p>
+                                                                </nav>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                    <tr>
+                                                        <td data-title="Nº" style="width:10%" align="center">
+                                                            1<input id="gridUsuarios_ccG_Id_0" type="hidden" value="1##6##undefined##undefined" style="visibility:hidden">
+                                                        </td>
+                                                        <td data-title="Usuario" style="width:20%" align="left">20515691562	</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">	A.F.A.P. REPUBLICA S.A.</td>
+
+
+                                                        <td data-title="" style="width:10%" align="center">
+                                                            <div class="accion-box">
+                                                                <a href="javascript:EditarUsuario(6);" title="Editar"><span class="fas fa-edit"></span></a>
+                                                                <a href="javascript:EliminarUsuario('Fernando Mestanza Robles',6);" title="Eliminar">
+                                                                    <span class="fas icon-cross"></span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-title="Nº" style="width:10%" align="center">2<input id="gridUsuarios_ccG_Id_1" type="hidden" value="2##5##undefined##undefined" style="visibility:hidden"></td>
+                                                        <td data-title="Usuario" style="width:35%" align="left">20512178881</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">ALMACENES PARIS S.A.C.</td>
+
+
+                                                        <td data-title="" style="width:10%" align="center">
+                                                            <div class="accion-box">
+                                                                <a href="javascript:EditarUsuario(5);" title="Editar">
+                                                                    <span class="fas fa-edit"></span>
+                                                                </a>
+                                                                <a href="javascript:EliminarUsuario('Pedro Rivera Castro',5);" title="Eliminar">
+                                                                    <span class="fas icon-cross"></span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-title="Nº" style="width:10%" align="center">3<input id="gridUsuarios_ccG_Id_2" type="hidden" value="3##1##undefined##undefined" style="visibility:hidden"></td>
+                                                        <td data-title="Usuario" style="width:35%" align="left">20159969156	</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">Amerop Peru</td>
+
+
+                                                        <td data-title="" style="width:10%" align="center">
+                                                            <div class="accion-box">
+                                                                <a href="javascript:EditarUsuario(1);" title="Editar"><span class="fas fa-edit"></span></a>
+                                                                <a href="javascript:EliminarUsuario('Alex Sandoval Caro',1);" title="Eliminar">
+                                                                    <span class="fas icon-cross"></span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-title="Nº" style="width:10%" align="left">2<input id="gridUsuarios_ccG_Id_1" type="hidden" value="2##5##undefined##undefined" style="visibility:hidden"></td>
+                                                        <td data-title="Usuario" style="width:35%" align="left">20187787870</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">ALMACENES PARIS S.A.C.</td>
+
+
+                                                        <td data-title="" style="width:10%" align="center">
+                                                            <div class="accion-box">
+                                                                <a href="javascript:EditarUsuario(5);" title="Editar">
+                                                                    <span class="fas fa-edit"></span>
+                                                                </a>
+                                                                <a href="javascript:EliminarUsuario('Pedro Rivera Castro',5);" title="Eliminar">
+                                                                    <span class="fas icon-cross"></span>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav class="cont-icons">
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="cont-box">
+                                    <button id="btnGuardar" class="cont-box-submit" value="Registrar">
+                                        <label>Seleccionar</label>
+                                    </button>
+                                </div>
+                                <div class="cont-box">
+                                    <button id="btnCancelarProveedor" class="cont-box-cancel close">
+                                        <label>Cancelar</label>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reveal-modal-bg2" style="transition: all 0.4s linear 0s; height: 0px; opacity: 0;">
+                            <div class="modal-registrar modal-registrar-ancho700">
+                                <div class="cont-cont">
+                                    <h2 id="">Agente Marítimo</h2>
+                                    <div class="section-check">
+
+                                        <div style="width:470px" class="cont-box">
+                                            <label class="cont-box-label">Línea Aérea:</label>
+                                            <select id="ddlPerfil" class="cont-box-select">
+                                                <option value="0">Seleccione</option>
+                                                <option value="19">Latam Cargo</option>
+                                                <option value="20">KLM Cargo</option>
+                                                <option value="21">Delta Cargo</option>
+                                            </select>
+                                        </div>
+                                        <div style="width:470px" class="cont-box">
+                                            <label class="cont-box-label">Frecuencia:</label>
+                                            <select id="ddlPerfil" class="cont-box-select">
+                                                <option value="0">Seleccione</option>
+                                                <option value="19">Diaria</option>
+                                                <option value="20">InterDiaria</option>
+                                                <option value="21">Semanal</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont-box">
+                                    <button id="btnGuardar" class="cont-box-submit" value="Registrar">
+                                        <label>Guardar</label>
+                                    </button>
+                                </div>
+                                <div class="cont-box">
+                                    <button id="btnCancelarProducto" class="cont-box-cancel close">
+                                        <label>Cancelar</label>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal-modal-bg" style="transition: all 0.4s linear 0s; height: 0px; opacity: 0;">
+                        <div style="width:700px" class="modal-registrar">
+                            <h2 id="lblRegistro">Crear Ruta</h2>
+
+                            
+                            <div style="width:500px" class="cont-box">
+                                <label class="cont-box-label">Destino:</label>
+                                <select id="ddlPerfil" class="cont-box-select">
+                                    <option value="0">Seleccione</option>
+                                    <option value="19">Miami - EEUU</option>
+                                    <option value="20">Los Angeles - EEUU</option>
+                                    <option value="21">Washington - EEUU</option>
+                                </select>
+                            </div>
+                            <div style="width:500px" class="cont-box">
+                                <label class="cont-box-label">Tiempo viaje (horas):</label>
+                                <input id="txtTelefono" type="text" class="cont-box-input" maxlength="15">
+                            </div>
+                            <div style="width:500px" class="cont-box">
+                                <label class="cont-box-label">Orden:</label>
+                                <input id="txtTelefono" type="text" class="cont-box-input" maxlength="15">
+                            </div>
+                            <div style="width:500px" class="cont-box">
+                                <label class="cont-box-label">Ruta:</label>
+                                <input type="file" id="seleccionArchivo" class="cont-box-input" name="seleccionArchivo" style="border:0 !important;">
+                            </div>
+                            
+                            <img id="imagenPrevisualizacion" style="max-height:180px; max-width:180px;">
+                            
+                            <div class="">
+                                <div class="cont-cont">
+                                    <div class="cont-header">
+                                        Lista de Línea Aérea
+                                    </div>
+                                    <div class="section-check">
+                                        <nav class="cont-icons">
+                                            <a id="btnNuevaProducto" href="javascript:" class="cont-icons-new">
+                                                <span class="fas fa-plus"></span><span>Añadir</span>
+                                            </a>
+                                        </nav>
+                                        <div class="cont-table">
+                                            <table id="" class="cont-left tableResponsive" style="width: 98%;">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width:20%;">Línea Aérea</th>
+                                                        <th style="width:20%;">Frecuencia</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td data-title="Usuario" style="width:20%" align="left">Latam Cargo	</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">Diaria</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-title="Usuario" style="width:20%" align="left">KLM Cargo	</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">Diaria</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-title="Usuario" style="width:20%" align="left">Delta Cargo</td>
+                                                        <td data-title="Correo" style="width:25%" align="left">Diaria</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav class="cont-icons">
+
+                                        </nav>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="cont-box">
+
+
+                            </div>
+                            <div class="cont-box">
+
+
+                            </div>
+                            <div class="cont-box">
+                                <button id="btnGuardar" class="cont-box-submit" value="Registrar"><label>Registrar</label></button>
+                            </div>
+                            <div class="cont-box"><button id="btnCancelar" class="cont-box-cancel close"><label>Cancelar</label></button></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var editar = true;
+        var eliminar = true;
+    </script>
+ 
+    <script>
+
+        $(function () {
+            $('#btnMenu').click(function () {
+                $('.side-menu').toggleClass('slide-menu');
+            });
+            $('.menu-option').click(function () {
+                $('.side-menu').toggleClass('slide-menu');
+            });
+        });
+    </script>
+</body>
+
+</html>

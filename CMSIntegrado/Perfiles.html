@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    
+    <title>Perfiles - PromPeru</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="../img/iconos/icon.png">
+
+    <link href="css/Menu.css" rel="stylesheet">
+    <link href="iconmoon/iconmoon.css" rel="stylesheet">
+    <link href="css/apprise.css" rel="stylesheet">
+    <link href="css/botones.css" rel="stylesheet">
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/helper.js"></script>
+    <script src="Scripts/apprise.js"></script>
+    <script src="Scripts/ccGrid.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="l-contents header-cont">
+                <div class="header-logo2">
+                    <h2>[Nombre del sistema]</h2>
+                </div>
+                <div class="header-logo3"><a href="Seguridad/Login.html" class="header-close"><span>Cerrar Sesión</span><span class="fas fa-power-off"></span></a><a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a></div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu">
+
+        <ul class="menu">
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-office"></span>CMS General<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:block;">
+                    <li><a class="menu-option" href="Usuario.html">Usuario</a></li>
+                    <li><a class="menu-option" href="Perfil.html" style="background-color: #777;">Perfil</a></li>
+					<li><a class="menu-option" href="UsuarioEmpresa.html">Usuario Empresa</a></li>
+					<li><a class="menu-option" href="Logos.html">Logo</a></li>
+					<li><a class="menu-option" href="Notificacion.html">Notificaciones</a></li>
+					<li><a class="menu-option" href="CTipoContenedor.html" >Tipo de Contenedor</a></li>
+					<li><a class="menu-option" href="CLPartida.html">Subpartida Nacional</a></li>
+                    <li><a class="menu-option" href="CLProducto.html">Producto</a></li>
+					<li><a class="menu-option" href="RAPais.html">País</a></li>
+					<li><a class="menu-option" href="TextoSugerencia.html">Texto Sugerencia</a></li>
+					<li><a class="menu-option" href="TextoRegistroEmpresa.html">Texto Registro</a></li>
+					<li><a class="menu-option" href="CLMaestrosV.html">Maestros Varios</a></li>
+                    <li><a class="menu-option" href="Sugerencia.html">Sugerencia</a></li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-earth"></span>Rutas Maritimas<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option"  href="RutaMaritima.html">Rutas</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option"  href="RMPuerto.html">Puerto</a></li>
+							<li><a class="menu-option" href="RMLineaN.html">Linea Naviera</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-airplane"></span>Rutas Aéreas<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="RutaAerea.html">Rutas</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="RAAeropuerto.html">Aeropuerto</a></li>
+							<li><a class="menu-option" href="RALineaA.html">Linea Aérea</a></li>
+                            <li><a class="menu-option" href="RAEscala.html">Escala</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-truck"></span>Rutas Terrestres<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="RutaTerrestre.html">Rutas</a></li>
+                            <li><a class="menu-option" href="RTTarifa.html">Tarifa</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="RTCiudad.html">Ciudad</a></li>
+							<li><a class="menu-option" href="RTOperadorL.html">Operador Logístico</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-users"></span>Directorio Logistico<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="DirectorioLogistico.html">Directorio Logistico</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="DLProducto.html">Producto</a></li>
+							<li><a class="menu-option" href="DLServicio.html">Servicios</a></li>
+                            <li><a class="menu-option" href="DLMercadoE.html">Mercado Exportación</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-insert-template"></span>Simulador de Cubicaje<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                	<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="CTipoCarga.html" >Tipo Carga</a></li>
+                            <li><a class="menu-option" href="CCarga.html" >Carga</a></li>
+							<li><a class="menu-option" href="CProducto.html">Producto</a></li>
+                            <li><a class="menu-option" href="Sugerencia.html">Sugerencia</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-clipboard"></span>Simulador de Drawback<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="DipoProduccion.html">Tipo de producción</a></li>
+							<li><a class="menu-option" href="DInsumos.html">Insumos</a></li>
+							<li><a class="menu-option" href="DModalidad.html">Modalidad</a></li>
+                            <li><a class="menu-option" href="DDeclaraciónA.html">Consignación del código 13</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-coin-dollar"></span>Costos de Exportación<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="CLCostos.html">Costos</a></li>
+							<li><a class="menu-option" href="CLFleteA.html">Flete Aéreo</a></li>
+							<li><a class="menu-option" href="CLFleteMFCL.html">Flete Marítimo FCL</a></li>
+							<li><a class="menu-option" href="CLFleteMLCL.html">Flete Marítimo LCL</a></li>
+							<li><a class="menu-option" href="CLTasaA.html">Tasa Arancelaria</a></li>
+							<li><a class="menu-option" href="CLGasto.html">Gasto</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="CLMaestrosV.html">Maestros varios</a></li>
+							<li><a class="menu-option" href="CLAeropuerto.html">Aeropuerto</a></li>
+							<li><a class="menu-option" href="CLPuerto.html">Puerto</a></li>
+							<li><a class="menu-option" href="CLGlosario.html">Glosario</a></li>
+							<li><a class="menu-option" href="CLSector.html">Sector</a></li>
+							<li><a class="menu-option" href="Sugerencia.html">Sugerencia</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+        </ul>
+
+    </div>
+    
+    <!-- Main Content -->
+    <div class="side-body" id="divContenido" style="min-height:500px;">
+
+
+
+        <script src="ScriptsForms/Admin/Seguridad/Perfil.js"></script>
+
+        <div>
+            <p id="idPerfil" visibility="" hidden="">0</p>
+            <p id="idPerfilConfig" visibility="" hidden="">0</p>
+            <div class="l-contents">
+                <div class="cont-cont">
+                    <div class="cont-header">
+                        <h1 class="cont-header-h1">Perfiles</h1>
+                    </div>
+                    <nav class="cont-icons"><a id="btnNuevo" href="javascript:" class="cont-icons-new"><span class="fas icon-plus"></span><span>Nuevo</span></a></nav>
+                    <div class="cont-table">
+                        <table id="gridPerfiles" class="cont-left tableResponsive" style="width: 100%; min-width: 400px; max-width: 700px;">
+                            <thead>
+                                <tr class="filter">
+                                    <th data-title="Nº" style="width:8%">
+
+                                    </th>
+                                    <th data-title="Perfil" style="width:42%">
+                                        <input type="text" onkeypress=" ccGrid['gridPerfiles'].FiltrarGrid(event); " id="gridPerfiles_txtB_Perf_Nombre">
+                                    </th>
+                                    <th data-title="Estado" style="width:40%">
+                                        <input type="text" onkeypress=" ccGrid['gridPerfiles'].FiltrarGrid(event); " id="gridPerfiles_txtB_Perf_ActivoDescripcion">
+                                    </th>
+                                    <th data-title="" style="width:10%"></th>
+                                </tr>
+                                <tr>
+                                    <th style="width:8%;">
+                                        <a id="a_RowNumber" onclick="ccGrid['gridPerfiles'].OrdenarGrid('RowNumber')">Nº</a>
+                                    </th>
+                                    <th style="width:42%;">
+                                        <a id="a_Perf_Nombre" onclick="ccGrid['gridPerfiles'].OrdenarGrid('Perf_Nombre')">Perfil</a>
+                                    </th>
+                                    <th style="width:40%;">
+                                        <a id="a_Perf_ActivoDescripcion" onclick="ccGrid['gridPerfiles'].OrdenarGrid('Perf_ActivoDescripcion')">Estado</a>
+                                    </th>
+                                    <th style="width:10%;">
+                                        <a id="a_" onclick="ccGrid['gridPerfiles'].OrdenarGrid('')"></a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">
+                                        <div id="gridPerfiles_divPaginacion" style="display: none;">
+                                            <nav class="cont-nav">
+                                                <a href="" onclick="return ccGrid[gridPerfiles].PaginarGrid(first);">
+                                                    <span class="fas fa-angle-double-left">
+                                                    </span>
+                                                </a>
+                                                <a href="" onclick="return ccGrid[gridPerfiles].PaginarGrid(previous);">
+                                                    <span class="fas fa-angle-left"></span>
+                                                </a>
+                                                <a href="" onclick="return ccGrid[gridPerfiles].PaginarGrid(next);">
+                                                    <span class="fas fa-angle-right"></span>
+                                                </a>
+                                                <a href="" onclick="return ccGrid[gridPerfiles].PaginarGrid(last);">
+                                                    <span class="fas fa-angle-double-right"></span>
+                                                </a>
+                                                <input id="gridPerfiles_TextboxPaginaActual" type="text" value="1" class="cont-nav-n" onkeypress="if (ccG_ValidaSoloNumeros(event))return ccGrid['gridPerfiles'].PaginarGrid('current', event); else return false;"><p>
+                                                    de <label id="gridPerfiles_LabelTotalPaginas">
+                                                    </label> páginas, N° de registros: <label id="gridPerfiles_LabelTotalRegistros"></label>
+                                                </p>
+                                            </nav>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr class="selected">
+                                    <td data-title="Nº" style="width:8%" align="left" onclick="ccGrid['gridPerfiles'].__SeleccionarFila(this); ">
+                                        1<input id="gridPerfiles_ccG_Id_0" type="hidden" value="1##1##Administrador" style="visibility:hidden">
+                                    </td>
+                                    <td data-title="Perfil" style="width:42%" align="left" onclick="ccGrid['gridPerfiles'].__SeleccionarFila(this); ">Administrador</td>
+                                    <td data-title="Estado" style="width:40%" align="left" onclick="ccGrid['gridPerfiles'].__SeleccionarFila(this); ">Activo</td>
+                                    <td data-title="" style="width:10%" align="center" onclick="ccGrid['gridPerfiles'].__SeleccionarFila(this); ">
+                                        <div class="accion-box">
+                                            <a href="javascript:Configuracion('Administrador',1);" title="Editar">
+                                                <span class="fas fa-edit"></span>
+                                            </a>
+                                            <a href="javascript:EliminarPerfil('Administrador',1);" title="Eliminar">
+                                                <span class="fas fa-trash-alt"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="reveal-modal-bg">
+                <div class="modal-registrar">
+                    <h2 id="lblRegistro">Registro de Perfil</h2>
+                    <div class="cont-box">
+                        <label class="cont-box-label">Nombre:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input cajaNormal" maxlength="50">
+                    </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label">Activo:</label>
+
+                        <div class="cont-input-cl">
+                            <input type="checkbox" id="chkActivo" class="input-checkbox comboNormal" checked="" value="0">
+                            <label for="chkActivo" class="input-checkbox-lab"> </label>
+                        </div>
+
+                    </div>
+                    <div id="panelUsuario" class="cont-cont" style="display: none;">
+                        <div class="cont-header">
+                            Configuración
+                        </div>
+                        <div class="section-check">
+                            <div class="cont-table">
+                                <table id="gridConfiguracion" class="cont-left tableResponsive"></table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont-box">
+                        <button id="btnGuardar" class="cont-box-submit" value="Registrar"><label>Registrar</label></button>
+                    </div>
+                    <div class="cont-box"><button id="btnCancelar" class="cont-box-cancel close"><label>Cancelar</label></button></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var editar = true;
+            var eliminar = true;
+        </script>
+    </div>
+
+    <script>
+
+        $(function () {
+            $('#btnMenu').click(function () {
+                $('.side-menu').toggleClass('slide-menu');
+            });
+            $('.menu-option').click(function () {
+                $('.side-menu').toggleClass('slide-menu');
+            });
+        });
+
+    </script>
+
+</body>
+</html>

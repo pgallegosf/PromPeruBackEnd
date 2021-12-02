@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    
+    <title>Paso 3 - PromPeru</title>
+	<base href="../" />
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="../img/iconos/icon.png">
+
+    <link href="css/Menu.css" rel="stylesheet">
+    <link href="iconmoon/iconmoon.css" rel="stylesheet">
+    <link href="css/apprise.css" rel="stylesheet">
+    <link href="css/botones.css" rel="stylesheet">
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/helper.js"></script>
+    <script src="Scripts/apprise.js"></script>
+    <script src="Scripts/ccGrid.js"></script>
+     <script>
+        var urlRaiz = "../";
+
+        function openGlosario() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open( 'Glosario.html', 'Glosario', 'scrollbars=1, resizable = 1, width=' + window_width + ',height=' + window_height + ',top=' + window_top + ',left=' + window_left + '');
+        }
+
+        function openContacto() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open( 'Contacto.html', '_blank');
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="l-contents header-cont">
+                <div class="header-logo2">
+                    <h2>[Nombre del sistema]</h2>
+                </div>
+                <div class="header-logo3">
+				<a href="javascript:openGlosario()" class="header-close"><span>Glosario</span><span class="fab fa-stack-exchange"></span></a>
+                    <a href="javascript:openContacto()" class="header-close"><span>Contacto</span><span class="fas fa-envelope"></span></a>
+                <a href="Login.html" class="header-close"><span>Cerrar Sesión</span><span class="fas fa-power-off"></span></a><a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a>
+				</div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu">
+        <ul class="menu">
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-key"></span>[Nombre del menú]<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+						<li><a class="menu-option" href="Alertas.html"><span class="icon-profile"></span>Alertas</a></li>
+                    <li><a class="menu-option" href="BotonesRectangulares.html"><span class="icon-profile"></span>Botones Rectangulares</a></li>
+                    <li><a class="menu-option" href="BotonesCirculares.html"><span class="icon-profile"></span>Botones circulares</a></li>
+						<li><a class="menu-option" href="Mantenimiento.html"><span class="icon-user"></span>Mantenimiento Simple</a></li>
+						<li><a class="menu-option" href="CabeceraDetalle.html"><span class="icon-profile"></span>Cabecera detalle</a></li>
+						<li><a class="menu-option" href="Flujo/Listado.html"><span class="icon-profile"></span>Flujo</a></li>
+					</ul>
+            </li>
+            <li><div class="divider"></div></li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-newspaper"></span>Configuración<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+                    <li><a class="menu-option" href="Seguridad/Producto.html"><span class="icon-newspaper"></span>Producto</a></li>
+                    <li><a class="menu-option" href="Seguridad/Inventario.html"><span class="icon-newspaper"></span>Inventario</a></li>
+                    <li><a class="menu-option" href="Seguridad/RegistrarFactura.html"><span class="icon-newspaper"></span>Factura</a></li>
+                    <li><a class="menu-option" href="Seguridad/MantenimientoProducto.html"><span class="icon-newspaper"></span>Producto</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+        </ul>
+
+    </div>
+
+    <div class="side-body" id="divContenido" style="min-height:500px;">
+            <div class="l-contents">
+                <div class="cont-cont">
+                    <div class="advances-bar">
+                        <a id="btnPaso1" href="javascript:"><span class="advances-inactive">1</span></a>
+                        <a id="btnPaso2" href="javascript:"><span class="advances-inactive">2</span></a>
+                        <span class="advances-active">3</span>
+                        <span>4</span>
+                    </div>
+                    <div class="advance-line"></div>
+                    <div class="cont-title">
+                        <h1>Paso 3</h1>
+                    </div>
+                    <div>
+                        <h2 class="cont-title-h2"> </h2>
+                        <div class="cont-information">
+                            <div class="cont-boxes">
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Producto:</label>
+                                    <input type="text" disabled="" class="cont-box-input" value="8">
+                                    <input id="txtIdSimulacion" type="text" style="display:none;" value="7173">
+                                    <input id="txtIdSector" type="text" style="display:none;" value="1">
+                                    <input id="txtTipoTransporte" type="text" style="display:none;" value="A">
+                                    <input id="txtTipoCarga" type="text" style="display:none;" value="">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Partida arancelaria:</label>
+                                    <input type="text" disabled="" class="cont-box-input" value="ABRIGOS,IMPERMEAB.,CHAQUETO.,CAPAS Y ART.SIMILARES,P`MUJERES O NIÑAS,DE LANA O PELO F">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Cantidad a exportar:</label>
+                                    <input type="text" disabled="" class="cont-box-input" value="78  Tonelada">
+                                </div>
+                                <div>
+                                    <div>
+                                        <div class="box-checkbox">
+                                            <div class="cont-input-cl">
+                                                <input type="checkbox" id="chkExWorks" checked="" class="input-checkbox">
+                                                <label for="chkExWorks" class="input-checkbox-lab">Incluir ExWorks</label>
+                                            </div>
+                                            <section id="sectionExWorks">
+                                                <div class="section-check">
+                                                    <div class="cont-table">
+                                                        <table id="gridComercializacion" class="cont-left tableResponsive" style="margin: 0px auto; width: 100%; max-width: 500px;"><thead><tr><th style="width:70%;">Comercialización</th><th style="width:30%;">Costo (US$)</th></tr></thead><tbody><tr><td data-title="Comercialización" style="width:70%" align="left" onclick="ccGrid['gridComercializacion'].__SeleccionarFila(this); ">Folletos<input id="gridComercializacion_ccG_Id_0" type="hidden" value="1##61" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridComercializacion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Comercialización" style="width:70%" align="left" onclick="ccGrid['gridComercializacion'].__SeleccionarFila(this); ">Participación ferial<input id="gridComercializacion_ccG_Id_1" type="hidden" value="2##62" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridComercializacion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr></tbody></table>
+                                                    </div>
+                                                    <div class="cont-table">
+                                                        <table id="gridDistribucion" class="cont-left tableResponsive" style="margin: 0px auto; width: 100%; max-width: 500px;"><thead><tr><th style="width:70%;">Distribución y ventas</th><th style="width:30%;">Costo (US$)</th></tr></thead><tbody><tr><td data-title="Distribución y ventas" style="width:70%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); ">Gastos de ventas<input id="gridDistribucion_ccG_Id_0" type="hidden" value="1##63" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Distribución y ventas" style="width:70%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); ">Marcado de bultos<input id="gridDistribucion_ccG_Id_1" type="hidden" value="2##64" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Distribución y ventas" style="width:70%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); ">Certificado Sanitario<input id="gridDistribucion_ccG_Id_2" type="hidden" value="3##65" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Distribución y ventas" style="width:70%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); ">Certificado Calidad<input id="gridDistribucion_ccG_Id_3" type="hidden" value="4##80" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Distribución y ventas" style="width:70%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); ">Certificado Origen<input id="gridDistribucion_ccG_Id_4" type="hidden" value="5##81" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Distribución y ventas" style="width:70%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); ">Certificado Otros<input id="gridDistribucion_ccG_Id_5" type="hidden" value="6##82" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridDistribucion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr></tbody></table>
+                                                    </div>
+
+                                                </div>
+                                            </section>
+                                            <div class="cont-input-cl">
+                                                <input type="checkbox" id="chkFAS" class="input-checkbox">
+                                                <label for="chkFAS" class="input-checkbox-lab"> Incluir Precio FAS</label>
+                                            </div>
+                                            <section id="sectionFAS" class="display-none">
+                                                <div class="section-check">
+                                                    <div class="cont-table">
+                                                        <table id="gridGastoExportacion" class="cont-left tableResponsive" style="margin: 0px auto; width: 100%; max-width: 500px;"><thead><tr><th style="width:70%;">Gastos de exportación</th><th style="width:30%;">Costo (US$)</th></tr></thead><tbody><tr><td data-title="Gastos de exportación" style="width:70%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); ">Comisión agente Aduanas<input id="gridGastoExportacion_ccG_Id_0" type="hidden" value="1##66" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos de exportación" style="width:70%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); ">Gasto operativo<input id="gridGastoExportacion_ccG_Id_1" type="hidden" value="2##67" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos de exportación" style="width:70%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); ">Conducción al puerto o aeropuerto<input id="gridGastoExportacion_ccG_Id_2" type="hidden" value="3##68" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos de exportación" style="width:70%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); ">Precinto<input id="gridGastoExportacion_ccG_Id_3" type="hidden" value="4##69" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos de exportación" style="width:70%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); ">Servicio de laboratorio<input id="gridGastoExportacion_ccG_Id_4" type="hidden" value="5##70" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos de exportación" style="width:70%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); ">Otros gastos de origen<input id="gridGastoExportacion_ccG_Id_5" type="hidden" value="6##71" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoExportacion'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr></tbody></table>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <div class="cont-input-cl">
+                                                <input type="checkbox" id="chkFOB" class="input-checkbox">
+                                                <label for="chkFOB" class="input-checkbox-lab"> Incluir Precio FCA o FOB:</label>
+                                            </div>
+                                            <section id="sectionFOB" class="display-none">
+                                                <div class="section-check">
+                                                    <div class="cont-table">
+                                                        <table id="gridGastoFinanciero" class="cont-left tableResponsive" style="margin: 0px auto; width: 100%; max-width: 500px;"><thead><tr><th style="width:70%;">Gastos financieros</th><th style="width:30%;">Costo (US$)</th></tr></thead><tbody><tr><td data-title="Gastos financieros" style="width:70%" align="left" onclick="ccGrid['gridGastoFinanciero'].__SeleccionarFila(this); ">Carta de crédito por aviso<input id="gridGastoFinanciero_ccG_Id_0" type="hidden" value="1##57" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoFinanciero'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos financieros" style="width:70%" align="left" onclick="ccGrid['gridGastoFinanciero'].__SeleccionarFila(this); ">Mensaje Swift<input id="gridGastoFinanciero_ccG_Id_1" type="hidden" value="2##58" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoFinanciero'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos financieros" style="width:70%" align="left" onclick="ccGrid['gridGastoFinanciero'].__SeleccionarFila(this); ">Portes<input id="gridGastoFinanciero_ccG_Id_2" type="hidden" value="3##59" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoFinanciero'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr></tbody></table>
+                                                    </div>
+                                                    <div id="divFleteAereo" class="cont-table">
+                                                        <table id="gridFleteAereo" class="cont-left tableResponsive" style="max-width:500px; margin:0 auto">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style="width:70%">Gasto local flete aéreo</th>
+                                                                    <th style="width:30%">Costo (US$)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td data-title="Gasto flete aéreo" style="text-align:left">Uso aereopuerto</td>
+                                                                    <td data-title="Costo (US$)">
+                                                                        <input id="txtUsoAeropuerto" type="text" class="table-input">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td data-title="Gasto flete aéreo" style="text-align:left">Emisión AWB</td>
+                                                                    <td data-title="Costo (US$)">
+                                                                        <input id="txtEmisionAWB" type="text" class="table-input">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td data-title="Gasto flete aéreo" style="text-align:left">Handling</td>
+                                                                    <td data-title="Costo (US$)">
+                                                                        <input id="txtHandlingAereo" type="text" class="table-input">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div id="divFleteMaritimo" class="cont-table"></div>
+                                                </div>
+                                            </section>
+                                            <div class="cont-input-cl">
+                                                <input type="checkbox" id="chkCFR" class="input-checkbox">
+                                                <label for="chkCFR" class="input-checkbox-lab"> Incluir Precio CPT o CFR</label>
+                                            </div>
+                                            <section id="sectionCFR" class="display-none"></section>
+                                            <div class="cont-input-cl">
+                                                <input type="checkbox" id="chkCIF" class="input-checkbox">
+                                                <label for="chkCIF" class="input-checkbox-lab"> Incluir Precio CIP o CIF</label>
+                                            </div>
+                                            <section id="sectionCIF" class="display-none">
+                                                <div class="section-check">
+                                                    <div class="cont-table">
+                                                        <table id="gridSeguro" class="cont-left tableResponsive" style="max-width:500px; margin:0 auto">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style="width:70%">Seguros</th>
+                                                                    <th style="width:30%">Valor (%)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td data-title="Seguros" style="text-align:left">Tasa porcentual deducible</td>
+                                                                    <td data-title="Costo (US$)">
+                                                                        <input id="txtTasa" type="text" class="table-input">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td data-title="Seguros" style="text-align:left">Prima neta</td>
+                                                                    <td data-title="Costo (US$)">
+                                                                        <input id="txtPrima" type="text" class="table-input">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td data-title="Seguros" style="text-align:left">Derecho de emisión</td>
+                                                                    <td data-title="Costo (US$)">
+                                                                        <input id="txtDerechoEmision" type="text" class="table-input">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <div class="cont-input-cl">
+                                                <input type="checkbox" id="chkDAT" class="input-checkbox">
+                                                <label for="chkDAT" class="input-checkbox-lab"> Incluir Precio DAT</label>
+                                            </div>
+                                            <section id="sectionDAT" class="display-none">
+                                                <div class="section-check">
+                                                    <div class="cont-table">
+                                                        <table id="gridGastoDescarga" class="cont-left tableResponsive" style="margin: 0px auto; width: 100%; max-width: 500px;"><thead><tr><th style="width:70%;">Gastos de descarga</th><th style="width:30%;">Costo (US$)</th></tr></thead><tbody><tr><td data-title="Gastos de descarga" style="width:70%" align="left" onclick="ccGrid['gridGastoDescarga'].__SeleccionarFila(this); ">Uso del terminal<input id="gridGastoDescarga_ccG_Id_0" type="hidden" value="1##74" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoDescarga'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos de descarga" style="width:70%" align="left" onclick="ccGrid['gridGastoDescarga'].__SeleccionarFila(this); ">Seguridad portuaria	<input id="gridGastoDescarga_ccG_Id_1" type="hidden" value="2##75" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoDescarga'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos de descarga" style="width:70%" align="left" onclick="ccGrid['gridGastoDescarga'].__SeleccionarFila(this); ">Descarga<input id="gridGastoDescarga_ccG_Id_2" type="hidden" value="3##76" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoDescarga'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Gastos de descarga" style="width:70%" align="left" onclick="ccGrid['gridGastoDescarga'].__SeleccionarFila(this); ">THC<input id="gridGastoDescarga_ccG_Id_3" type="hidden" value="4##77" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridGastoDescarga'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr></tbody></table>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <div class="cont-input-cl">
+                                                <input type="checkbox" id="chkDAP" class="input-checkbox">
+                                                <label for="chkDAP" class="input-checkbox-lab"> Incluir Precio DAP</label>
+                                            </div>
+                                            <section id="sectionDAP" class="display-none"></section>
+                                            <div class="cont-input-cl">
+                                                <input type="checkbox" id="chkDDP" class="input-checkbox">
+                                                <label for="chkDDP" class="input-checkbox-lab"> Incluir Precio DDP</label>
+                                            </div>
+                                            <section id="sectionDDP" class="display-none">
+                                                <div class="section-check">
+                                                    <div class="cont-table">
+                                                        <table id="gridImpuesto" class="cont-left tableResponsive" style="margin: 0px auto; width: 100%; max-width: 500px;"><thead><tr><th style="width:70%;">Derechos e impuestos</th><th style="width:30%;">Costo (US$)</th></tr></thead><tbody><tr><td data-title="Derechos e impuestos" style="width:70%" align="left" onclick="ccGrid['gridImpuesto'].__SeleccionarFila(this); ">Otros tributos<input id="gridImpuesto_ccG_Id_0" type="hidden" value="1##78" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridImpuesto'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr><tr><td data-title="Derechos e impuestos" style="width:70%" align="left" onclick="ccGrid['gridImpuesto'].__SeleccionarFila(this); ">Otros gastos destino<input id="gridImpuesto_ccG_Id_1" type="hidden" value="2##84" style="visibility:hidden"></td><td data-title="Costo (US$)" style="width:30%" align="left" onclick="ccGrid['gridImpuesto'].__SeleccionarFila(this); "><input id="Cost_CostoTotal" type="text" value="" class="table-input" maxlength="10" onkeypress="return ValidarDecimal(event);"></td></tr></tbody></table>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <div class="cont-input-cl"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <nav class="cont-box-button">
+								<a id="" href="Flujo/Paso2.html" class="cont-box-link cont-box-link-prev"><label><span class="fas fa-chevron-left"></span><span>Anterior</span></label></a>
+								<a id="" href="Flujo/Paso4.html" class="cont-box-link"><label><span>Calcular</span><span class="fas fa-cog"></span></label></a></nav>
+                            </div>
+                            <div>
+                                <nav class="cont-box-button">
+                                    <a href="Flujo/Listado.html" class="link">Ir a listado</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reveal-modal-bg">
+            <div class="modal-2">
+                <div class="cont-modal"><span class="fas fa-window-close close"></span></div>
+                <form action="#">
+                    <div class="cont-box">
+                        <label class="cont-box-label">Concepto:</label>
+                        <input type="text" class="cont-box-input">
+                    </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label"></label>
+                        <input type="submit" value="Guardar" class="cont-box-submit close">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+    var listaCostos=[{"Cost_Id":0,"Simu_Id":7173,"Conc_Id":57,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":"A","Simu_TipoCarga":"","Tcon_Id":13,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Carta de crédito por aviso","Tcon_Nombre":"Gastos financieros","Prod_Nombre":"8","Part_Nombre":"ABRIGOS,IMPERMEAB.,CHAQUETO.,CAPAS Y ART.SIMILARES,P`MUJERES O NIÑAS,DE LANA O PELO F","Simu_Paso":2,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":78,"Sect_Id":1,"ccG_Estado":null,"Tcon_Incoterms":"FOB","Simu_UnidadMedida":"Tonelada","Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":false,"Simu_IncluirFOB":false,"Simu_IncluirCFR":false,"Simu_IncluirCIF":false,"Simu_IncluirDAT":false,"Simu_IncluirDAP":false,"Simu_IncluirDDP":false,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":58,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":13,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Mensaje Swift","Tcon_Nombre":"Gastos financieros","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"FOB","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":59,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":13,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Portes","Tcon_Nombre":"Gastos financieros","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"FOB","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":61,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":10,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Folletos","Tcon_Nombre":"Comercialización","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"EXW","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":62,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":10,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Participación ferial","Tcon_Nombre":"Comercialización","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"EXW","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":63,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":11,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Gastos de ventas","Tcon_Nombre":"Distribución y ventas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"EXW","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":64,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":11,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Marcado de bultos","Tcon_Nombre":"Distribución y ventas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"EXW","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":65,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":11,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Certificado Sanitario","Tcon_Nombre":"Distribución y ventas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"EXW","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":66,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":12,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Comisión agente Aduanas","Tcon_Nombre":"Gastos exportación y aduanas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"FAS","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":67,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":12,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Gasto operativo","Tcon_Nombre":"Gastos exportación y aduanas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"FAS","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":68,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":12,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Conducción al puerto o aeropuerto","Tcon_Nombre":"Gastos exportación y aduanas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"FAS","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":69,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":12,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Precinto","Tcon_Nombre":"Gastos exportación y aduanas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"FAS","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":70,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":12,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Servicio de laboratorio","Tcon_Nombre":"Gastos exportación y aduanas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"FAS","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":71,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":12,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Otros gastos de origen","Tcon_Nombre":"Gastos exportación y aduanas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"FAS","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":74,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":14,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Uso del terminal","Tcon_Nombre":"Gastos de descarga","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"DAT","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":75,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":14,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Seguridad portuaria\t","Tcon_Nombre":"Gastos de descarga","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"DAT","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":76,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":14,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Descarga","Tcon_Nombre":"Gastos de descarga","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"DAT","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":77,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":14,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"THC","Tcon_Nombre":"Gastos de descarga","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"DAT","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":78,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":15,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Otros tributos","Tcon_Nombre":"Derechos e impuestos","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"DDP","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":80,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":11,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Certificado Calidad","Tcon_Nombre":"Distribución y ventas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"EXW","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":81,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":11,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Certificado Origen","Tcon_Nombre":"Distribución y ventas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"EXW","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":82,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":11,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Certificado Otros","Tcon_Nombre":"Distribución y ventas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"EXW","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":84,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":15,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"Otros gastos destino","Tcon_Nombre":"Derechos e impuestos","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":"DDP","Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false}];
+        </script>
+        <script src="/PROMPERU.SIMCOS.Web/Scripts/ccGrid.js"></script>
+        <script src="/PROMPERU.SIMCOS.Web/Scripts/helper.js"></script>
+        <script src="/PROMPERU.SIMCOS.Web/ScriptsForms/Simulador/Inicio/Incoterms.js"></script>
+    </main>
+    <!--<footer>
+        <div class="footer2">
+            <div class="l-contents">
+                <div class="footer-box">
+                    <div class="footer-logo"><img src="/PROMPERU.SIMCOS.Web/Content/img/logos//logo-promperu.jpg" alt="Logo PromPerú"></div>
+                </div>
+                <div class="footer-box2">
+                    <div class="footer-logo">
+                        <img src="/PROMPERU.SIMCOS.Web/Content/img/logos//logo.png" alt="Marca Perú">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        -->
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Chrome","requestId":"1adc8128a78b42e8bf94506298c70628"}
+    </script>
+    <script type="text/javascript" src="http://localhost:49579/b76c8533a8914a7d82ee1c79a53d283e/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+
+</body>
+</html>

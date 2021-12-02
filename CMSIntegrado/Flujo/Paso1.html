@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    
+    <title>Paso 1 - PromPeru</title>
+	<base href="../" />
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="../img/iconos/icon.png">
+
+    <link href="css/Menu.css" rel="stylesheet">
+    <link href="iconmoon/iconmoon.css" rel="stylesheet">
+    <link href="css/apprise.css" rel="stylesheet">
+    <link href="css/botones.css" rel="stylesheet">
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/helper.js"></script>
+    <script src="Scripts/apprise.js"></script>
+    <script src="Scripts/ccGrid.js"></script>
+     <script>
+        var urlRaiz = "../";
+
+        function openGlosario() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open( 'Glosario.html', 'Glosario', 'scrollbars=1, resizable = 1, width=' + window_width + ',height=' + window_height + ',top=' + window_top + ',left=' + window_left + '');
+        }
+
+        function openContacto() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open( 'Contacto.html', '_blank');
+        }
+    </script>
+	
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="l-contents header-cont">
+                <div class="header-logo2">
+                    <h2>[Nombre del sistema]</h2>
+                </div>
+                <div class="header-logo3">
+				<a href="javascript:openGlosario()" class="header-close"><span>Glosario</span><span class="fab fa-stack-exchange"></span></a>
+                    <a href="javascript:openContacto()" class="header-close"><span>Contacto</span><span class="fas fa-envelope"></span></a>
+                <a href="Login.html" class="header-close"><span>Cerrar Sesión</span><span class="fas fa-power-off"></span></a><a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a>
+				</div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu">
+        <ul class="menu">
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-key"></span>[Nombre del menú]<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+						<li><a class="menu-option" href="Alertas.html"><span class="icon-profile"></span>Alertas</a></li>
+                    <li><a class="menu-option" href="BotonesRectangulares.html"><span class="icon-profile"></span>Botones Rectangulares</a></li>
+                    <li><a class="menu-option" href="BotonesCirculares.html"><span class="icon-profile"></span>Botones circulares</a></li>
+						<li><a class="menu-option" href="Mantenimiento.html"><span class="icon-user"></span>Mantenimiento Simple</a></li>
+						<li><a class="menu-option" href="CabeceraDetalle.html"><span class="icon-profile"></span>Cabecera detalle</a></li>
+						<li><a class="menu-option" href="Flujo/Listado.html"><span class="icon-profile"></span>Flujo</a></li>
+					</ul>
+            </li>
+            <li><div class="divider"></div></li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-newspaper"></span>Configuración<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+                    <li><a class="menu-option" href="Seguridad/Producto.html"><span class="icon-newspaper"></span>Producto</a></li>
+                    <li><a class="menu-option" href="Seguridad/Inventario.html"><span class="icon-newspaper"></span>Inventario</a></li>
+                    <li><a class="menu-option" href="Seguridad/RegistrarFactura.html"><span class="icon-newspaper"></span>Factura</a></li>
+                    <li><a class="menu-option" href="Seguridad/MantenimientoProducto.html"><span class="icon-newspaper"></span>Producto</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+        </ul>
+
+    </div>
+
+    <div class="side-body" id="divContenido" style="min-height:500px;">
+            <div class="l-contents">
+                <div class="cont-cont">
+                    <div class="advances-bar">
+                        <span class="advances-active">1</span>
+                        <span>2</span>                <span>3</span>                <span>4</span>
+                    </div>
+                    <div class="advance-line"></div>
+                    <div class="cont-title">
+                        <h1>Paso 1</h1>
+                    </div>
+                    <div>
+                        <h2 class="cont-title-h2">Datos iniciales</h2>
+                        <div class="cont-information">
+                            <div class="cont-boxes">
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Nombre simulación:</label>
+                                    <input id="txtNombreSimulacion" type="text" class="cont-box-input">
+                                    <input id="txtIdSimulacion" type="text" style="display:none;" value="0">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Producto:</label>
+                                    <div class="display-flex ">
+                                        <input id="txtProducto" type="text" class="cont-box-input cont-box-width2" autocomplete="off" placeholder="Buscar producto">
+                                        <a href="javascript:" id="btnNuevoProducto" class="cont-box-new"><span class="fas fa-plus" title="Crear producto"></span></a>
+                                        <input id="txtCodProducto" type="text" style="width:10px; display:none;" value="0">
+
+                                        <select id="ddlResultado" class="cont-box-select select-busqueda-producto" multiple="multiple"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div></div>
+                            <div class="cont-boxes">
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Nombre técnico:</label>
+                                    <input id="txtNombreTecnico" type="text" disabled="" class="cont-box-input">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Partida arancelaria:</label>
+                                    <input id="txtPartida" type="text" disabled="" class="cont-box-input">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Tipo de Empresa:</label>
+                                    <select id="ddlTipoEmpresa" class="cont-box-select">
+                                        <option value="">--Seleccione--</option>
+                                        <option value="P">Productora</option>
+                                        <option value="C">Comercializadora</option>
+                                    </select>
+                                </div>
+                                <div id="divCostoUnitario" class="cont-box" style="display:none">
+                                    <label class="cont-box-label">Costo unitario (US$):</label>
+                                    <input id="txtCostoUnitario" type="text" class="cont-box-input">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Cantidad por exportar:</label>
+                                    <div class="display-flex">
+                                        <input id="txtCantidadExportar" type="text" class="cont-box-input cont-box-width" value="">
+                                        <select id="ddlUnidadMedida" class="cont-box-select cont-box-width">
+                                            <option value="">Unidad medida</option>
+
+                                            <option value="26">Kilogramo</option>
+                                            <option value="27">Metros</option>
+                                            <option value="28">Onza</option>
+                                            <option value="29">Quintal</option>
+                                            <option value="25">Tonelada</option>
+                                            <option value="24">Unidad</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="cont-title-h2">Transporte</h2>
+                        <div class="cont-information">
+                            <div class="cont-boxes">
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Tipo de transporte:</label>
+                                    <select id="ddlTipoTransporte" onchange="SeleccionarTipoTransporte(this);" class="cont-box-select">
+                                        <option value="">--Seleccione--</option>
+                                        <option value="A">Aéreo</option>
+                                        <option value="M">Marítimo</option>
+                                    </select>
+                                </div>
+                                <div id="divCarga" class="display-none">
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Tipo de Carga:</label>
+                                        <select id="ddlTipoCarga" onchange="SeleccionarCarga(this);" class="cont-box-select">
+                                            <option value="">--Seleccione--</option>
+                                            <option value="C">Consolidada</option>
+                                            <option value="L">Contenedor Lleno</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="divCargaConsolidada" class="display-none">
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Largo bulto (m):</label>
+                                        <input id="txtLargoBulto" type="text" class="cont-box-input" value="">
+                                    </div>
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Ancho bulto (m):</label>
+                                        <input id="txtAnchoBulto" type="text" class="cont-box-input" value="">
+                                    </div>
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Alto bulto (m):</label>
+                                        <input id="txtAltoBulto" type="text" class="cont-box-input" value="">
+                                    </div>
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Peso bruto (Kg):</label>
+                                        <input id="txtPesoBulto" type="text" class="cont-box-input" value="">
+                                    </div>
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Cantidad de bultos:</label>
+                                        <input id="txtCantidadBultos" type="text" class="cont-box-input" value="">
+                                    </div>
+                                </div>
+                                <div id="divContenedorLleno" class="display-none">
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Tipo Contenedor:</label>
+                                        <select id="ddlTipoContenedor" class="cont-box-select">
+                                            <option value="">--Seleccione--</option>
+                                            <option value="1">20</option>
+                                            <option value="2">40</option>
+                                            <option value="3">Refeer 40</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="divVolumen" class="display-none">
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Volumen total (m3):</label>
+                                        <input id="txtVolumenTotal" type="text" disabled="" class="cont-box-input">
+                                    </div>
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Peso bruto (kg):</label>
+                                        <input id="txtPesoBruto" type="text" disabled="" class="cont-box-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="cont-title-h2">Destino</h2>
+                        <div class="cont-information">
+                            <div class="cont-boxes">
+                                <div id="divPais" class="display-none">
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">País:</label>
+                                        <select id="ddlPais" class="cont-box-select">
+                                            <option value="">--Seleccione--</option>
+                                            <option value="92">AFGANISTÁN</option>
+                                            <option value="138">ALBANIA</option>
+                                            <option value="139">ALEMANIA</option>
+                                            <option value="140">ANDORRA</option>
+                                            <option value="1">ANGOLA</option>
+                                            <option value="56">ANTIGUA Y BARBUDA</option>
+                                            <option value="93">ARABIA SAUDITA</option>
+                                            <option value="2">ARGELIA</option>
+                                            <option value="57">ARGENTINA</option>
+                                            <option value="141">ARMENIA</option>
+                                            <option value="185">AUSTRALIA</option>
+                                            <option value="142">AUSTRIA</option>
+                                            <option value="143">AZERBAIYÁN</option>
+                                            <option value="58">BAHAMAS</option>
+                                            <option value="94">BANGLADÉS</option>
+                                            <option value="59">BARBADOS</option>
+                                            <option value="95">BARÉIN</option>
+                                            <option value="144">BÉLGICA</option>
+                                            <option value="60">BELICE</option>
+                                            <option value="3">BENIN</option>
+                                            <option value="145">BIELORRUSIA</option>
+                                            <option value="61">BOLIVIA</option>
+                                            <option value="146">BOSNIA Y HERZEGOVINA</option>
+                                            <option value="4">BOTSUANA</option>
+                                            <option value="62">BRASIL</option>
+                                            <option value="96">BRUNEI</option>
+                                            <option value="147">BULGARIA</option>
+                                            <option value="5">BURKINA FASO</option>
+                                            <option value="6">BURUNDI</option>
+                                            <option value="97">BUTÁN</option>
+                                            <option value="7">CABO VERDE</option>
+                                            <option value="98">CAMBOYA</option>
+                                            <option value="8">CAMERÚN</option>
+                                            <option value="63">CANADÁ</option>
+                                            <option value="99">CATAR</option>
+                                            <option value="9">CHAD</option>
+                                            <option value="64">CHILE</option>
+                                            <option value="100">CHINA</option>
+                                            <option value="101">CHIPRE</option>
+                                            <option value="65">COLOMBIA</option>
+                                            <option value="10">COMORAS</option>
+                                            <option value="102">COREA DEL NORTE</option>
+                                            <option value="103">COREA DEL SUR</option>
+                                            <option value="11">COSTA DE MARFIL</option>
+                                            <option value="66">COSTA RICA</option>
+                                            <option value="148">CROACIA</option>
+                                            <option value="67">CUBA</option>
+                                            <option value="149">DINAMARCA</option>
+                                            <option value="68">DOMINICA</option>
+                                            <option value="69">ECUADOR</option>
+                                            <option value="12">EGIPTO</option>
+                                            <option value="70">EL SALVADOR</option>
+                                            <option value="104">EMIRATOS ARABES UNIDOS</option>
+                                            <option value="13">ERITREA</option>
+                                            <option value="150">ESLOVAQUIA</option>
+                                            <option value="151">ESLOVENIA</option>
+                                            <option value="152">ESPAÑA</option>
+                                            <option value="71">ESTADOS UNIDOS</option>
+                                            <option value="153">ESTONIA</option>
+                                            <option value="14">ETIOPÍA</option>
+                                            <option value="105">FILIPINAS</option>
+                                            <option value="154">FINLANDIA</option>
+                                            <option value="186">FIYI</option>
+                                            <option value="155">FRANCIA</option>
+                                            <option value="15">GABÓN</option>
+                                            <option value="16">GAMBIA</option>
+                                            <option value="156">GEORGIA</option>
+                                            <option value="17">GHANA</option>
+                                            <option value="72">GRANADA</option>
+                                            <option value="157">GRECIA</option>
+                                            <option value="73">GUATEMALA</option>
+                                            <option value="18">GUINEA</option>
+                                            <option value="19">GUINEA ECUATORIAL</option>
+                                            <option value="20">GUINEA-BISSAU</option>
+                                            <option value="74">GUYANA</option>
+                                            <option value="75">HAITÍ</option>
+                                            <option value="171">HOLANDA</option>
+                                            <option value="76">HONDURAS</option>
+                                            <option value="158">HUNGRÍA</option>
+                                            <option value="106">INDIA</option>
+                                            <option value="107">INDONESIA</option>
+                                            <option value="108">IRÁN</option>
+                                            <option value="109">IRAQ</option>
+                                            <option value="159">IRLANDA</option>
+                                            <option value="160">ISLANDIA</option>
+                                            <option value="187">ISLAS MARSHALL</option>
+                                            <option value="188">ISLAS SALOMÓN</option>
+                                            <option value="110">ISRAEL</option>
+                                            <option value="161">ITALIA</option>
+                                            <option value="77">JAMAICA</option>
+                                            <option value="111">JAPÓN</option>
+                                            <option value="112">JORDANIA</option>
+                                            <option value="113">KAZAJISTÁN</option>
+                                            <option value="21">KENIA</option>
+                                            <option value="114">KIRGUISTÁN</option>
+                                            <option value="189">KIRIBATI</option>
+                                            <option value="115">KUWAIT</option>
+                                            <option value="116">LAOS</option>
+                                            <option value="22">LESOTO</option>
+                                            <option value="162">LETONIA</option>
+                                            <option value="117">LÍBANO</option>
+                                            <option value="23">LIBERIA</option>
+                                            <option value="24">LIBIA</option>
+                                            <option value="163">LIECHTENSTEIN</option>
+                                            <option value="164">LITUANIA</option>
+                                            <option value="165">LUXEMBURGO</option>
+                                            <option value="25">MADAGASCAR</option>
+                                            <option value="118">MALASIA</option>
+                                            <option value="26">MALAUI</option>
+                                            <option value="119">MALDIVAS</option>
+                                            <option value="27">MALI</option>
+                                            <option value="166">MALTA</option>
+                                            <option value="28">MARRUECOS</option>
+                                            <option value="29">MAURICIO</option>
+                                            <option value="30">MAURITANIA</option>
+                                            <option value="78">MÉXICO</option>
+                                            <option value="190">MICRONESIA</option>
+                                            <option value="167">MOLDAVIA</option>
+                                            <option value="168">MÓNACO</option>
+                                            <option value="120">MONGOLIA</option>
+                                            <option value="169">MONTENEGRO</option>
+                                            <option value="31">MOZAMBIQUE</option>
+                                            <option value="121">MYANMAR (BIRMANIA)</option>
+                                            <option value="32">NAMIBIA</option>
+                                            <option value="191">NAURU</option>
+                                            <option value="122">NEPAL</option>
+                                            <option value="79">NICARAGUA</option>
+                                            <option value="33">NÍGER</option>
+                                            <option value="34">NIGERIA</option>
+                                            <option value="170">NORUEGA</option>
+                                            <option value="192">NUEVA ZELANDA</option>
+                                            <option value="123">OMÁN</option>
+                                            <option value="124">PAKISTÁN</option>
+                                            <option value="193">PALAOS</option>
+                                            <option value="125">PALESTINA</option>
+                                            <option value="80">PANAMÁ</option>
+                                            <option value="194">PAPÚA NUEVA GUINEA</option>
+                                            <option value="81">PARAGUAY</option>
+                                            <option value="82">PERÚ</option>
+                                            <option value="172">POLONIA</option>
+                                            <option value="173">PORTUGAL</option>
+                                            <option value="83">PUERTO RICO</option>
+                                            <option value="174">REINO UNIDO</option>
+                                            <option value="35">REPÚBLICA CENTROAFRICANA</option>
+                                            <option value="175">REPÚBLICA CHECA</option>
+                                            <option value="176">REPÚBLICA DE MACEDONIA</option>
+                                            <option value="36">REPÚBLICA DEL CONGO</option>
+                                            <option value="37">REPÚBLICA DEMOCRÁTICA DEL CONGO</option>
+                                            <option value="84">REPÚBLICA DOMINICANA</option>
+                                            <option value="38">REPÚBLICA SAHARAUI</option>
+                                            <option value="39">RUANDA</option>
+                                            <option value="177">RUMANIA</option>
+                                            <option value="178">RUSIA</option>
+                                            <option value="195">SAMOA</option>
+                                            <option value="85">SAN CRISTÓBAL Y NIEVES</option>
+                                            <option value="179">SAN MARINO</option>
+                                            <option value="86">SAN VICENTE Y LAS GRANADINAS</option>
+                                            <option value="87">SANTA LUCÍA</option>
+                                            <option value="40">SANTO TOMÉ Y PRÍNCIPE</option>
+                                            <option value="41">SENEGAL</option>
+                                            <option value="180">SERBIA</option>
+                                            <option value="42">SEYCHELLES</option>
+                                            <option value="43">SIERRA LEONA</option>
+                                            <option value="126">SINGAPUR</option>
+                                            <option value="127">SIRIA</option>
+                                            <option value="44">SOMALIA</option>
+                                            <option value="128">SRI LANKA</option>
+                                            <option value="45">SUAZILANDIA</option>
+                                            <option value="46">SUDÁFRICA</option>
+                                            <option value="47">SUDÁN DEL NORTE</option>
+                                            <option value="48">SUDÁN DEL SUR</option>
+                                            <option value="181">SUECIA</option>
+                                            <option value="182">SUIZA</option>
+                                            <option value="88">SURINAM</option>
+                                            <option value="129">TAILANDIA</option>
+                                            <option value="130">TAIWAN</option>
+                                            <option value="49">TANZANIA</option>
+                                            <option value="131">TAYIKISTÁN</option>
+                                            <option value="132">TIMOR ORIENTAL</option>
+                                            <option value="50">TOGO</option>
+                                            <option value="196">TONGA</option>
+                                            <option value="89">TRINIDAD Y TOBAGO</option>
+                                            <option value="51">TÚNEZ</option>
+                                            <option value="133">TURKMENISTÁN</option>
+                                            <option value="134">TURQUÍA</option>
+                                            <option value="197">TUVALU</option>
+                                            <option value="183">UCRANIA</option>
+                                            <option value="52">UGANDA</option>
+                                            <option value="90">URUGUAY</option>
+                                            <option value="135">UZBEKISTÁN</option>
+                                            <option value="198">VANUATU</option>
+                                            <option value="184">VATICANO</option>
+                                            <option value="91">VENEZUELA</option>
+                                            <option value="136">VIETNAM</option>
+                                            <option value="137">YEMEN</option>
+                                            <option value="53">YIBUTI</option>
+                                            <option value="54">ZAMBIA</option>
+                                            <option value="55">ZIMBABUE</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="divPuerto" class="display-none">
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Puerto:</label>
+                                        <select id="ddlPuerto" class="cont-box-select">
+                                            <option>--Seleccione--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="divAeropuerto" class="display-none">
+                                    <div class="cont-box">
+                                        <label class="cont-box-label">Aeropuerto:</label>
+                                        <select id="" class="cont-box-select">
+                                            <option value="">--Seleccione--</option>
+                                            <option value="13"> Aeropuerto 1</option>
+                                            <option value="13"> Aeropuerto 2</option>
+                                            <option value="13"> Aeropuerto 3</option>
+                                            <option value="13"> Aeropuerto 4</option>
+                                            <option value="13"> Aeropuerto 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <nav class="cont-box-button"><a id="" href="Flujo/Paso2.html" class="cont-box-link"><label><span>Siguiente</span><span class="fas fa-chevron-right"></span></label></a></nav>
+                    </div>
+                    <div>
+                        <nav class="cont-box-button">
+                            <a href="Flujo/Listado.html" class="link">Ir a listado</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reveal-modal-bg">
+            <div class="modal-registrar">
+                <h2 class="modal-title">Agregar producto</h2>
+                <form action="#">
+                    <div class="cont-box">
+                        <label class="cont-box-label">Partida:</label>
+                        <select id="ddlPartida" class="cont-box-select"><option value="">--Seleccione--</option><option value="166">-</option><option value="178">-</option><option value="360">ABRIG.,IMPERMEAB.,CHAQUETO.,CAPAS Y ART.SIMIL.P`HOMB.O NIÑOS,DE FIBRAS SINTET.O ARTIF</option><option value="287">ABRIGOS,CHAQ.,CAPAS Y ART. SIMIL.DE PTO, PARA MUJERES O NIÑAS, DE ALGODON</option><option value="288">ABRIGOS,CHAQ.,CAPAS Y ART. SIMIL.DE PTO, PARA MUJERES O NIÑAS, DE FIBRAS SINTETICAS O</option><option value="361">ABRIGOS,IMPERMEAB.,CHAQUETO.,CAPAS Y ART.SIMILARES,P`MUJERES O NIÑAS,DE LANA O PELO F</option><option value="359">ABRIGOS,IMPERMEAB.,CHAQUETONES,CAPAS Y ART.SIMIL.P`HOMBRES O NIÑOS,DE LANA O PELO FIN</option><option value="83">ABULONES U OREJAS DE MAR</option><option value="60">ACEITE DE MANI EN BRUTO</option><option value="61">ACEITE DE OLIVA VIRGEN</option><option value="62">ACEITE DE OLIVA Y SUS FRACCIONES, INCLUSO REFINADO PERO SIN MODIFICAR QUIMICAMENTE</option><option value="59">ACEITE DE SOJA Y SUS FRACCIONES, INCL. REFINADO, PERO SIN MODIF. QUIMICAMENTE</option><option value="66">ACEITES DE NABO (NABINA), COLZA O MOSTAZA Y SUS FRACCIONES, REFINADOS PERO SIN MODIF,</option><option value="64">ACEITES DE NABO (NABINA), COLZA O MOSTAZA, EN BRUTO</option><option value="410">ACEITUNAS</option><option value="417">ACEITUNAS CONSERVADAS PROVISIONALMENTE, TODAVIA IMPROPIAS EL CONSUMO INMEDIATO</option><option value="111">ACEITUNAS PREPARADAS O CONSERVADAS, SIN CONGELAR</option><option value="105">ACEITUNAS PREPARADOS O CONSERVADOS EN VINAGRE O ACIDO ACETICO</option><option value="408">ACEITUNAS, FRESCAS O REFRIGERADAS</option><option value="53">ACHIOTE (ONOTO, BIJA)</option><option value="55">ACHIOTE EN POLVO (ONOTO, BIJA)</option><option value="507">ACUMULADORES ELECTRICOS DE PLOMO, UTILIZADOS P`ARRANQUE DE MOTORES DE EXPLOSION</option><option value="476">AGUACATES (PALTAS) , FRESCAS O SECAS</option><option value="429">AJOS SECOS,CORTADOS EN TROZOS O RODAJAS,TRITU.,O PULVE.,SIN OTRA PREPARACION</option><option value="402">AJOS, FRESCOS O REFRIGERADOS</option><option value="467">ALAMBRE DE COBRE REFINADO CON LA MAYOR DIMENSION DE LA SECCION TRANSV. SUP. A 6 MM</option><option value="455">ALAMBRE DE HIERRO O ACERO CINCADO</option><option value="454">ALAMBRE DE HIERRO O ACERO SIN REVESTIR, INCLUSO PULIDO</option><option value="457">ALAMBRE DE PUAS DE HIERRO O ACERO</option><option value="173">ALBACORAS O ATUNES BLANCOS CONGELADOS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="161">ALBACORAS O ATUNES BLANCOS, FRESCOS O REFRIGERADOS, EXCEPTO HIGADOS, HUEVAS Y LECHA</option><option value="114">ALCACHOFAS (ALCAUCILES)</option><option value="112">ALCACHOFAS (ALCAUCILES) PREPARADAS O CONSERVADAS, SIN CONGELAR</option><option value="37">ALGAS FRESCAS, REFRIGERADAS, CONGELADAS O SECAS</option><option value="82">ALMEJAS, BERBERECHOS Y ARCAS</option><option value="85">ALMEJAS, LOCOS Y MACHAS PREPARADOS O CONSERVADOS</option><option value="470">ALMENDRAS SIN CASCARA, FRESCAS O SECAS</option><option value="202">ANCHOAS (ENGRAULIS SPP.) SALADAS SIN SECAR  NI AHUMAR O EN SALMUERA</option><option value="171">ANGUILAS (ANGUILLA SPP.)</option><option value="502">APARATOS PARA FILTRAR LUBRICANTES O CARBURANTES EN MOTORES DE ENCENDIDO POR CHISPA O</option><option value="420">ART. DE JOYERIA DE CHAPADOS DE METAL PRECIOSO (PLAQUE) SOBRE METAL COMUN</option><option value="419">ART. DE JOYERIA DE LOS DEMAS METALES PRECIOSOS, INCLUSO REVESTIDOS O CHAPADOS</option><option value="418">ART. DE JOYERIA DE PLATA, INCLUSO REVESTIDA O CHAPADA DE OTRO METAL PRECIOSO (PLAQUE)</option><option value="423">ART. DE ORFEBRERIA DE CHAPADO DE METAL PRECIOSO (PLAQUE) SOBRE METAL COMUN</option><option value="422">ART. DE ORFEBRERIA DE PLATA , LEY &lt;&gt; 0,925</option><option value="421">ART. DE ORFEBRERIA DE PLATA DE LEY 0,925</option><option value="263">ARTICULOS DE PELETERIA DE ALPACA</option><option value="544">ARTICULOS PARA FIESTAS DE NAVIDAD</option><option value="404">ARVEJAS (GUISANTES, CHICHAROS) (PISUM SATIVUM) FRESCAS O REFRIGERADAS</option><option value="107">ARVEJAS (GUISANTES,CHICHAROS) (PISUM SATIVUM), PREPARADAS O CONSERVADOS,SIN CONGELAR</option><option value="431">ARVEJAS PARTIDAS EXCEPTO PARA LA SIEMBRA</option><option value="412">ARVEJAS(GUISANTES,CHICHAROS)(PISUM SATIVUM),AUNQUE ESTEN COCIDAS EN AGUA O VAPOR,CONG</option><option value="530">ASIENTOS CON RELLENO Y ARMAZON DE MADERA</option><option value="231">ASIENTOS Y TAPAS DE INODOROS</option><option value="197">ATUNES (DEL GÉNERO THUNNUS), LISTADOS O BONITOS DE VIENTRE RAYADO (EUTHYNNUS (KATSUWONUS) PELAMIS)</option><option value="177">ATUNES COMUNES O DE ALETA AZUL (THUNNUS THYNNUS)</option><option value="174">ATUNES DE ALETA AMARILLA CONGELADOS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="162">ATUNES DE ALETA AMARILLA, FRESCOS O REFRIGERADOS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="75">ATUNES ENTERO O EN TROZOS , EXCEPTO PICADO</option><option value="462">BALLESTAS Y SUS HOJAS, DE HIERRO O ACERO</option><option value="474">BANANAS O PLATANOS SECOS</option><option value="472">BANANAS O PLATANOS TIPO CAVENDISH VALERY FRESCOS</option><option value="471">BANANAS O PLATANOS TIPO PLANTAIN (PLATANO PARA COCCION) FRESCOS</option><option value="451">BARRA DE HIERRO O ACERO SIN ALEAR CON MUESCAS, CORDONES, SURCOS O RELIEVES</option><option value="255">BAULES, MALETAS Y MALETINES, INCL. LOS DE ASEO C/LA SUPERF. EXTERIOR DE CUERO NATURAL</option><option value="425">BISUTERIA DE METAL COMUN : GEMELOS Y PASADORES SIMILARES</option><option value="304">BLUSAS, CAMISERAS Y POLOS, DE PUNTO DE ALGODON, P` MUJERES O NIÑAS</option><option value="464">BOLAS Y ARTICULOS SIMILARES PARA MOLINOS DE FUNDICION DE HIERRO O ACERO</option><option value="465">BOLAS Y ARTICULOS SIMILARES PARA MOLINOS FORJADAS DE HIERRO O ACERO</option><option value="87">BOMBONES, CARAMELOS CONFITES Y PASTILLAS, SIN CACAO</option><option value="283">BULBOS,CEBOLLAS,TUBERC. RAICES Y BULBOS TUBEROSOS,TURIONES Y RIZOMAS, EN REPOSO VEGET</option><option value="284">BULBOS,CEBOLLAS,TUBERC.RAICES Y BULBOS TUBEROSOS,TURIONES Y RIZOMAS,EN VEGET.O FLOR,A</option><option value="180">CABALLAS (SCOMBER SCOMBRUS, SCOMBER AUSTRALASICUS, SCOMBER JAPONICUS)</option><option value="88">CACAO EN GRANO, ENTERO O PARTIDO, CRUDO</option><option value="91">CACAO EN GRANO, ENTERO O PARTIDO, TOSTADO</option><option value="100">CACAO EN POLVO SIN ADICION DE AZUCAR NI OTRO EDULCORANTE.</option><option value="511">CAFE DESCAFEINADO, SIN TOSTAR</option><option value="509">CAFE SIN DESCAFEINAR, SIN TOSTAR</option><option value="514">CAFE TOSTADO DESCAFEINADO</option><option value="512">CAFE TOSTADO, SIN DESCAFEINAR, EN GRANO</option><option value="513">CAFE TOSTADO, SIN DESCAFEINAR, MOLIDO</option><option value="269">CAJONES, CAJAS, JAULAS, TAMBORES Y ENVASES SIMIL.; CARRETES PARA CABLES, DE MADERA</option><option value="385">CALZADO CON PALMILLA O PLATAFORMA DE MADERA, SIN PLANTILLAS NI PUNTERA METÁLICA DE PROTECCIÓN</option><option value="380">CALZADO IMPERMEBALE QUE CUBRAN EL  TOBILLO SIN  CUBRIR  LA RODILLA</option><option value="308">CAMIS.BLUS.D`PTO.DE ALG.P`MUJ.O NIÑ,C/CUE.Y ABER.DEL.PARC.,UN SOLO COLOR INC.BLANQUEA</option><option value="309">CAMIS.BLUS.D`PTO.DE ALG.P`MUJ.O NIÑ,C/CUE.Y ABERT.DELANT.PARCIAL DIST.COLORES A RAYA</option><option value="305">CAMIS.BLUS.DE PTO.DE ALG.P`MUJ.O NIÑ,C/ABERT.DEL.PARC,CUE.Y PUÑ.DE T.A.ELAST.UN COLOR</option><option value="306">CAMIS.BLUS.DE PTO.DE ALG.P`MUJ.O NIÑ.C/ABERT.DEL.PARC,CUE.Y PUÑ.DE T.A.ELAST.DIST.COL</option><option value="295">CAMISAS D`PTO.ALG.C/ABERT.DEL.PARC.,C.Y PUÑ.DE TEJ.ACAN.P`HOMB.,C/HILAD.DIST.COLOR.RA</option><option value="294">CAMISAS D`PTO.ALG.C/ABERT.DEL.PARC.,C.Y PUÑ.DE TEJ.ACAN.P`HOMB.,TEÑIDO D`UN SOLO COLO</option><option value="298">CAMISAS D`PTO.ALG.C/CUE.Y ABERT.DEL.PARC.P`HOMB.,D`TEJ.C/HILADOS D`DIST.COLOR.A RAYAS</option><option value="297">CAMISAS D`PTO.ALG.C/CUE.Y ABERT.DEL.PARC.P`HOMB.,D`TEJ.TEÑIDO D`UN SOLO COLOR INCL.BL</option><option value="371">CAMISAS PARA HOMBRES O NIÑOS, DE ALGODON</option><option value="372">CAMISAS, BLUSAS Y BLUS.CAMISERAS, PARA MUJERES O NIÑAS, DE ALGODON</option><option value="321">CAMISETAS INTERIORES</option><option value="312">CAMISONES Y PIJAMAS DE PUNTO DE AGODON, PARA HOMBRES O NIÑOS</option><option value="313">CAMISONES Y PIJAMAS DE PUNTO DE ALGODON, PARA MUJERES O NIÑAS</option><option value="373">CAMISONES Y PIJAMAS, PARA HOMBRES O NIÑOS, DE ALGODON</option><option value="374">CAMISONES Y PIJAMAS, PARA MUJERES O NIÑAS, DE ALGODON</option><option value="447">CAMOTES (BATATAS, BONIATOS)  FRESCOS, REFRIGERADOS,CONGELADOS O SECOS</option><option value="214">CARACOLES DE MAR</option><option value="326">CARDIGANES</option><option value="335">CARDIGANES</option><option value="346">CARDIGANES</option><option value="341">CARDIGANS DE ALGODON</option><option value="92">CASCARA, PELICULAS Y DEMAS RESIDUOS DE CACAO.</option><option value="428">CEBOLLAS SECAS,CORTADAS EN TROZOS O RODAJAS,O TRITUR.,O PULVER.,SIN OTRA PREPARACION</option><option value="401">CEBOLLAS Y CHALOTES, FRESCOS O REFRIGERADOS</option><option value="144">CEMENTO PORTLAND BLANCO, INCLUSO COLOREADO ARTIFICIALMENTE</option><option value="145">CEMENTO PORTLAND, EXCEPTO CEMENTO BLANCO O COLOREADO ARTIFICIALMENTE</option><option value="143">CEMENTOS SIN PULVERIZAR (CLINKER)</option><option value="345">CHALECOS</option><option value="325">CHALECOS</option><option value="331">CHALECOS DE LOS DEMAS PELOS FINOS</option><option value="225">CHAMPUES</option><option value="289">CHAQUETAS (SACOS) DE PUNTO,PARA HOMBRES O NIÑOS, DE LAS DEMAS MATERIAS TEXTILES</option><option value="362">CHAQUETAS (SACOS) PARA HOMBRES O NIÑOS, DE ALGODON</option><option value="363">CHAQUETAS (SACOS) PARA HOMBRES O NIÑOS, DE FIBRAS SINTETICAS</option><option value="368">CHAQUETAS (SACOS), PARA MUJERES O NIÑAS, DE ALGODON</option><option value="367">CHAQUETAS (SACOS), PARA MUJERES O NIÑAS, DE LANA O PELO FINO</option><option value="488">CHIRIMOYA, GUANABANA Y DEMAS ANONAS (ANNONA SPP.) FRESCAS</option><option value="206">COLAS CON CAPARAZÓN, COCIDOS EN AGUA O VAPOR</option><option value="205">COLAS CON CAPARAZÓN, SIN COCER EN AGUA O VAPOR</option><option value="204">COLAS SIN CAPARAZÓN</option><option value="501">COMBINACIONES DE REFRIGERADOR Y CONGELADOR CON PUERTAS EXTERIORES SEPARADAS</option><option value="323">CON CUELLO DE CISNE (¿SOUS PULL¿, ¿TURTLE NECK¿)</option><option value="327">CON CUELLO DE CISNE (¿SOUS PULL¿, ¿TURTLE NECK¿)</option><option value="333">CON CUELLO DE CISNE (¿SOUS PULL¿, ¿TURTLE NECK¿)</option><option value="336">CON CUELLO DE CISNE (¿SOUS PULL¿, ¿TURTLE NECK¿)</option><option value="343">CON CUELLO DE CISNE (¿SOUS PULL¿, ¿TURTLE NECK¿)</option><option value="347">CON CUELLO DE CISNE (¿SOUS PULL¿, ¿TURTLE NECK¿)</option><option value="98">CON UN ÍNDICE DE ACIDEZ EXPRESADO EN ÁCIDO OLEICO INFERIOR O IGUAL A 1%</option><option value="99">CON UN ÍNDICE DE ACIDEZ EXPRESADO EN ÁCIDO OLEICO SUPERIOR A 1% PERO INFERIOR O IGUAL A 1.65%</option><option value="128">CONDIMENTOS Y SAZONADORES,  COMPUESTOS</option><option value="378">CONJ.DE ABRIGO P`ENTREN.O DEPORTE,Y DEMAS PREND.DE VESTIR P`MUJ.O NIÑAS, DE ALGODON</option><option value="379">CONJ.DE ABRIGO P`ENTREN.O DEPORTE,Y DEMAS PREND.DE VESTIR P`MUJ.O NIÑAS,DE FIB.SINT.O</option><option value="253">CUEROS DE CAPRINO PREPARADOS DESPUES DEL CURTIDO O SECADO Y CUEROS Y PIELES APERGAMINADOS</option><option value="254">CUEROS DE DEMAS ANIMALES PREPARADOS DESPUES DEL CURTIDO O SECADO Y CUEROS Y PIELES APERGAMINADOS</option><option value="242">CUEROS Y PIELES CURTIDOS O CRUST DE BOVINO O DE EQUINO, DEPILADOS, EN ESTADO HUMEDO, PLENA FLOR SIN DIVIDIR; DIVIDIDOS CON LA FLOR</option><option value="244">CUEROS Y PIELES CURTIDOS O CRUST DE BOVINO O DE EQUINO, DEPILADOS, EN ESTADO SECO, PLENA FLOR SIN DIVIDIR; DIVIDIDOS CON LA FLOR</option><option value="248">CUEROS Y PIELES DEPILADOS  DE CAPRINO, INCLUSO DIVIDIDOS PERO SIN OTRA PREPARACION EN ESTADO HUMEDO</option><option value="249">CUEROS Y PIELES DEPILADOS  DE CAPRINO, INCLUSO DIVIDIDOS PERO SIN OTRA PREPARACION EN ESTADO SECO</option><option value="251">CUEROS Y PIELES DEPILADOS  DE DEMAS ANIMALES, INCLUSO DIVIDIDOS PERO SIN OTRA PREPARACION EN ESTADO HUMEDO</option><option value="252">CUEROS Y PIELES DEPILADOS  DE DEMAS ANIMALES, INCLUSO DIVIDIDOS PERO SIN OTRA PREPARACION EN ESTADO SECO</option><option value="250">CUEROS Y PIELES DEPILADOS  DE PORCINO, INCLUSO DIVIDIDOS PERO SIN OTRA PREPARACION EN ESTADO SECO</option><option value="239">CUEROS Y PIELES EN BRUTO, DE OVINO S/LANA (DEPILADA) PIQUELADOS</option><option value="264">DE ALPACA</option><option value="125">DE CAMU CAMU (MYRCIARIA DUBIA)</option><option value="233">DE CAPACIDAD SUPERIOR O IGUAL A 18,9 LITROS (5 GAL.)</option><option value="122">DE GUANABANA (ANNONA MURICATA)</option><option value="354">DE LANA O PELO FINO</option><option value="17">DE LÚCUMA (LÚCUMA OBOVATA)</option><option value="124">DE MARACUYÁ (PARCHITA) (PASSIFLORA EDULIS)</option><option value="68">DEMAS ACEITES Y GRASAS VEGETALES FIJOS, Y SUS FRACCIONES, INCL. REFINADOS PERO SIN MO</option><option value="63">DEMAS ACEITES Y SUS FRACCIONES OBTENIDOS EXCLUSIV. DE ACEITUNA, INCL.  REFINADO</option><option value="179">DEMAS ATUNES CONGELADOS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="199">DEMAS CARNE DE PESCADO (INC. PICADA) CONGELADA</option><option value="499">DEMAS CERRADURAS Y CERROJOS DE METALES COMUNES</option><option value="130">DEMAS CONCENTRADOS DE PROTEINAS Y SUSTANCIAS PROTEICAS TEXTURADAS</option><option value="508">DEMAS CONDUCT. ELECTR. P` TENSION &gt;80V Y &lt;= 1000 V,DE COBRE SIN PIEZAS DE CONEXION</option><option value="243">DEMAS CUEROS Y PIELES CURTIDOS O CRUST DE BOVINO O DE EQUINO, DEPILADOS, EN ESTADO HUMEDO</option><option value="245">DEMAS CUEROS Y PIELES CURTIDOS O CRUST DE BOVINO O DE EQUINO, DEPILADOS, EN ESTADO SECO</option><option value="241">DEMAS CUEROS Y PIELES EN BRUTO (FRESCOS O SALADOS, SECOS, O CONSERVADOS DE OTRO MODO)</option><option value="240">DEMAS CUEROS Y PIELES EN BRUTO, DE OVINO S/LANA (FRESCOS, SALADOS, SECOS, ENCALADOS)</option><option value="437">DEMAS FRIJOL COMUN (PHASEOLUS VULGARIS) PARA SIEMBRA</option><option value="440">DEMAS FRIJOL COMUN EXCEPTO PARA SIEMBRA</option><option value="492">DEMAS FRUTAS Y OTROS FRUTOS,SIN COCER O COCIDOS EN AGUA O VAPOR,C/AZUC.O EDUL.CONGELA</option><option value="493">DEMAS FRUTAS Y OTROS FRUTOS,SIN COCER O COCIDOS EN AGUA O VAPOR,S/AZUC.O EDULC.CONGEL</option><option value="120">DEMAS FRUTAS/FRUTOS Y DEMAS PART. COMESTIB. DE PLANTAS, PREP. O CONSERV. DE OTRO MODO</option><option value="117">DEMAS FRUTOS DE CASCARA, INCLUIDAS LAS MEZCLAS PREPARADOS O CONSERVADOS DE OTRO MODO</option><option value="38">DEMAS GOMAS, RESINAS, GOMORRESINAS, Y OLEORRESINAS NATURALES</option><option value="69">DEMAS GRASAS Y ACEITES ANIMALES O VEGETALES Y SUS FRACCIONES, COCIDOS, OXIDADOS, DESH</option><option value="12">DEMAS HARINA DE CEREALES, EXCEPTO DE TRIGO, O DE MORCAJO (TRANQUILLON)</option><option value="27">DEMAS HARINA DE SEMILLAS O DE FRUTOS OLEAGINOSOS, EXC. LA HARINA DE MOSTAZA</option><option value="106">DEMAS HORTALIZAS,FRUTAS Y DEMAS PART. COMEST. DE PLANTAS,PREP. O CONSERV.EN VINAGRE</option><option value="430">DEMAS HORTALIZAS,MEZCLAS DE HORTALIZAS,CORTADAS EN TROZOS O RODAJ.,TRITU.O PULV.,SIN</option><option value="211">DEMAS JIBIAS, GLOBITOS,CALAMARES Y POTAS, CONGELADAS, SECAS, SALADAS O EN SALMUERA</option><option value="43">DEMAS JUGOS Y EXTRACTOS VEGETALES (P.EJ.: GINSENG, ALOE).</option><option value="267">DEMAS MADERAS CONTRACHAP. Q`TENGAN POR LO MENOS,UNA HOJA EXTERNA DISTINTA D`CONIFERAS</option><option value="274">DEMAS MANUFACTURA DE MADERA</option><option value="275">DEMAS MANUFACTURAS DE CORCHO AGLOMERADO</option><option value="260">DEMAS MANUFACTURAS DE CUERO NATURAL O CUERO REGENERADO.</option><option value="273">DEMAS MARQUETERIA, COFRECILLOS O ESTUCHES P`JOYERIA U ORFEBR. Y MANUF. SIMIL.D`MADERA</option><option value="154">DEMAS MEDICAMENTOS P` USO HUMANO Q` CONTENGAN VITAMINAS</option><option value="222">DEMAS MEZCLAS DE SUST. ODORIFERAS P` INDUST. ALIMENTARIA O DE BEBIDAS .</option><option value="147">DEMAS MINERALES DE METALES PRECIOSOS Y SUS CONCENTRADOS, EXCEPTO DE ORO O PLATA</option><option value="86">DEMAS MOLUSCOS E INVERTEBRADOS ACUATICOS, PREPARADOS O CONSERVADOS</option><option value="215">DEMAS MOLUSCOS,INC HARINA,POLVO Y PELLETS DE INVERT.ACUATIC.APTOS P`ALIM.HUMAN.CONG</option><option value="271">DEMAS OBRAS Y PIEZAS DE CARPINTERIA PARA CONSTRUCCIONES, DE MADERA</option><option value="182">DEMAS PESCADOS CONGELADOS, EXCTO. HIGADOS, HUEVAS Y LECHAS</option><option value="262">DEMAS PIELES ENTERAS, INCL. SIN LA CABEZA, COLA, PATAS; SIN ENSAMBLAR</option><option value="36">DEMAS PLANTAS, PARTES DE PLANTAS, SEMILLAS Y FRUTOS DE LAS UTILIZ. EN PERFUMERIA, MED</option><option value="376">DEMAS PRENDAS DE VESTIR DEL TIPO DE LAS CITADAS EN LAS SUBPART.6201.11.00 A 6201.19.0</option><option value="72">DEMAS PREPARA. Y CONSERVAS DE SARDINA, ENTERO O EN TROZOS, EXC.PICADO</option><option value="80">DEMAS PREPARACIONES Y CONSERVAS DE PESCADO</option><option value="79">DEMAS PREPARACIONES Y CONSERVAS DE PESCADO ENTERO O EN TROZOS, EXCEPTO PICADO</option><option value="103">DEMAS PRODUCTOS DE PANADERIA, PASTELERIA O GALLETERIA, INCL. C/ADICION DE CACAO</option><option value="259">DEMAS SACOS DE VIAJE Y MOCHILAS</option><option value="258">DEMAS SACOS DE VIAJE Y MOCHILAS CON LA SUPERF. EXT. DE CUERO NATURAL, REGENERADO</option><option value="30">DEMAS SEMILLAS DE HORTALIZAS</option><option value="23">DEMAS SEMILLAS DE NABO O COLZA, INCLUSO QUEBRANTADA EXCEPTO PARA SIEMBRA</option><option value="32">DEMAS SEMILLAS DE PLANTAS HERBACEAS UTILIZADAS PRINCIPALMENTE POR SUS FLORES</option><option value="25">DEMAS SEMILLAS Y FRUTOS OLEAGINOSOS, INCLUSO QUEBRANTADO, EXCEPTO PARA SIEMBRA</option><option value="266">DEMAS TABLEROS DE PARTICULA Y TABLEROS SIMILARES DE MADERA</option><option value="458">DEMAS TELAS METALICAS, REDES Y REJAS, CINCADAS</option><option value="459">DEMAS TELAS METALICAS, REDES Y REJAS, REVESTIDAS DE PLASTICO</option><option value="227">DENTIFRICOS</option><option value="468">DESPERDICIOS Y DESECHOS, DE ALUMINIO.</option><option value="229">DEXTRINA Y DEMAS ALMIDONES Y FECULAS MODIFICADOS</option><option value="194">EN BLOQUES, PICADO</option><option value="192">EN BLOQUES, SIN PIEL, CON ESPINA</option><option value="193">EN BLOQUES, SIN PIEL, SIN ESPINAS</option><option value="521">EN TROZOS O RODAJAS</option><option value="203">ENTEROS</option><option value="414">ESPARRAGO CONGELADO AUNQUE ESTEN COCIDAS EN AGUA O VAPOR.</option><option value="110">ESPARRAGOS PREPARADOS O CONSERVADOS, SIN CONGELAR</option><option value="406">ESPARRAGOS, FRESCOS O REFRIGERADOS</option><option value="398">ESPEJOS DE VIDRIO ENMARCADOS</option><option value="399">ESTATUILLA Y DEMAS ARTICULOS DE ADORNO DE VIDRIO</option><option value="272">ESTATUILLAS Y DEMAS OBJETOS DE ADORNO, DE MADERA</option><option value="47">EXTRACTO DE CURARE</option><option value="46">EXTRACTO DE HABAS (POROTOS, FRIJOLES, FRÉJOLES) DE SOJA (SOYA), INCLUSO EN POLVO</option><option value="44">EXTRACTO DE UÑA DE GATO (UNCARIA TORMENTOSA)</option><option value="126">EXTRACTOS, ESENCIAS Y CONCENTRADOS DE CAFE</option><option value="127">EXTRACTOS, ESENCIAS Y CONCENTRADOS DE TE/YERBA MATE Y PREP. A BASE DE ESTOS EXTRACTOS</option><option value="187">FILETES CONGELADOS DE MERLUZA, INTERFOLIADOS, SIN PIEL, CON ESPINAS</option><option value="186">FILETES DE MERLUZA  INTERFOLIADOS, SIN PIEL, SIN ESPINAS, CONGELADOS</option><option value="184">FILETES Y DEMAS CARNE DE PESCADO, FRESCOS O REFRIGERADOS</option><option value="286">FOLLAJE,HOJAS,RAMAS Y PARTES DE PLANTAS,SIN FLORES NI CAPULLOS Y HIERBAS,SECOS,TEÑID</option><option value="463">FREGADEROS (PILETAS DE LAVAR) Y LAVABOS, DE ACERO INOXIDABLE</option><option value="436">FRIJOL (FREJOL, POROTO, ALUBIA, JUDIA) COMUN (PHASEOLUS VULGARIS) PARA SIEMBRA NEGRO</option><option value="435">FRIJOL ADZUKI(PHASEOLUS O VIGNA ANGULARIS) EXCTO. PARA SIEMBRA</option><option value="434">FRIJOL ADZUKI(PHASEOLUS O VIGNA ANGULARIS) PARA LA SIEMBRA</option><option value="439">FRIJOL CANARIO EXCEPTO PARA SIEMBRA</option><option value="443">FRIJOL CASTILLA (FRIJOL OJO NEGRO) (VIGNA UNGUICULATA)</option><option value="438">FRIJOL COMUN NEGRO EXCEPTO PARA SIEMBRA</option><option value="433">FRIJOLES DE LAS ESPEC.VIGNA MUNGO(L)HEPPER O VIGNA RADIATA(L)WILCZEK,EXCEP.P`LA SIEMB</option><option value="432">FRIJOLES DE LAS ESPECIES VIGNA MUNGO(L)HEPPER O VIGNA RADIATA(L)WILCZEK PARA SIEMBRA</option><option value="108">FRIJOLES DESVAINADOS, PREPARADOS O CONSERVADOS, SIN CONGELAR</option><option value="405">FRIJOLES(FREJOLES,POROTOS,ALUBIAS,JUDIAS) (VIGNA SPP, PHASEOLUS SPP) FRESCOS O REFRIG</option><option value="413">FRIJOLES(FREJOLES,POROTOS,ALUBIAS,JUDIAS)(VIGNA SPP.,PHASEOLUS SPP.)COCIDAS O CONGELA</option><option value="407">FRUTOS DE LOS GENEROS CAPSICUM O PIMENTA, FRESCOS O REFRIGERADOS</option><option value="520">FRUTOS DE LOS GENEROS CAPSICUM O PIMENTA, SECOS, TRITURADOS O PULVERIZADOS</option><option value="150">GLUTARALDEHIDO</option><option value="487">GRANADILLA, MARACUYA (PARCHITA) Y DEMAS FRUTAS DE LA PASION (PASSIFLORA SPP.) FRESC</option><option value="58">GRASAS Y ACEITES DE PESCADO Y SUS FRACCIONES EXC. ACEITE DE HIGADO EN BRUTO</option><option value="496">GUANÁBANA (ANNONA MURICATA)</option><option value="21">HABAS (POROTOS, FRIJOLES,) DE SOJA, PARA SIEMBRA</option><option value="446">HABAS, HABA CABALLAR Y HABA MENOR EXCEPTO PARA SIEMBRA</option><option value="445">HABAS, HABA CABALLAR Y HABA MENOR PARA SIEMBRA</option><option value="26">HARINA DE HABAS (POROTOS, FRIJOLES, FREJOLES) DE SOJA (SOYA)</option><option value="11">HARINA DE MAIZ</option><option value="201">HARINA, POLVO Y PELLETS DE PESCADO, APTOS PARA LA ALIMENTACION HUMANA</option><option value="20">HARINA, SEMOLA Y POLVO  DE LOS DEMAS PRODUCTOS DEL CAPITULO 8, EXCEPTO BANANAS O PLATANOS Y LUCUMA</option><option value="19">HARINA, SEMOLA Y POLVO DE LUCUMA</option><option value="14">HARINA, SEMOLA Y POLVO DE MACA (LEPIDIUM MEYENII)</option><option value="15">HARINA, SEMOLA Y POLVO DE SAGU O DE LAS RAICES O TUBERCULOS DE LA PARTIDAS 07.14</option><option value="16">HARINA, SEMOLA, Y POLVO DE BANANAS O PLATANOS</option><option value="13">HARINA, SEMOLA, Y POLVO DE LAS HORTALIZAS DE LA PARTIDA N§ 07.13</option><option value="18">HARINA, SEMOLA, Y POLVO DE LOS DEMAS PRODUCTOS DEL CAP. 8 EXC. BANANAS O PLATANOS</option><option value="475">HIGOS, FRESCOS O SECOS</option><option value="276">HILADOS DE LANA CARDADA NO P` VENTA POR MENOR CON UN CONTENIDO DE LANA &lt; 85% EN PESO</option><option value="277">HILADOS DE LANA PEINADA NO P``VENTA  POR MENOR CON UN CONTENIDO DE LANA &gt;=85% EN PESO</option><option value="278">HILADOS DE LANA PEINADA NO P`VENTA POR MENOR CON UN CONTENIDO DE LANA &lt; 85%</option><option value="279">HILADOS DE PELO FINO CARDADO SIN ACONDICIONAR P` LA VENTA EL POR MENOR</option><option value="280">HILADOS DE PELO FINO PEINADO SIN ACONDICIONAR P` LA VENTA EL POR MENOR</option><option value="281">HLADOS DE LANA O PELO FINO P` VENTA AL POR MENOR CON UN CONTENIDO &gt;=85% EN PESO</option><option value="529">INSTRUMENTOS MUSICALES DE PERCUSION (POR EJEMPLO: TAMBORES, CAJAS, XILOFONOS, PLATILL</option><option value="500">INYECTORES Y DEMAS PARTES PARA SISTEMAS DE COMBUSTIBLE PARA MOTORES DE LA PARTIDA</option><option value="228">JABON DE TOCADOR (INCLUSO MEDICINAL), EN BARRA, PANES O TROZOS</option><option value="81">JIBIAS (SEPIAS) Y CALAMARES</option><option value="123">JUGO DE MANGO</option><option value="121">JUGO DE MARACUYA (PARCHITA) (PASSIFLORA EDULIS)</option><option value="42">JUGO Y EXTRACTO DE CURARE</option><option value="41">JUGO Y EXTRACTO DE PIRETRO (PELITRE) O DE RAICES QUE CONTENGAN ROTENONA</option><option value="48">JUGOS Y EXTRACTOS DE DEMAS VEGETALES</option><option value="505">JUNTAS METALOPLASTICAS</option><option value="237">JUNTAS O EMPAQUETADURAS DE CAUCHO VULCANIZADO SIN ENDURECER</option><option value="181">JURELES (TRACHURUS SPP.)</option><option value="540">LAMPARAS ELECTRICAS DE CABECERA, MESA, OFICINA O DE PIE</option><option value="411">LAS DEMÁS</option><option value="355">LAS DEMÁS</option><option value="265">LAS DEMÁS</option><option value="1">LAS DEMÁS</option><option value="135">LAS DEMÁS</option><option value="427">LAS DEMAS BISUTERIAS</option><option value="426">LAS DEMAS BISUTERIAS DE METALES COMUNES</option><option value="307">LAS DEMAS CAMIS.BLUS.DE PTO.DE ALG.P`MUJ.O NIÑAS C/ABERT.DEL.PARC.,CUE.Y PUÑ DE T.A.E</option><option value="310">LAS DEMAS CAMIS.BLUS.DE PTO.DE ALGODON, PARA MUJERES O NIÑAS CON ABERT.DELANT.PARCIAL</option><option value="300">LAS DEMAS CAMISAS D`PTO ALG.CON CUELLO Y ABERTURA DELANTERA PARCIAL P`HOMBRES</option><option value="301">LAS DEMAS CAMISAS D`PTO.ALG.C/ABERT.DEL.PARC.P`HOMB.Y NIÑOS,CUEL.Y PUÑO D`TEJ.ACAN.EL</option><option value="302">LAS DEMAS CAMISAS D`PTO.ALG.C/CUELLO Y ABERTURA DELANTERA PARCIAL P`HOMBRES O NIÑOS</option><option value="299">LAS DEMAS CAMISAS D`PTO.ALG.CON CUELLO Y ABERTURA DELANTERA PARCIAL PARA HOMBRES</option><option value="296">LAS DEMAS CAMISAS DE PTO.ALG.,CON ABERT.DEL.PARC.,C.Y PUÑ.DE TEJ.ACAN.ELAST.P`HOMBRES</option><option value="303">LAS DEMAS CAMISAS DE PUNTO DE ALGODON PARA HOMBRES O NIÑOS</option><option value="311">LAS DEMAS CAMISAS,BLUSAS DE PTO.DE ALGODON, PARA MUJERES O NIÑAS</option><option value="116">LAS DEMAS CONFITURAS, JALEAS Y MERMELADAS DE FRUTAS U OTROS FRUTOS</option><option value="527">LAS DEMAS ESPECIAS</option><option value="394">LAS DEMAS ESTATUILLAS Y DEMAS ARTICULOS PARA ADORNOS DE CERAMICA</option><option value="498">LAS DEMAS FRUTAS U OTROS FRUTOS SECOS</option><option value="409">LAS DEMAS HORTALIZAS (INC. SILVESTRES) , FRESCAS O REFRIGERADAS</option><option value="113">LAS DEMAS HORTALIZAS PREPARADAS O CONSERVADAS SIN CONGELAR</option><option value="395">LAS DEMAS MANUFACTURAS DE CERAMICA</option><option value="466">LAS DEMAS MANUFACTURAS DE HIERRO O ACERO</option><option value="545">LAS DEMAS MATERIAS VEGETALES O MINERALES PARA TALLAR, TRABAJADAS Y MANUFACTURAS DE EST</option><option value="542">LAS DEMAS PARTES DE APARATOS DE ALUMBRADO</option><option value="221">LAS DEMAS PINTURAS Y BARNICES DISPERSOS O DISUELTOS EN UN MEDIO NO ACUOSO</option><option value="356">LAS DEMAS PRENDAS DE VESTIR DE PUNTO DE ALGODON</option><option value="377">LAS DEMAS PRENDAS DE VESTIR PARA MUJERES O NIÑAS</option><option value="139">LAS DEMAS PREPARACIONES ALIMENTICIAS</option><option value="136">LAS DEMAS PREPARACIONES ALIMENTICIAS NO EXPRESADAS NI COMPRENDIDAS EN OTRA PARTE</option><option value="138">LAS DEMAS PREPARACIONES ALIMENTICIAS QUE CONTENGAN MEZCLAS O EXTRACTOS DE PLANTAS, PARTES DE PLANTAS, SEMILLAS O FRUTOS, CON VITAMINAS, MINERALES U OTRAS SUSTANCIAS.</option><option value="137">LAS DEMAS PREPARACIONES ALIMENTICIAS QUE CONTENGAN MEZCLAS O EXTRACTOS DE PLANTAS, PARTES DE PLANTAS, SEMILLAS O FRUTOS.</option><option value="226">LAS DEMAS PREPARACIONES CAPILARES</option><option value="224">LAS DEMAS PREPARACIONES DE BELLEZA, MAQUILLAJE Y CUIDADO DE LA PIEL</option><option value="151">LAS DEMAS PROVITAMINAS Y VITAMINAS,INCL.LOS CONCENTRADOS NATURALES,SUS DERIV.,MEZCLAD</option><option value="450">LAS DEMAS RAICES Y TUBERCULOS SIMILARES RICOS EN FECULA O INULINA, FRESCOS, REFRIGERADOS, CONGELADOS O SECOS, INLCUSO TROCEADOS</option><option value="158">LAS DEMAS TRUCHAS VIVAS</option><option value="268">LAS DEMÁS, QUE TENGAN, POR LO MENOS, UNA HOJA EXTERNA DE MADERA DISTINTA DE LA DE CONÍFERAS</option><option value="483">LIMA TAHITI (LIMON TAHITI) (CITRUS LATIFOLIA)</option><option value="482">LIMON (LIMON SUTIL, LIMON COMUN, LIMON CRIOLLO) (CITRUS AURANTIFOLIA)</option><option value="481">LIMONES (CITRUS LIMON, CITRUS LIMONUM) FRESCOS O SECOS.</option><option value="175">LISTADOS  O  BONITOS DE VIENTRE RAYADO CONGELADOS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="163">LISTADOS O BONITOS DE VIENTRE  RAYADO FRESC. O REFRI., EXCEPTO HIGADOS, HUEVAS Y LECH</option><option value="76">LISTADOS Y BONITOS ENTEROS O EN TROZOS</option><option value="213">LOCOS (CONCHOLEPAS CONCHOLEPAS) EXCEPTO FRESCOS, VIVOS O REFRIGERADOS</option><option value="210">LOS DEMÁS</option><option value="208">LOS DEMÁS</option><option value="200">LOS DEMÁS</option><option value="195">LOS DEMÁS</option><option value="198">LOS DEMÁS</option><option value="185">LOS DEMÁS</option><option value="188">LOS DEMÁS</option><option value="190">LOS DEMÁS</option><option value="191">LOS DEMÁS</option><option value="169">LOS DEMÁS</option><option value="183">LOS DEMÁS</option><option value="261">LOS DEMÁS</option><option value="234">LOS DEMÁS</option><option value="84">LOS DEMÁS</option><option value="104">LOS DEMÁS</option><option value="101">LOS DEMÁS</option><option value="90">LOS DEMÁS</option><option value="4">LOS DEMÁS</option><option value="6">LOS DEMÁS</option><option value="50">LOS DEMÁS</option><option value="45">LOS DEMÁS</option><option value="39">LOS DEMÁS</option><option value="57">LOS DEMÁS</option><option value="497">LOS DEMÁS</option><option value="448">LOS DEMÁS</option><option value="510">LOS DEMÁS</option><option value="528">LOS DEMÁS</option><option value="525">LOS DEMÁS</option><option value="522">LOS DEMÁS</option><option value="523">LOS DEMÁS</option><option value="403">LOS DEMÁS</option><option value="348">LOS DEMÁS</option><option value="344">LOS DEMÁS</option><option value="337">LOS DEMÁS</option><option value="334">LOS DEMÁS</option><option value="328">LOS DEMÁS</option><option value="324">LOS DEMÁS</option><option value="282">LOS DEMAS  HILADOS DE LANA O PELO FINO ACONDICIONADOS P` LA VENTA AL POR MENOR</option><option value="65">LOS DEMAS ACEITES DE NABO (DE NABINA)  O DE COLZA CON BAJO CONTENIDO DE ACIDO ERUCICO Y SUS FRACCIONES, EXCEPTO EN BRUTO</option><option value="67">LOS DEMAS ACEITES Y SUS FRACCIONES EXCLUIDO DE NABO (NABINA) O DE COLZA</option><option value="10">LOS DEMAS ANIMALES VIVOS</option><option value="541">LOS DEMAS APARATOS DE ALUMBRADO NO ELECTRICOS</option><option value="322">LOS DEMAS ARTICULOS DE LANA DE PUNTO</option><option value="332">LOS DEMAS ARTICULOS SIMILARES DE PUNTO, EXCEPTO DE LANA O DE PELO DE CABRA DE CACHEMIRA</option><option value="532">LOS DEMAS ASIENTOS</option><option value="531">LOS DEMAS ASIENTOS CON ARMAZON DE MADERA</option><option value="167">LOS DEMAS ATUNES FRESCOS O REFRIGERADOS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="473">LOS DEMAS BANANAS O PLATANOS FRESCOS</option><option value="387">LOS DEMÁS CALZADOS CON PALMILLA O PLATAFORMA DE MADERA, SIN PLANTILLAS NI PUNTERA METÁLICA DE PROTECCIÓN</option><option value="384">LOS DEMAS CALZADOS CON PARTE SUPERIOR DE CUERO NATURAL QUE CUBRAN EL TOBILLO</option><option value="383">LOS DEMAS CALZADOS CON PARTE SUPERIOR Y SUELA DE CUERO NATURAL</option><option value="382">LOS DEMAS CALZADOS CON PARTE SUPERIOR Y SUELA DE CUERO NATURAL QUE CUBRAN EL TOBILLO</option><option value="381">LOS DEMAS CALZADOS QUE CUBRAN EL TOBILLO</option><option value="386">LOS DEMÁS CALZADOS QUE CUBRAN EL TOBILLO CON PALMILLA O PLATAFORMA DE MADERA, SIN PLANTILLAS NI PUNTERA METÁLICA DE PROTECCIÓN</option><option value="456">LOS DEMAS CONSTRUCCIONES Y SUS PARTES DE FUNDICON DE HIERRO O ACERO</option><option value="220">LOS DEMAS EXTRACTOS DE ORIGEN VEGETAL</option><option value="285">LOS DEMAS FLORES Y CAPULLOS FRESCOS, CORTADAS PARA RAMOS O ADORNOS</option><option value="392">LOS DEMAS FREG.,LAVAB.,PEDEST.DE LAVABO,BAÑER.,BIDES,INODO.,URINAR.Y APAR.FIJ.SIMIL.D</option><option value="441">LOS DEMAS FREJOLES PARA LA SIEMBRA</option><option value="444">LOS DEMAS FRIJOLES</option><option value="109">LOS DEMAS FRIJOLES PREPARADOS O CONSERVADOS, SIN CONGELAR</option><option value="491">LOS DEMAS FRUTAS U OTROS FRUTOS FRESCOS</option><option value="415">LOS DEMAS HORTALIZAS INCLUSO SILVESTRES CONGELADAS EXCEPTO ESPARRAGO</option><option value="40">LOS DEMAS JUGOS Y EXTRACTOS VEGETALES DE OPIO, EXCEPTO CONCENTRADO DE PAJA DE ADORMIDERA</option><option value="506">LOS DEMAS JUNTAS Y SURTIDOS DE JUNTAS DE DISTINTA COMPOSICION PRESENTADAS EN BOLSAS/S</option><option value="503">LOS DEMAS MAQUINAS Y APARATOS DE QUEBRANTAR, TRITURAR O PULVERIZAR</option><option value="391">LOS DEMAS MARMOLES, TRAVERTINOS Y ALABASTROS</option><option value="152">LOS DEMAS MEDICAMENTOS P` USO HUMANO SIN DOSIFICAR NI ACOND. P` VENTA AL POR MENOR</option><option value="155">LOS DEMAS MEDICAMENTOS PARA USO HUMANO</option><option value="52">LOS DEMAS MUCILAGOS Y ESPESATIVOS DERIVADOS DE LOS VEGETALES</option><option value="538">LOS DEMAS MUEBLES DE MADERA</option><option value="534">LOS DEMAS MUEBLES DE METAL</option><option value="539">LOS DEMÁS MUEBLES Y SUS PARTES.</option><option value="159">LOS DEMAS PECES O PESCADOS VIVOS</option><option value="469">LOS DEMAS PERFILES DE ALEACIONES DE ALUMINIO</option><option value="168">LOS DEMAS PESCADOS, FRESCOS O REFRIGERADOS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="212">LOS DEMAS PULPOS, CONGELADOS, SECOS, SALADOS O EN SALMUERA</option><option value="526">LOS DEMAS RELOJES DE PULSERA,INCL. CON CONTADOR DE TIEMPO INCORPORADO</option><option value="172">LOS DEMAS SALMONIDOS CONGELADOS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="342">LOS DEMAS SWEATERS, PULLOVERS, CARDIGANS, Y ARTICULOS SIMILARES DE PUNTO,DE ALGODON</option><option value="461">LOS DEMAS TORNILLOS,PERNOS Y ARANDELAS DE FUNDICION DE HIERRO O ACERO</option><option value="317">LOS DEMAS T-SHIRTS DE ALGODON, PARA HOMBRES O MUJERES</option><option value="320">LOS DEMAS T-SHIRTS DE ALGODON, PARA NIÑOS O NIÑAS</option><option value="504">LOS DEMAS VALVULAS DE ALIVIO O SEGURIDAD</option><option value="396">LOS DEMAS VIDRIOS DE SEGURIDAD TEMPLADOS</option><option value="388">LOSETAS, CUBOS, DADOS Y ART.SIMIL.,INCL.DE FORMA DISTINTA A LA CUADRADA O RECTANG.EN</option><option value="495">LÚCUMA (LÚCUMA OBOVATA)</option><option value="449">MACA (LEPIDIUM MEYENII), FRESCOS, REFRIGERADOS, CONGELADOS O SECOS, INCLUSO TROCEADOS O EN PELLETS</option><option value="2">MAIZ DURO BLANCO</option><option value="479">MANDARINAS (INCLUIDAS LAS TANGERINAS Y SATSUMAS) FRESCAS O SECAS</option><option value="494">MANGO (MANGIFERA INDICA L.)</option><option value="119">MANGOS PREPARADOS O CONSERVADOS</option><option value="477">MANGOS Y MANGOSTANES, FRESCOS O SECOS</option><option value="95">MANTECA DE CACAO C/INDICE DE ACIDEZ EXPRESADO EN ACIDO OLEICO&lt;=1%</option><option value="96">MANTECA DE CACAO C/INDICE DE ACIDEZ EXPRESADO EN ACIDO OLEICO&gt;1% PERO&lt;=1.65%</option><option value="97">MANTECA DE CACAO C/INDICE DE ACIDEZ EXPRESADO EN ACIDO OLEICO&gt;1.65%</option><option value="424">MANUFACTURAS DE PIEDRAS PRECIOSAS O SEMIPRECIOSAS (NATURALES,SINTETICAS O RECONSTI.)</option><option value="142">MARMOL Y TRAVERTINOS SIMPLEM. TROCEADOS, POR ASERRADO O DE OTRO MODO, EN BLOQUES</option><option value="389">MARMOL,TRAVERTINOS Y ALABASTRO,SIMPLEMENTE TALLADAS O ASERRADAS,CON SUPERF.PLANA O LI</option><option value="218">MATERIAS COLORANTES DE MAIZ MORADO (ANTOCIANINA)</option><option value="219">MATERIAS COLORANTES DE MAIZ MORADO (ANTOCIANINA)</option><option value="217">MATERIAS COLORANTES DE ORIGEN VEGETAL DE ACHIOTE (ONOTO, BIJA)</option><option value="486">MELONES FRESCOS</option><option value="146">MINERALES DE ORO Y SUS CONCENTRADOS</option><option value="3">MORADO (ZEA MAYS AMILACEA CV. MORADO)</option><option value="51">MUCILAGOS DE SEMILLA DE TARA (CAESALPINEA SPINOSA)</option><option value="536">MUEBLES DE MADERA DEL TIPO DE LOS UTILIZADOS EN COCINAS</option><option value="537">MUEBLES DE MADERA DEL TIPO DE LOS UTILIZADOS EN DORMITORIOS</option><option value="535">MUEBLES DE MADERA DEL TIPO DE LOS UTILIZADOS EN OFICINAS</option><option value="533">MUEBLES DE METAL DEL TIPO DE LOS UTILIZADOS EN OFICINAS</option><option value="478">NARANJAS , FRESCAS O SECAS</option><option value="236">NEUMATICOS NUEVOS DE CAUCHO DEL TIPO DE LOS UTILIZ. EN AUTOBUSES O CAMIONES</option><option value="235">NEUMATICOS NUEVOS DE CAUCHO DEL TIPO DE LOS UTILIZ. EN AUTOMOVILES DE TURISMO</option><option value="556">Nueva Part 11</option><option value="33">OREGANO (ORIGANUM VULGARE)</option><option value="416">ORO EN LAS DEMAS FORMAS EN BRUTO</option><option value="148">OXIDO DE CINC (BLANCO O FLOR DE CINC)</option><option value="442">PALLARES (PHASEOLUS LUNATUS) EXCEPTO PARA SIEMBRA</option><option value="118">PALMITOS PREPARADOS O CONSERVADOS DE OTRO MODO</option><option value="293">PANT.LARG,PANT.CON PETO, PANT.CORT(CALZON)Y SHORTS DE PTO,PARA MUJE. O NIÑAS,DE ALGOD</option><option value="290">PANT.LARG,PANT.CON PETO,PANT.CORT(CALZON) Y SHORTS DE PTO,P`HOMBRES O NIÑOS,DE ALGODO</option><option value="292">PANT.LARG,PANT.CON PETO,PANT.CORT(CALZON)Y SHORTS DE PTO,P`MUJER O NIÑAS DE LANA O PE</option><option value="370">PANT.LARG.,PANT.C/PETO,PANT.CORTOS(CALZON.)Y SHORTS,P`MUJ.O NIÑAS,D`LAS DEMAS MAT.TEX</option><option value="369">PANT.LARG.,PANT.C/PETO,PANT.CORTOS(CALZON.)Y SHORTS,P`MUJERES O NIÑAS, DE ALGODON</option><option value="364">PANT.LARGOS,PANT.C/PETO,PANT.CORTOS(CALZONES) Y SHORTS,P`HOMB.Y NIÑOS, DE ALGODON</option><option value="366">PANTALONES LARGOS Y PANTALONES CON PETO</option><option value="365">PANTALONES LARGOS Y PANTALONES CON PETO DE ALGODON DENIM,PARA HOMBRES O NIÑOS</option><option value="524">PAPRIKA (CAPSICUM ANNUUM, L.)</option><option value="89">PARA SIEMBRA</option><option value="5">PARA SIEMBRA</option><option value="153">PARA USO HUMANO</option><option value="357">PARTES DE PRENDAS O DE COMPLEMENTOS DE VESTIR DE PTO DE FIBRAS SINTETICAS O ARTIFICIA</option><option value="358">PARTES DE PRENDAS O DE COMPLEMENTOS DE VESTIR DE PUNTO DE OTRAS MATERIAS</option><option value="94">PASTA DE CACAO DESGRASADA TOTAL O PARCIALMENTE</option><option value="93">PASTA DE CACAO SIN DESGRASAR</option><option value="164">PATUDOS O ATUNES OJO GRANDE  (THUNNUS OBESUS)</option><option value="176">PATUDOS O ATUNES OJO GRANDE  (THUNNUS OBESUS)</option><option value="157">PECES ORNAMENTALES</option><option value="453">PERFILES DE HIERRO O ACERO EN L, LAMINADOS O EXTRU. EN CALIENTE ALTURA&lt;80MM</option><option value="452">PERFILES DE HIERRO O ACERO EN U, I O H, LAMINADOS O EXTRU. EN CALIENTE ALTURA&lt;80MM</option><option value="165">PESCADO FRESCO O REFRIGERADO, EXCEPTO LOS FILETES Y DEMAS CARNE DE PESCADO DE LA PARTIDA No. 03.04 ATUNES COMUNES O DE ALETA AZUL (THUNNUS THYNNUS)</option><option value="390">PIEDRAS CALIZAS</option><option value="246">PIELES CURTIDAS O CRUST DE OVINO, DEPILADAS, INCLUSO DIVIDIDAS PERO SIN OTRA PREPARACION EN ESTADO HUMEDO</option><option value="247">PIELES CURTIDAS O CRUST DE OVINO, DEPILADAS, INCLUSO DIVIDIDAS PERO SIN OTRA PREPARACION EN ESTADO SECO</option><option value="519">PIMIENTA DEL GENERO PIPER, TRITURADA O PULVERIZADA</option><option value="115">PIMIENTO PIQUILLO (CAPSICUM ANNUUM)</option><option value="140">PISCO</option><option value="131">POLVOS PARA LA PREPARACION DE BUDINES, CREMAS, HELADOS, POSTRES, GELATINAS Y SIMILARE</option><option value="256">PORTADOCUMENTOS, PORTAFOLIOS, Y CONTINENTES SIMIL. C/LA SUPERF. EXTERIOR DE CUERO</option><option value="232">PREFORMAS</option><option value="352">PRENDAS Y COMPLEMENTOS DE VESTIR DE PUNTO PARA BEBES, DE ALGODON</option><option value="353">PRENDAS Y COMPLEMENTOS DE VESTIR DE PUNTO PARA BEBES, DE FIBRAS SINTETICAS</option><option value="375">PRENDAS Y COMPLEMENTOS DE VESTIR PARA BEBES, DE ALGODON</option><option value="132">PREP. COMPUESTAS CUYO GRADO VOLUM. SEA &lt;=0,5% PRESENTADAS EN ENVASES INMEDIATOS</option><option value="70">PREPARA. Y CONSERVAS DE SARDINAS EN SALSA DE TOMATE,ENTERO O EN TROZOS EN ENVASE TIPO OVAL</option><option value="71">PREPARA. Y CONSERVAS DE SARDINAS EN SALSA DE TOMATE,ENTERO O EN TROZOS EN ENVASE TIPO TALL</option><option value="78">PREPARAC. Y CONSERVAS DE ANCHOAS ENTERO O EN TROZOS, EXCEPTO PICADO</option><option value="77">PREPARAC. Y CONSERVAS DE CABALLAS ENTERO O EN TROZOS, EXCEPTO PICADO</option><option value="156">PREPARACIONES EN FORMA DE GEL, CONCEBIDAS PARA SER UTILIZADAS EN MEDICINA O VETERINARIA COMO LUBRICANTE PARA CIERTAS PARTES DEL CUERPO, EN OPERACIONES QUIRURGICAS O EXAMENES MEDICOS O COMO NEXO ENTRE EL CUERPO Y LOS INSTRUMENTOS MEDICOS.</option><option value="223">PREPARACIONES PARA EL  MAQUILLAJE DE LOS LABIOS</option><option value="74">PREPARACIONES Y CONSERVAS DE SARDINELAS Y ESPADINES, ENTERO O TROZOS</option><option value="133">PRESENTADAS EN ENVASES ACONDICIONADOS PARA LA VENTA AL POR MENOR</option><option value="49">PRESENTADO O ACONDICIONADO PARA LA VENTA AL POR MENOR</option><option value="216">PROD.CURTIENTES INORGANICOS;PREPARAC. CURTIENTES,INCL. CON PROD.CURTIENTES NATURA</option><option value="102">PRODUCTOS A BASE DE CEREALES, OBTENIDOS POR INFLADO O TOSTADO</option><option value="270">PUERTAS Y SUS MARCOS, CONTRAMARCOS Y UMBRALES, DE MADERA</option><option value="460">PUNTAS,CLAVOS,CHINCHES,GRAPAS APUNTADAS, Y ART. SIMI.DE FUNDICION DE HIERRO O ACERO</option><option value="134">QUE CONTENGAN EXCLUSIVAMENTE MEZCLAS O EXTRACTOS DE PLANTAS, PARTES DE PLANTAS, SEMILLAS O FRUTOS</option><option value="543">QUE REPRESENTEN ANIMALES O SERES NO HUMANOS</option><option value="9">QUINUA (CHENOPODIUM QUINOA) EXCEPTO PARA LA SIEMBRA</option><option value="8">QUINUA (CHENOPODIUM QUINOA) PARA SIEMBRA</option><option value="7">QUINUA.</option><option value="230">REVESTIMIENTO PARA SUELOS DE POLIMEROS DE CLORURO DE VINILO.</option><option value="257">SACOS DE VIAJE Y MOCHILAS CON LA SUPERF. EXT. DE CUERO NATURAL, REGENERADO,CHAROLADO</option><option value="485">SANDIAS FRESCAS</option><option value="73">SARDINAS, SARDINELAS Y ESPADINES ENTERO O EN TROZOS, EXCEPTO PICADO, EN ACEITE</option><option value="31">SEMILLAS DE ACHIOTE (ONOTO, BIJA)</option><option value="28">SEMILLAS DE CEBOLLAS, PUERROS (POROS), AJOS Y DEMAS HORTALIZAS DEL GENERO ALLIUM</option><option value="24">SEMILLAS DE NABO (NABINA) O DE COLZA CON BAJO CONTENIDO DE ACIDO ERUCICO</option><option value="22">SEMILLAS DE NABO O COLZA PARA SIEMBRA</option><option value="29">SEMILLAS DE TOMATES (LICOPERSICUM SPP.)</option><option value="129">SOPAS, POTAJES O CALDOS, PREPARADOS</option><option value="340">SUETERES (JERSEYS) DE ALGODON</option><option value="339">SUETERES Y PULLOVERS CON CUELLO DE CISNE (SOUS-PULL, TURTLE NECKS) DE ALGODON</option><option value="329">SUETERES, CARDIGANS, CHALECOS Y ARTICULOS SIMILARES DE CABRA DE CACHEMIRA DE PUNTO</option><option value="330">SUETERES, CARDIGANS, CON CUELLO DE CISNE DE LOS DEMAS PELOS FINOS</option><option value="338">SUETERES, CHALECOS Y ART. SIMILARES, DE PUNTO  DE ALGODON</option><option value="350">SUETERES, PULLOVERS, CARDIGANS, CHALECOS Y ART. SIMILARES DE FIBRAS ARTIFICIALES</option><option value="351">SUETERES, PULLOVERS, CARDIGANS, CHALECOS Y ART. SIMILARES DE LAS DEMAS MATERIAS TEXTI</option><option value="349">SUETERES, PULLOVERS, CARDIGANS, CHALECOS Y ARTICULOS SIMLARES DE FIBRAS ACRILICAS O M</option><option value="149">SULFATO DE COBRE</option><option value="480">TANGELO (CITRUS RETICULATA X CITRUS PARADISIS)</option><option value="54">TARA</option><option value="56">TARA EN POLVO (CAESALPINEA SPINOSA)</option><option value="516">TE NEGRO (FERMENTADO) Y TE PARCIALM.FERMENTADO, PRESENTADOS EN ENVASES DE CONT.&lt; =3KG</option><option value="517">TE NEGRO (FERMENTADO) Y TE PARCIALMENTE FERMENTADO, PRESENTADOS DE OTRA FORMA</option><option value="515">TE VERDE (SIN FERMENTAR) PRESENTADO DE OTRA FORMA</option><option value="489">TOMATE DE ARBOL (LIMA TOMATE, TAMARILLO)  (CYPHOMANDRA  BETACEA) FRESCO</option><option value="400">TOMATES FRESCOS O REFRIGERADOS.</option><option value="141">TORTAS Y DEMAS RESIDUOS SOLIDOS DE LA EXTRACC. DE GRASAS O ACEITES DE NABO (DE NABINA</option><option value="170">TRUCHAS (SALMO TRUTTA, ONCORHYNCHUS MYKISS, ONCORHYNCHUS CLARKI, ONCORHYNCHUS AGUABONITA, ONCORHYNCHUS GILAE, ONCORHYNCHUS APACHE Y ONCORHYNCHUS CHRYSOGASTER)</option><option value="189">TRUCHAS (SALMO TRUTTA, ONCORHYNCHUS MYKISS, ONCORHYNCHUS CLARKI, ONCORHYNCHUS AGUABONITA, ONCORHYNCHUS GILAE, ONCORHYNCHUS APACHE Y ONCORHYNCHUS CHRYSOGASTER)</option><option value="196">TRUCHAS (SALMO TRUTTA, ONCORHYNCHUS MYKISS, ONCORHYNCHUS CLARKI, ONCORHYNCHUS AGUABONITA, ONCORHYNCHUS GILAE, ONCORHYNCHUS APACHE Y ONCORHYNCHUS CHRYSOGASTER)</option><option value="160">TRUCHAS FRESCAS O REFRIGERADAS, EXCEPTO HIGADOS, HUEVAS Y LECHAS</option><option value="316">T-SHIRTDE ALGODON P`HOMB.O MUJ.,D`TEJ.C/HILADOS DE DIST. COLORES,C/ MOTIV. DE RAYAS</option><option value="315">T-SHIRTDE ALGODON P`HOMB.O MUJ.,D`TEJ.TEÑIDO D`UN SOLO COLOR UNIF.INCL.BLANQLEADOS</option><option value="319">T-SHIRTDE ALGODON P`NIÑOS O NIÑAS,DE TEJ.C/HILADOS D`DIST.COLORES,CON MOTIV.A RAYAS</option><option value="318">T-SHIRTDE ALGODON P`NIÑOS O NIÑAS,DE TEJ.TEÑ.D`UN SOLO COLOR UNIF.INCL.BLANQUEADOS</option><option value="314">T-SHIRTS Y CAMISETAS, DE PUNTO DE ALGODON</option><option value="490">UCHUVAS (UVILLAS) (PHYSALIS PERUVIANA) FRESCAS</option><option value="35">UÑA DE GATO (UNCARIA SPP.)</option><option value="34">UÑA DE GATO (UNCARIA TORMENTOSA) FRESCOS, SECOS, INCLUSO CORTADOS, QUEBRANTADOS O PULVERIZADOS</option><option value="484">UVAS FRESCAS</option><option value="393">VAJILLA Y DEMAS ART.DE USO DOMESTICO, HIGIENE O TOCADOR,DE CERAMICA, EXCEPTO PORCELANA</option><option value="209">VENERAS (VIEIRAS, CONCHA DE ABANICO)</option><option value="207">VENERAS (VIEIRAS, CONCHA DE ABANICO)</option><option value="291">VESTIDOS DE PUNTO PARA MUJERES O NIÑAS, DE LANA O PELO FINO</option><option value="397">VIDRIO DE SEGURIDAD CONTRACHAPADO  P`  AUTOMOVILES, AERONAVES, BARCOS U OTROS</option><option value="518">YERBA MATE.</option><option value="238">YOGUR AROMATIZADO CON FRUTAS, CACAO U OTROS FRUTOS, INC. CON AZUCAR U OTRO EDULCORANT</option></select>
+                    </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label">Nombre comercial:</label>
+                        <input id="txtNombreProductoPopUp" type="text" class="cont-box-input">
+                    </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label">Nombre técnico:</label>
+                        <input id="txtNombreTecnicoPopUp" type="text" placeholder="(opcional)" class="cont-box-input">
+                    </div>
+					<div>
+                     <div class="cont-box">
+                                <button id="btnGuardar" class="cont-box-submit" value="Registrar"><label>Registrar</label></button>
+                            </div>
+                            <div class="cont-box"><button id="btnCancelar" class="cont-box-cancel close"><label>Cancelar</label></button></div>
+							</div>
+                </form>
+            </div>
+        </div>
+        <script>
+            var _simuId = 0;
+            var _unidadMedida = '';
+            var _tipoTransporte = '';
+            var _tipoCarga = '';
+            var _idContenedor = '';
+            var _idPais = '';
+            var _idPuerto = '';
+            var _idAeropuerto = '';
+			 $("#btnCancelar").click(function () {
+        $('.reveal-modal-bg').css({ transition: "all 0.4s linear", height: "0", opacity: "0" });
+    });
+
+        </script>
+        
+        <script src="ScriptsForms/Simulador/Inicio/InformacionPreliminar.js"></script>
+
+
+   
+
+
+
+</body>
+</html>
+

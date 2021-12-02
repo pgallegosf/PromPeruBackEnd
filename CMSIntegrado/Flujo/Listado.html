@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <base href="../"/>
+    <title>Flujo - PromPeru</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="../img/iconos/icon.png">
+
+    <link href="css/Menu.css" rel="stylesheet">
+    <link href="iconmoon/iconmoon.css" rel="stylesheet">
+    <link href="css/apprise.css" rel="stylesheet">
+    <link href="css/botones.css" rel="stylesheet">
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/helper.js"></script>
+    <script src="Scripts/apprise.js"></script>
+    <script src="Scripts/ccGrid.js"></script>
+    <script>
+        var urlRaiz = "../";
+    </script>
+	 <script>
+        var urlRaiz = "../";
+
+        function openGlosario() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open( 'Glosario.html', 'Glosario', 'scrollbars=1, resizable = 1, width=' + window_width + ',height=' + window_height + ',top=' + window_top + ',left=' + window_left + '');
+        }
+
+        function openContacto() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open( 'Contacto.html', '_blank');
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="l-contents header-cont">
+                <div class="header-logo2">
+                    <h2>[Nombre del sistema]</h2>
+                </div>
+				<div class="header-logo3">
+				<a href="javascript:openGlosario()" class="header-close"><span>Glosario</span><span class="fab fa-stack-exchange"></span></a>
+                    <a href="javascript:openContacto()" class="header-close"><span>Contacto</span><span class="fas fa-envelope"></span></a>
+                <a href="Login.html" class="header-close"><span>Cerrar Sesión</span><span class="fas fa-power-off"></span></a><a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a>
+				</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu">
+        <ul class="menu">
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-key"></span>[Nombre del menú]<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+						<li><a class="menu-option" href="Alertas.html"><span class="icon-profile"></span>Alertas</a></li>
+                    <li><a class="menu-option" href="BotonesRectangulares.html"><span class="icon-profile"></span>Botones Rectangulares</a></li>
+                    <li><a class="menu-option" href="BotonesCirculares.html"><span class="icon-profile"></span>Botones circulares</a></li>
+						<li><a class="menu-option" href="Mantenimiento.html"><span class="icon-user"></span>Mantenimiento Simple</a></li>
+						<li><a class="menu-option" href="CabeceraDetalle.html"><span class="icon-profile"></span>Cabecera detalle</a></li>
+						<li><a class="menu-option" href="Flujo/Listado.html"><span class="icon-profile"></span>Flujo</a></li>
+					</ul>
+            </li>
+            <li><div class="divider"></div></li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-newspaper"></span>Configuración<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+                    <li><a class="menu-option" href="Seguridad/Producto.html"><span class="icon-newspaper"></span>Producto</a></li>
+                    <li><a class="menu-option" href="Seguridad/Inventario.html"><span class="icon-newspaper"></span>Inventario</a></li>
+                    <li><a class="menu-option" href="Seguridad/RegistrarFactura.html"><span class="icon-newspaper"></span>Factura</a></li>
+                    <li><a class="menu-option" href="Seguridad/MantenimientoProducto.html"><span class="icon-newspaper"></span>Producto</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del submenú]</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list">
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                    <li><a class="menu-option"><span class="icon-newspaper"></span>[Nombre del maestro]</a></li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+        </ul>
+
+    </div>
+
+    <div class="side-body" id="divContenido" style="min-height:500px;">
+        <div class="l-contents">
+            <div class="cont-cont">
+                <div class="cont-header">
+                    <h1 class="cont-header-h1">Listado</h1>
+                </div>
+                <nav class="cont-icons">
+                <a href="Flujo/Paso1.html" class="cont-icons-new"><span class="fas icon-plus"></span><span>Nuevo</span></a></nav>
+                <div class="cont-table">
+                    <table id="gridSimulaciones" class="cont-left tableResponsive"></table>
+                </div>
+                <div class="cont-table">
+                    <table class="cont-left tableResponsive">
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>Nombre</th>
+                                <th>Producto</th>
+                                <th>Origen</th>
+                                <th>Destino</th>
+                                <th>Fecha</th>
+                                <th>Progreso</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="N°">1</td>
+                                <td data-title="Nombre">Simulación 1</td>
+                                <td data-title="Producto">Papa</td>
+                                <td data-title="Origen">Perú - Lima</td>
+                                <td data-title="Destino">Brasil -Brasilia</td>
+                                <td data-title="Fecha">24/07/2018</td>
+                                <td data-title="Progreso">
+                                    <div class="pasos-box"><span>Paso</span><a><span class="num">1</span></a><a><span class="num">2</span></a><a href="" class="cont-link-pasos"><span class="num">3</span></a><a><span class="num">4</span></a></div>
+                                </td>
+                                <td data-title="Acciones">
+                                    <div class="accion-box"><a href="#" title="Editar"><span class="fas fa-edit"></span></a><a href="#" title="Eliminar"><span class="fas fa-trash-alt"></span></a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="N°">2</td>
+                                <td data-title="Nombre">Simulación 2</td>
+                                <td data-title="Producto">Camote</td>
+                                <td data-title="Origen">Perú - Lima</td>
+                                <td data-title="Destino">Venezuela - Caracas</td>
+                                <td data-title="Fecha">25/07/2018</td>
+                                <td data-title="Progreso">
+                                    <div class="pasos-box"><span>Paso</span><a href="" class="cont-link-pasos"><span class="num">1 </span></a><a><span class="num">2</span></a><a><span class="num">3</span></a><a><span class="num">4</span></a></div>
+                                </td>
+                                <td data-title="Acciones">
+                                    <div class="accion-box"><a href="#" title="Editar"><span class="fas fa-edit"></span></a><a href="#" title="Eliminar"><span class="fas fa-trash-alt"></span></a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="N°">3</td>
+                                <td data-title="Nombre">Simulación 3</td>
+                                <td data-title="Producto">Chuño</td>
+                                <td data-title="Origen">Perú - Lima</td>
+                                <td data-title="Destino">Ecuador</td>
+                                <td data-title="Fecha">26/07/2018</td>
+                                <td data-title="Progreso">
+                                    <div class="pasos-box"><span>Terminado</span><a href="" class="cont-link-pasos cont-link-termi"><span class="fas fa-check"></span></a></div>
+                                </td>
+                                <td data-title="Acciones">
+                                    <div class="accion-box"><a href="#" title="Editar" class="accion-box-links"><span class="fas fa-edit"></span></a><a href="#" title="Eliminar" class="accion-box-links"><span class="fas fa-trash-alt"></span></a><a href="#" title="Ver Reporte"><span class="fas fa-receipt"></span></a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="N°">4</td>
+                                <td data-title="Nombre">Simulación 4</td>
+                                <td data-title="Producto">Arina</td>
+                                <td data-title="Origen">Perú - Lima</td>
+                                <td data-title="Destino">Bolivia - Paz</td>
+                                <td data-title="Fecha">27/07/2018</td>
+                                <td data-title="Progreso">
+                                    <div class="pasos-box"><span>Paso</span><a href="" class="cont-link-pasos"><span class="num">1 </span></a><a><span class="num">2</span></a><a><span class="num">3</span></a><a><span class="num">4</span></a></div>
+                                </td>
+                                <td data-title="Acciones">
+                                    <div class="accion-box"><a href="#" title="Editar"><span class="fas fa-edit"></span></a><a href="#" title="Eliminar"><span class="fas fa-trash-alt"></span></a></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <nav class="cont-nav">
+                    <a href="Flujo/Listado.html"><span class="fas fa-angle-double-left"></span></a><a href="Flujo/Listado.html"><span class="fas fa-angle-left"></span></a><a href="Flujo/Paso1.html"><span class="fas fa-angle-right"></span></a><a href="Flujo/Paso4.html"><span class="fas fa-angle-double-right"></span></a>
+                    <input type="text" value="1" class="cont-nav-n">
+                    <p>de 2 páginas N° de registros: 15				</p>
+                </nav>
+            </div>
+        </div>
+     </div>
+
+    <script>
+        var editar = true;
+        var eliminar = true;
+    </script>
+ 
+    <script>
+
+        $(function () {
+            $('#btnMenu').click(function () {
+                $('.side-menu').toggleClass('slide-menu');
+            });
+            $('.menu-option').click(function () {
+                $('.side-menu').toggleClass('slide-menu');
+            });
+        });
+    </script>
+</body>
+
+</html>

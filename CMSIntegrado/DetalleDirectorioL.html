@@ -1,0 +1,935 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    
+    <title>Detalle Directorio - PromPeru</title>
+	
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/iconos/icon.png">
+
+    <link href="css/Menu.css" rel="stylesheet">
+    <link href="iconmoon/iconmoon.css" rel="stylesheet">
+    <link href="css/apprise.css" rel="stylesheet">
+    <link href="css/botones.css" rel="stylesheet">
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/helper.js"></script>
+    <script src="Scripts/apprise.js"></script>
+    <script src="Scripts/ccGrid.js"></script>
+	<script src="ScriptsForms/Admin/Mantenimientos/DetalleDirectorioL.js"></script>
+     <script>
+        var urlRaiz = "../";
+
+        function openGlosario() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open( 'Glosario.html', 'Glosario', 'scrollbars=1, resizable = 1, width=' + window_width + ',height=' + window_height + ',top=' + window_top + ',left=' + window_left + '');
+        }
+
+        function openContacto() {
+            var window_width = 850;
+            var window_height = 650;
+            var window_top = (screen.height - window_height) / 2;
+            var window_left = (screen.width - window_width) / 2;
+            window.open( 'Contacto.html', '_blank');
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="l-contents header-cont">
+                <div class="header-logo2">
+                    <a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a><h2>CMS Herramientas logisticas</h2>
+                </div>
+                <div class="header-logo3">
+				<a href="Login.html" class="header-close"><span>Cerrar Sesión</span><span class="fas fa-power-off"></span></a><a id="btnMenu" href="javascript:" class="header-glos" title="Menú"><span></span><span class="fas fa-list"></span></a>
+				</div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu">
+
+        <ul class="menu">
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-office"></span>CMS General<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li><a class="menu-option" href="Usuario.html">Usuario</a></li>
+                    <li><a class="menu-option" href="Perfil.html">Perfil</a></li>
+					<li><a class="menu-option" href="UsuarioEmpresa.html">Usuario Empresa</a></li>
+					<li><a class="menu-option" href="Logos.html">Logo</a></li>
+					<li><a class="menu-option" href="Notificacion.html">Notificaciones</a></li>
+					<li><a class="menu-option" href="CTipoContenedor.html">Tipo de Contenedor</a></li>
+					<li><a class="menu-option" href="CLPartida.html">Subpartida Nacional</a></li>
+                    <li><a class="menu-option" href="CLProducto.html">Producto</a></li>
+					<li><a class="menu-option" href="RAPais.html">País</a></li>
+					<li><a class="menu-option" href="TextoSugerencia.html">Texto Sugerencia</a></li>
+					<li><a class="menu-option" href="TextoRegistroEmpresa.html">Texto Registro</a></li>
+					<li><a class="menu-option" href="CLMaestrosV.html">Maestros Varios</a></li>
+                    <li><a class="menu-option" href="Sugerencia.html">Sugerencia</a></li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-earth"></span>Rutas Maritimas<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option"  href="RutaMaritima.html" >Rutas</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option"  href="RMPuerto.html" >Puerto</a></li>
+							<li><a class="menu-option" href="RMLineaN.html" >Linea Naviera</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-airplane"></span>Rutas Aéreas<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="RutaAerea.html" >Rutas</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="RAAeropuerto.html" >Aeropuerto</a></li>
+							<li><a class="menu-option" href="RALineaA.html" >Linea Aérea</a></li>
+                            <li><a class="menu-option" href="RAEscala.html" >Escala</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-truck"></span>Rutas Terrestres<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="RutaTerrestre.html"> Rutas</a></li>
+                            <li><a class="menu-option" href="RTTarifa.html" >Tarifa</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="RTCiudad.html">Ciudad</a></li>
+							<li><a class="menu-option" href="RTOperadorL.html">Operador Logístico</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-users"></span>Directorio Logistico<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:block;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:block;">
+							<li><a class="menu-option" href="DirectorioLogistico.html" style="background-color: #777;">Directorio Logistico</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="DLServicio.html">Servicios</a></li>
+                            <li><a class="menu-option" href="DLMercadoE.html">Mercado Exportación</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-insert-template"></span>Simulador de Cubicaje<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                	<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="CTipoCarga.html" >Tipo Carga</a></li>
+                            <li><a class="menu-option" href="CCarga.html" >Carga</a></li>
+							<li><a class="menu-option" href="CProducto.html">Producto</a></li>
+                            <li><a class="menu-option" href="CTipoPallet.html">Tipo de Paleta</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-toggle">
+                    <span class="icon-clipboard"></span>Simulador de Drawback<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+                            <li><a class="menu-option" href="DipoProduccion.html">Tipo de producción</a></li>
+							<li><a class="menu-option" href="DInsumos.html">Insumos</a></li>
+							<li><a class="menu-option" href="DModalidad.html">Modalidad</a></li>
+                            <li><a class="menu-option" href="DDeclaraciónA.html">Consignación del código 13</a></li>
+                        </ul>
+					</li>
+                </ul>
+            </li>
+			<li>
+                <a class="menu-toggle">
+                    <span class="icon-coin-dollar"></span>Costos de Exportación<span class="menu-caret"></span>
+                </a>
+                <ul class="menu-list" style="display:none;">
+                    <li>
+						<a class="menu-toggle">
+							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="CLCostos.html">Costos</a></li>
+							<li><a class="menu-option" href="CLFleteA.html">Flete Aéreo</a></li>
+							<li><a class="menu-option" href="CLFleteMFCL.html">Flete Marítimo FCL</a></li>
+							<li><a class="menu-option" href="CLFleteMLCL.html">Flete Marítimo LCL</a></li>
+							<li><a class="menu-option" href="CLTasaA.html">Tasa Arancelaria</a></li>
+							<li><a class="menu-option" href="CLGasto.html">Gasto</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="menu-toggle">
+							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
+						</a>
+						<ul class="menu-list" style="display:none;">
+							<li><a class="menu-option" href="CLMaestrosV.html">Maestros varios</a></li>
+							<li><a class="menu-option" href="CLAeropuerto.html">Aeropuerto</a></li>
+							<li><a class="menu-option" href="CLPuerto.html">Puerto</a></li>
+							<li><a class="menu-option" href="CLGlosario.html">Glosario</a></li>
+							<li><a class="menu-option" href="CLSector.html">Sector</a></li>
+						</ul>
+					</li>
+                </ul>
+            </li>
+            <li><div class="divider"></div></li>
+        </ul>
+
+    </div>
+
+    <div class="side-body" id="divContenido" style="min-height:500px;">
+            <div class="l-contents">
+                <div class="cont-cont">
+                    
+                    
+                    <div class="cont-title">
+                        <h1>Detalle Directorio Logistico</h1>
+                    </div>
+                    <div>
+                        <h2 class="cont-title-h2"> </h2>
+                        <div class="cont-information">
+                            <div class="cont-boxes">
+                                <div class="cont-box">
+                                    <label class="cont-box-label">País:</label>
+                                    <select class="cont-box-input" id="ddlMaterial_Conc_Id">
+										<option value="" selected="">--Seleccione--</option>
+										<option value="1">Perú</option>
+										<option value="2">Chile</option>
+										<option value="3">Argentina</option>
+										<option value="4">Brasil</option>
+									</select>
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Ruc:</label>
+                                    <input type="text" disabled="" class="cont-box-input" value="20344769932">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Razón Social:</label>
+                                    <input type="text" disabled="" class="cont-box-input" value="FRÍO AÉREO ASOCIACIÓN CIVIL">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Nombre Comercial:</label>
+                                    <input type="text" disabled="" class="cont-box-input" value="FRÍO AÉREO">
+                                </div>
+                                <div class="cont-box">
+                                    <label class="cont-box-label">Correo:</label>
+                                    <div class="display-flex">
+                                        <input type="text"  class="cont-box-input" value="omoreno@frioaereo.com.pe	">
+                                    </div>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Página Web:</label>
+                                    <div class="display-flex">
+                                        <input type="text"  class="cont-box-input" value="www.frioaereo.com.pe">
+                                    </div>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Descripción:</label>
+                                    <div class="display-flex">
+                                        <textarea id="w3review" name="w3review" class="cont-box-input" rows="4">
+											Somos, desde 1997, un depósito temporal especializado en el manejo de perecederos 
+											vegetales de exportación aérea y brindamos servicios integrales de almacenaje refrigerado, 
+											paletizado y control de calidad a todo aquel que lo requiera. Proveemos también insumos y 
+											materiales de embalaje diversos. Estamos constituidos como una asociación civil sin fines 
+											de lucro y estamos comprometidos en la promoción de las agro exportaciones peruanas.
+										</textarea>
+                                    </div>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Otros Certificaciones:</label>
+                                    <div class="display-flex">
+                                        <textarea id="w3review" name="w3review" class="cont-box-input" rows="3">
+											DGAC, ISO 14001, OHSAS 18001, GS1, RA3.
+										</textarea>
+                                    </div>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Otros Servicios:</label>
+                                    <div class="display-flex">
+                                        <textarea id="w3review" name="w3review" class="cont-box-input" rows="3">
+											DGAC, ISO 14001, OHSAS 18001, GS1, RA3.
+										</textarea>
+                                    </div>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label" style="text-align: left;">Verificado:</label>
+                                    <div class="display-flex" style="justify-content:left; position: absolute;">
+                                       <input checked="checked" id="chkVerificado" class="input-checkbox cont-box-input" type="checkbox">
+									   <label for="chkVerificado" class="input-checkbox-lab "></label>
+                                    </div>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Fecha inscripción SUNAT:</label>
+                                    <div class="display-flex">
+                                        <input type="text"  class="cont-box-input" value="04/09/1997">
+                                    </div>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Clientes principales:</label>
+                                    <div class="display-flex">
+                                        <textarea id="w3review" name="w3review" class="cont-box-input" rows="3">
+											DGAC, ISO 14001, OHSAS 18001, GS1, RA3.
+										</textarea>
+                                    </div>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label" style="text-align: left;">Calificación:</label>
+                                    <div class="display-flex"style="justify-content:left; position: absolute;  color:#e21f19;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="divgridMaterialDirecto">
+                            <h2 class="cont-title-h2">Representantes</h2>
+                            <section id="contcheck1">
+                                <div class="section-check">
+                                    <div class="cont-table">
+                                        <table id="gridMaterialDirecto" class="cont-left tableResponsive" style="width: 100%;">
+										<thead>
+											<tr>
+												<th style="width:10%;">Nombre</th>
+												<th style="width:10%;">Apellido Paterno</th>
+												<th style="width:10%;">Apellido Materno</th>
+												<th style="width:15%;">Correo</th>
+												<th style="width:10%;">Cargo</th>
+												<th style="width:10%;">Clase Representante</th>
+												<th style="width:5%;"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Omar" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Moreno" class="table-input" >
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="100" autocomplete="off" value="omoreno@frioaereo.com.pe" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="100" autocomplete="off" value="COORDINADOR COMERCIAL" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Legal" class="table-input">
+												</td>
+												
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Victor" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Mercado" class="table-input" >
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Luyo" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="100" autocomplete="off" value="vmercado@frioaereo.com.pe" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="100" autocomplete="off" value="Gerente de proyectos" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
+												</td>
+												
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Eli" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Bustinza" class="table-input" >
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Saldivar" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="100" autocomplete="off" value="ebustinza@frioaereo.com.pe" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="100" autocomplete="off" value="Gerente de operaciones" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
+												</td>
+												
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+										</table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+						<div id="divgridMaterialDirecto">
+                            <h2 class="cont-title-h2">Servicios que Brinda la Empresa</h2>
+                            <section id="contcheck1">
+                                <div class="section-check">
+                                    <div class="cont-table">
+                                        <table id="gridMaterialDirecto" class="cont-left tableResponsive" style="width: 100%;">
+										<thead>
+											<tr>
+												<th style="width:10%;">Id</th>
+												<th style="width:10%;">Descripción</th>
+												<th style="width:5%;"></th>
+											</tr>
+										</thead>
+											<tbody>
+												<tr>
+													<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+														<input disabled id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="1" class="table-input">
+													</td>
+													<td data-title="Material" style="width:30%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+														<select id="ddlMaterial_Conc_Id" class="table-select">
+															<option value="" selected="">--Seleccione--</option>
+															<option value="122">Agente de Aduana</option>
+															<option value="121">Agente de Carga</option>
+															<option value="117" selected>Deposito temporal</option>
+															<option value="124">Líneas aereas</option>
+														</select>
+													</td>
+													<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+														<div class="accion-box">
+															<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+																<span class="fas fa-trash-alt"></span>
+															</a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+						<div id="divgridMaterialDirecto">
+                            <h2 class="cont-title-h2">Certificaciones</h2>
+                            <section id="contcheck1">
+                                <div class="section-check">
+                                    <div class="cont-table">
+                                        <table id="gridMaterialDirecto" class="cont-left tableResponsive" style="width: 100%;">
+										<thead>
+											<tr>
+												<th style="width:10%;">Id</th>
+												<th style="width:10%;">Descripción</th>
+												<th style="width:5%;"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input disabled id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="1" class="table-input">
+												</td>
+												<td data-title="Material" style="width:30%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<select id="ddlMaterial_Conc_Id" class="table-select">
+														<option value="" selected="">--Seleccione--</option>
+														<option value="122">OEA</option>
+														<option value="121">BASC</option>
+														<option value="117" selected>ISO 9001</option>
+														<option value="124">ISO 28000</option>
+														<option value="124">Otros</option>
+													</select>
+												</td>
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input disabled id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="1" class="table-input">
+												</td>
+												<td data-title="Material" style="width:30%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<select id="ddlMaterial_Conc_Id" class="table-select">
+														<option value="" selected="">--Seleccione--</option>
+														<option value="122">OEA</option>
+														<option value="121" selected>BASC</option>
+														<option value="117" >ISO 9001</option>
+														<option value="124">ISO 28000</option>
+														<option value="124">Otros</option>
+													</select>
+												</td>
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input disabled id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="1" class="table-input">
+												</td>
+												<td data-title="Material" style="width:30%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<select id="ddlMaterial_Conc_Id" class="table-select">
+														<option value="" selected="">--Seleccione--</option>
+														<option value="122">OEA</option>
+														<option value="121">BASC</option>
+														<option value="117" >ISO 9001</option>
+														<option value="124" selected>ISO 28000</option>
+														<option value="124">Otros</option>
+													</select>
+												</td>
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+										</table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div id="divgridMaterialDirecto">
+                            <h2 class="cont-title-h2">Sucursales</h2>
+                            <section id="contcheck1">
+                                <div class="section-check">
+                                    <div class="cont-table">
+                                        <table id="gridMaterialDirecto" class="cont-left tableResponsive" style="width: 100%;">
+										<thead>
+											<tr>
+												<th style="width:10%;">Tipo Sucursal</th>
+												<th style="width:10%;">País</th>
+												<th style="width:10%;">Departamento</th>
+												<th style="width:15%;">Provincia</th>
+												<th style="width:10%;">Distrito</th>
+												<th style="width:10%;">Ciudad</th>
+												<th style="width:10%;">Telefono</th>
+												<th style="width:10%;">Clase Sucursal</th>
+												<th style="width:5%;"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Oficina Comercial
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Perú
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Lima
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													5753314
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Legal
+												</td>
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:EditarSucursal(1)" title="Editar">
+															<span class="fas fas fa-search"></span>
+														</a>
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Oficina Comercial
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Perú
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Lima
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													5753314
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Legal
+												</td>
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:EditarSucursal(1)" title="Editar">
+															<span class="fas fas fa-search"></span>
+														</a>
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Oficina Comercial
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Perú
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													LIMA
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Lima
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													5753314
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													Legal
+												</td>
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:EditarSucursal(1)" title="Editar">
+															<span class="fas fas fa-search"></span>
+														</a>
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+						<div id="divgridMaterialDirecto">
+                            <h2 class="cont-title-h2">Productos Transportados y/o Gestionados</h2>
+                            <section id="contcheck1">
+                                <div class="section-check">
+                                    <div class="cont-table">
+                                        <table id="gridMaterialDirecto" class="cont-left tableResponsive" style="width: 100%;">
+										<thead>
+											<tr>
+												<th style="width:10%;">Id</th>
+												<th style="width:30%;">Producto</th>
+												<th style="width:10%;">Mercado de Exportación</th>
+												<th style="width:5%;"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input disabled id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="1" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input  id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Transporte de Carga de Proyecto, Mercancias Peligrosas, Carga General, otros." class="table-input">
+												</td>
+												<td data-title="Material" style="width:30%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<select id="ddlMaterial_Conc_Id" class="table-select">
+														<option value="" selected="">--Seleccione--</option>
+														<option value="122">Argentina</option>
+														<option value="121">Bolivia</option>
+														<option value="117" selected>Chile</option>
+														<option value="124">Paraguay</option>
+														<option value="124">Uruguay</option>
+													</select>
+												</td>
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+										</table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div>
+							<nav class="cont-icons">
+							<a id="btnAnterior" href="DirectorioLogistico.html" class="cont-icons-new" style="min-width:120px">
+                                <span class="fas fa-arrow-circle-left">
+                                </span><span>Anterior</span>
+                            </a>
+							<a id="btnGuardar" href="javascript:" class="cont-icons-new" style="min-width:120px">
+                                <span class="fas fa-save">
+                                </span><span>Guardar</span>
+                            </a>
+							</nav>
+						</div>
+                       
+                       
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="reveal-modal-bg">
+                <div class="modal-registrar">
+                    <h2 id="lblRegistro">Sucursal</h2>
+                    <div class="cont-box">
+                        <label class="cont-box-label">Tipo de Dirección:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Dirección:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Persona de Contacto:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Correo:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">País:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Departamento:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Provincia:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Distrito:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label">Teléfono:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Estado/Región:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Ciudad:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+					<div class="cont-box">
+                        <label class="cont-box-label">Clase Sucursal:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+                    <div class="cont-box">
+                        <button id="btnGuardar" class="cont-box-submit"><label>Actualizar</label></button>
+                    </div>
+                    <div class="cont-box"><button id="btnCancelar" class="cont-box-cancel close"><label>Cancelar</label></button></div>
+                </div>
+            </div>
+        </div>
+        <script>
+    var listaCostos=[{"Cost_Id":0,"Simu_Id":7175,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":1,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"P","Conc_Nombre":"","Tcon_Nombre":"Materiales directos","Prod_Nombre":"ppp","Part_Nombre":"ABRIGOS,CHAQ.,CAPAS Y ART. SIMIL.DE PTO, PARA MUJERES O NIÑAS, DE ALGODON","Simu_Paso":1,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":50,"Sect_Id":1,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":"Kilogramo","Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":2,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"P","Conc_Nombre":"","Tcon_Nombre":"Mano de obra directa","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":3,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"P","Conc_Nombre":"","Tcon_Nombre":"Materiales Indirectos","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":4,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"P","Conc_Nombre":"","Tcon_Nombre":"Mano de obra indirecta","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":5,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"P","Conc_Nombre":"","Tcon_Nombre":"Costos indirectos de fabricación","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":6,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"P","Conc_Nombre":"","Tcon_Nombre":"Gastos generales de administrativos","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":7,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Envase","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":8,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Empaque","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":9,"Tcon_Estatico":false,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Embalaje","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":10,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Comercialización","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":11,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Distribución y ventas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":12,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Gastos exportación y aduanas","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":13,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Gastos financieros","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":14,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Gastos de descarga","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false},{"Cost_Id":0,"Simu_Id":0,"Conc_Id":0,"Cost_UnidadMedida_Id":0,"Cost_CantidadExportar":null,"Cost_CantidadMerma":null,"Cost_CantidadTotal":null,"Cost_CantidadHoras":null,"Cost_CostoUnitario":null,"Cost_CostoFijo":null,"Cost_CostoVariable":null,"Cost_CostoTotal":null,"Cost_ClienteCreacion":0,"Simu_TipoTransporte":null,"Simu_TipoCarga":null,"Tcon_Id":15,"Tcon_Estatico":true,"Tcon_TipoEmpresa":"A","Conc_Nombre":"","Tcon_Nombre":"Derechos e impuestos","Prod_Nombre":null,"Part_Nombre":null,"Simu_Paso":0,"Simu_MermaAprox":null,"Simu_Utilidad":null,"Simu_CantidadExportar":0,"Sect_Id":0,"ccG_Estado":null,"Tcon_Incoterms":null,"Simu_UnidadMedida":null,"Simu_TasaSeguro":null,"Simu_PrimaNetaSeguro":null,"Simu_DerechoEmisionSeguro":null,"Simu_UsoAeropuerto":null,"Simu_EmisionAWB":null,"Simu_HandlingAereo":null,"Simu_ServicioIntegrado":null,"Simu_EmisionBL":null,"Simu_HandlingLCL":null,"Simu_Consolidacion":null,"Simu_IncluirFAS":null,"Simu_IncluirFOB":null,"Simu_IncluirCFR":null,"Simu_IncluirCIF":null,"Simu_IncluirDAT":null,"Simu_IncluirDAP":null,"Simu_IncluirDDP":null,"Orden":0,"Pais_Nombre":null,"Simu_Nombre":null,"Preguardado":false}];
+        </script>
+       
+        
+
+    </main>
+    <!--<footer>
+        <div class="footer2">
+            <div class="l-contents">
+                <div class="footer-box">
+                    <div class="footer-logo"><img src="/PROMPERU.SIMCOS.Web/Content/img/logos//logo-promperu.jpg" alt="Logo PromPerú"></div>
+                </div>
+                <div class="footer-box2">
+                    <div class="footer-logo">
+                        <img src="/PROMPERU.SIMCOS.Web/Content/img/logos//logo.png" alt="Marca Perú">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        -->
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Chrome","requestId":"a65cd3f926cf46a88e08b797554b6dde"}
+    </script>
+    <script type="text/javascript" src="http://localhost:49579/b76c8533a8914a7d82ee1c79a53d283e/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+
+</body>
+</html>
+
+
+
+
+<!--
+<tr>
+											<td data-title="Material" style="width:30%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+											<select id="ddlMaterial_Conc_Id" class="table-select">
+											<option value="" selected="">--Seleccione--</option>
+											<option value="122">botón002</option>
+											<option value="121">botones001</option>
+											<option value="117">eee</option>
+											<option value="124">guardar</option>
+											</select>
+											<input id="gridMaterialDirecto_ccG_Id_0" type="hidden" value="1##0" style="visibility:hidden">
+											</td>
+											<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+											<input id="Cost_CantidadExportar" type="text" maxlength="18" autocomplete="off" value="" class="table-input" onkeyup="CalcularMaterialDirecto(this);" onkeypress="return ValidarDecimal(event);"></td>
+											<td data-title="Cantidad de merma" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+											<input id="Cost_CantidadMerma" type="text" value="" class="table-input" disabled="">
+											</td>
+											<td data-title="Cantidad" style="width:10%" align="left" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+											<input id="Cost_CantidadTotal" type="text" value="" class="table-input" disabled="">
+											</td>
+											<td data-title="Unidad medida" style="width:15%" align="left" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+											<select id="Cost_UnidadMedida_Id" class="table-select">
+											<option value="" selected="">--Seleccione--</option>
+											<option value="26">Kilogramo</option>
+											<option value="27">Metros</option>
+											<option value="28">Onza</option>
+											<option value="29">Quintal</option>
+											<option value="25">Tonelada</option>
+											<option value="24">Unidad</option>
+											</select>
+											</td>
+											<td data-title="Costo unitario (US$)" style="width:10%" align="left" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+											<input id="Cost_CostoUnitario" type="text" maxlength="18" autocomplete="off" value="" class="table-input" onkeyup="CalcularMaterialDirecto(this);" onkeypress="return ValidarDecimal(event);"></td>
+											<td data-title="Costo total (US$)" style="width:10%" align="left" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+											<input id="Cost_CostoTotal" type="text" value="" class="table-input" disabled="">
+											</td>
+											<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+											<div class="accion-box"><a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+											<span class="fas fa-trash-alt"></span>
+											</a>
+											</div>
+											</td>
+										</tr>
+-->
+
+
