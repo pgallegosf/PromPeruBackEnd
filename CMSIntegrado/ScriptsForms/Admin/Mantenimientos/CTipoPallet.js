@@ -73,7 +73,7 @@ function LimpiarPoppupPuerto() {
     $('#chkActivo').prop('checked', 'checked');
     $('#btnGuardar').html('<label>Registrar</label>');
 	$('#lblRegistrar').html('Registrar');
-    $('#lblRegistro').html('Crear Pallet');
+    $('#lblRegistro').html('Crear Paleta');
 }
 
 function InsertarPuerto() {
@@ -97,7 +97,7 @@ function InsertarPuerto() {
         Puer_Activo: puertoActivo
     };
 
-    alert('Se guardó el Pallet "' + nombre + '" correctamente', 'CHECK', function () {
+    alert('Se guardó el Paleta "' + nombre + '" correctamente', 'CHECK', function () {
         LimpiarPoppupPuerto();
         $('.reveal-modal-bg').css({ transition: "all 0.4s linear", height: "0", opacity: "0" });
         HidePopUp('divPopup');
@@ -143,7 +143,7 @@ function EditarPuerto(puerId) {
         //SeleccionarPuerto(puerId);
         $('#btnGuardar').html('<label>Actualizar</label>');
 		$('#lblRegistrar').html('Actualizar');
-        $('#lblRegistro').html('Actualizar Pallet');
+        $('#lblRegistro').html('Actualizar Paleta');
         $('.reveal-modal-bg').css({ transition: "all 0.4s linear", height: "100%", opacity: "1" });
 		$('#txtNombre').focus();
         //ShowPopUp('divPopup');
@@ -152,7 +152,7 @@ function EditarPuerto(puerId) {
 
 
 function EliminarPuerto(puerNombre, puerId) {
-    confirm('¿Está seguro de eliminar el Pallet "' + puerNombre + '"?', function (result) {
+    confirm('¿Está seguro de eliminar el Paleta "' + puerNombre + '"?', function (result) {
         if (result) {
             var idPuerto = { Puer_Id: puerId };
             

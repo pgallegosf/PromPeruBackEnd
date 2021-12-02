@@ -72,7 +72,7 @@ function LimpiarPoppupPuerto() {
     $('#txtNombre').focus();
     $('#chkActivo').prop('checked', 'checked');
     $('#btnGuardar').html('<label>Registrar</label>');
-    $('#lblRegistro').html('Crear Modalidad');
+    $('#lblRegistro').html('Crear Modalidad de insumos');
 }
 
 function InsertarPuerto() {
@@ -141,7 +141,7 @@ function EditarPuerto(puerId) {
     if (puerId != null && puerId != '') {
         //SeleccionarPuerto(puerId);
         $('#lblRegistrar').html('Actualizar');
-        $('#lblRegistro').html('Actualizar Modalidad');
+        $('#lblRegistro').html('Actualizar Modalidad de insumos');
         $('.reveal-modal-bg').css({ transition: "all 0.4s linear", height: "100%", opacity: "1" });
 		$('#txtNombre').focus();
         //ShowPopUp('divPopup');
@@ -150,7 +150,7 @@ function EditarPuerto(puerId) {
 
 
 function EliminarPuerto(puerNombre, puerId) {
-    confirm('¿Está seguro de eliminar la Modalidad "' + puerNombre + '"?', function (result) {
+    confirm('¿Está seguro de eliminar la Modalidad de insumos "' + puerNombre + '"?', function (result) {
         if (result) {
             var idPuerto = { Puer_Id: puerId };
             

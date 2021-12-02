@@ -72,7 +72,7 @@ function LimpiarPoppupPuerto() {
     $('#txtNombre').focus();
     $('#chkActivo').prop('checked', 'checked');
     $('#btnGuardar').html('<label>Registrar</label>');
-    $('#lblRegistro').html('Crear Declaración Aduanera');
+    $('#lblRegistro').html('Crear Consignación del código 13');
 }
 
 function InsertarPuerto() {
@@ -96,7 +96,7 @@ function InsertarPuerto() {
         Puer_Activo: puertoActivo
     };
 
-    alert('Se guardó la Declaración Aduanera "' + nombre + '" correctamente', 'CHECK', function () {
+    alert('Se guardó la Consignación del código 13 "' + nombre + '" correctamente', 'CHECK', function () {
         LimpiarPoppupPuerto();
         $('.reveal-modal-bg').css({ transition: "all 0.4s linear", height: "0", opacity: "0" });
         HidePopUp('divPopup');
@@ -141,7 +141,7 @@ function EditarPuerto(puerId) {
     if (puerId != null && puerId != '') {
         //SeleccionarPuerto(puerId);
         $('#lblRegistrar').html('Actualizar');
-        $('#lblRegistro').html('Actualizar Declaración Aduanera');
+        $('#lblRegistro').html('Actualizar Consignación del código 13');
         $('.reveal-modal-bg').css({ transition: "all 0.4s linear", height: "100%", opacity: "1" });
 		$('#txtNombre').focus();
         //ShowPopUp('divPopup');
@@ -150,7 +150,7 @@ function EditarPuerto(puerId) {
 
 
 function EliminarPuerto(puerNombre, puerId) {
-    confirm('¿Está seguro de eliminar la Declaración Aduanera "' + puerNombre + '"?', function (result) {
+    confirm('¿Está seguro de eliminar la Consignación del código 13 "' + puerNombre + '"?', function (result) {
         if (result) {
             var idPuerto = { Puer_Id: puerId };
             
