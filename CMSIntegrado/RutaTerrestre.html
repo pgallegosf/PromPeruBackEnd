@@ -67,7 +67,7 @@
             <li><div class="divider"></div></li>
 			<li>
                 <a class="menu-toggle">
-                    <span class="icon-earth"></span>Rutas Maritimas<span class="menu-caret"></span>
+                    <span class="icon-earth"></span>Rutas Marítimas<span class="menu-caret"></span>
                 </a>
                 <ul class="menu-list" style="display:none;">
                     <li>
@@ -109,7 +109,6 @@
 						<ul class="menu-list" style="display:none;">
                             <li><a class="menu-option" href="RAAeropuerto.html" >Aeropuerto</a></li>
 							<li><a class="menu-option" href="RALineaA.html" >Linea Aérea</a></li>
-                            <li><a class="menu-option" href="RAEscala.html" >Escala</a></li>
 <li><a class="menu-option" href="RACostos.html" >Costos</a></li>
 <li><a class="menu-option" href="RATarifa.html" >Tarifa</a></li>
 						</ul>
@@ -194,7 +193,6 @@
 						</a>
 						<ul class="menu-list" style="display:none;">
                             <li><a class="menu-option" href="DipoProduccion.html">Tipo de producción</a></li>
-							<li><a class="menu-option" href="DInsumos.html">Insumos</a></li>
 							<li><a class="menu-option" href="DModalidad.html">Modalidad de insumos</a></li>
                             <li><a class="menu-option" href="DDeclaraciónA.html">Consignación del código 13</a></li>
                         </ul>
@@ -211,7 +209,7 @@
 							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
 						</a>
 						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="CLCostos.html">Costos</a></li>
+							<li><a class="menu-option" href="CLCostos.html" >Conceptos de costos y gastos </a></li>
 							<li><a class="menu-option" href="CLFleteA.html">Flete Aéreo</a></li>
 							<li><a class="menu-option" href="CLFleteMFCL.html">Flete Marítimo FCL</a></li>
 							<li><a class="menu-option" href="CLFleteMLCL.html">Flete Marítimo LCL</a></li>
@@ -219,17 +217,7 @@
 							
 						</ul>
 					</li>
-					<li>
-						<a class="menu-toggle">
-							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
-						</a>
-						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="CLMaestrosV.html">Maestros varios</a></li>
-							<li><a class="menu-option" href="CLAeropuerto.html">Aeropuerto</a></li>
-							<li><a class="menu-option" href="CLPuerto.html">Puerto</a></li>
-							
-						</ul>
-					</li>
+					
                 </ul>
             </li>
             <li><div class="divider"></div></li>
@@ -268,6 +256,9 @@
                                 <th data-title="Correo" style="width:25%"><input type="text" id=""></th>
 								<th data-title="Correo" style="width:25%"><input type="text" id=""></th>
 								<th data-title="Correo" style="width:25%"><input type="text" id=""></th>
+                                <th data-title="Correo" style="width:25%"><input type="text" id=""></th>
+                                <th data-title="Correo" style="width:25%"><input type="text" id=""></th>
+                                <th data-title="Correo" style="width:25%"><input type="text" id=""></th>
 								<th data-title="Correo" style="width:25%"><input type="text" id=""></th>
 								<th data-title="Correo" style="width:25%"><input type="text" id=""></th>
                                 <th data-title="Teléfono" style="width:10%"><input type="text" id="gridPuertos_txtB_Usua_Telefono"></th>
@@ -280,11 +271,14 @@
                             </tr>
                             <tr>
                                 <th style="width:10%;"><a id="a_RowNumber">Nº</a></th>
-                                <th style="width:35%;"><a id="a_NombreCompleto">Punto de origen</a></th>
-                                <th style="width:25%;"><a id="a_Usua_Email">Punto de llegada</a></th>
+                                <th style="width:35%;"><a id="a_NombreCompleto">Punto origen</a></th>
+                                <th style="width:25%;"><a id="a_Usua_Email">Punto llegada</a></th>
 								<th style="width:25%;"><a id="a_Usua_Email">Distancia (km)</a></th>
-								<th style="width:25%;"><a id="a_Usua_Email">Tiempo de transito</a></th>
-								<th style="width:25%;"><a id="a_Usua_Email">Frecuencia de salida </a></th>
+								<th style="width:25%;"><a id="a_Usua_Email">Tiempo transito</a></th>
+								<th style="width:25%;"><a id="a_Usua_Email">Frecuencia salida </a></th>
+                                <th style="width:25%;"><a id="a_Usua_Email">CNT 20 </a></th>
+                                <th style="width:25%;"><a id="a_Usua_Email">CNT 40</a></th>
+                                <th style="width:25%;"><a id="a_Usua_Email">CNT 40 Reefer</a></th>
 								<th style="width:25%;"><a id="a_Usua_Email">Imagen</a></th>
                                 <th style="width:10%;">
                                     <a id="a_Usua_ActivoDescripcion">Estado</a>
@@ -326,6 +320,9 @@
 								<td data-title="Pais" style="width:25%" align="left" >350</td>
 								<td data-title="Pais" style="width:25%" align="left" >9</td>
 								<td data-title="Pais" style="width:25%" align="left" >Interdiaria</td>
+                                <td data-title="Pais" style="width:25%" align="left" >1,500</td>
+                                <td data-title="Pais" style="width:25%" align="left" >2,000</td>
+                                <td data-title="Pais" style="width:25%" align="left" >3,000</td>
 								<td data-title="Pais" style="width:25%" align="center" ><img src="img/RutaTerrestre/Tumbes - Piura.jpg" alt="tipo carga" width="70" height="70"></td>
                                 <td data-title="Estado" style="width:10%" align="left">Activo</td>
                                 <td data-title="" style="width:10%" align="center">
@@ -347,6 +344,9 @@
 								<td data-title="Pais" style="width:25%" align="left" >450</td>
 								<td data-title="Pais" style="width:25%" align="left" >15</td>
 								<td data-title="Pais" style="width:25%" align="left" >Interdiaria</td>
+                                <td data-title="Pais" style="width:25%" align="left" >1,500</td>
+                                <td data-title="Pais" style="width:25%" align="left" >2,000</td>
+                                <td data-title="Pais" style="width:25%" align="left" >3,000</td>
 								<td data-title="Pais" style="width:25%" align="center" ><img src="img/RutaTerrestre/Trujillo - Callao.jpg" alt="tipo carga" width="70" height="70"></td>
                                 <td data-title="Estado" style="width:10%" align="left" >Activo</td>
                                 <td data-title="" style="width:10%" align="center" >
@@ -370,6 +370,9 @@
 								<td data-title="Pais" style="width:25%" align="left" >200</td>
 								<td data-title="Pais" style="width:25%" align="left" >6</td>
 								<td data-title="Pais" style="width:25%" align="left" >Diario</td>
+                                <td data-title="Pais" style="width:25%" align="left" >1,500</td>
+                                <td data-title="Pais" style="width:25%" align="left" >2,000</td>
+                                <td data-title="Pais" style="width:25%" align="left" >3,000</td>
 								<td data-title="Pais" style="width:25%" align="center" ><img src="img/RutaTerrestre/tumbes-zarumilla.jpg" alt="tipo carga" width="70" height="70"></td>
                                 <td data-title="Estado" style="width:10%" align="left" >Activo</td>
                                 <td data-title="" style="width:10%" align="center">
@@ -395,7 +398,7 @@
                 <div class="modal-registrar">
                     <h2 id="lblRegistro">Crear Ruta</h2>
                     <div class="cont-box">
-                        <label class="cont-box-label">Punto de Origen:</label>
+                        <label class="cont-box-label">Punto Origen:</label>
                         <select id="ddlPais" class="cont-box-select">
                             <option value="0">--Seleccione--</option>
                             <option value="1">Callao</option>
@@ -404,7 +407,7 @@
                         </select>
                     </div>
 					<div class="cont-box">
-                        <label class="cont-box-label">Punto de Llegada:</label>
+                        <label class="cont-box-label">Punto Llegada:</label>
                         <select id="ddlPais" class="cont-box-select">
                             <option value="0">--Seleccione--</option>
                             <option value="1">Callao</option>
@@ -417,17 +420,29 @@
                         <input id="txtProducto" type="text" class="cont-box-input" maxlength="25">
                     </div>
 					<div class="cont-box">
-                        <label class="cont-box-label">Tiempo de transito:</label>
+                        <label class="cont-box-label">Tiempo transito:</label>
                         <input id="txtLargo" type="text" class="cont-box-input" maxlength="25">
                     </div>
 					<div class="cont-box">
-                        <label class="cont-box-label">Frecuencia de salida:</label>
+                        <label class="cont-box-label">Frecuencia salida:</label>
                         <select id="ddlPais" class="cont-box-select">
                             <option value="0">--Seleccione--</option>
                             <option value="1">Diario</option>
                             <option value="2">Interdiario</option>
                             <option value="3">Semanal</option>
                         </select>
+                    </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label">CNT 20:</label>
+                        <input id="txtLargo" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label">CNT 40:</label>
+                        <input id="txtLargo" type="text" class="cont-box-input" maxlength="25">
+                    </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label">CNT 40 Reefer:</label>
+                        <input id="txtLargo" type="text" class="cont-box-input" maxlength="25">
                     </div>
 					<div class="cont-box" style="width:186px">
                         <label class="cont-box-label">Activo:</label>

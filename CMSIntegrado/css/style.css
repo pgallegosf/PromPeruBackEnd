@@ -7052,3 +7052,6 @@ text-align: -webkit-center;
 td{
     text-align: -webkit-center !important;
 }
+.text-left{
+    text-align: left !important;
+}

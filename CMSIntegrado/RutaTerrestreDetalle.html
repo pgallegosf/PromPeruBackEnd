@@ -64,7 +64,7 @@
             <li><div class="divider"></div></li>
 			<li>
                 <a class="menu-toggle">
-                    <span class="icon-earth"></span>Rutas Maritimas<span class="menu-caret"></span>
+                    <span class="icon-earth"></span>Rutas Marítimas<span class="menu-caret"></span>
                 </a>
                 <ul class="menu-list" style="display:none;">
                     <li>
@@ -106,7 +106,6 @@
 						<ul class="menu-list" style="display:none;">
                             <li><a class="menu-option" href="RAAeropuerto.html">Aeropuerto</a></li>
 							<li><a class="menu-option" href="RALineaA.html">Linea Aérea</a></li>
-                            <li><a class="menu-option" href="RAEscala.html" >Escala</a></li>
                             <li><a class="menu-option" href="RACostos.html" >Costos</a></li>
                             <li><a class="menu-option" href="RATarifa.html" >Tarifa</a></li>
 						</ul>
@@ -209,7 +208,7 @@
 							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
 						</a>
 						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="CLCostos.html">Costos</a></li>
+							<li><a class="menu-option" href="CLCostos.html" >Conceptos de costos y gastos </a></li>
 							<li><a class="menu-option" href="CLFleteA.html">Flete Aéreo</a></li>
 							<li><a class="menu-option" href="CLFleteMFCL.html">Flete Marítimo FCL</a></li>
 							<li><a class="menu-option" href="CLFleteMLCL.html">Flete Marítimo LCL</a></li>
@@ -272,9 +271,6 @@
                                     <th data-title="Usuario" style="width:10%">
                                         <input type="text" id="gridUsuarios_txtB_NombreCompleto">
                                     </th>
-                                    <th data-title="Correo" style="width:10%">
-                                        <input type="text" id="gridUsuarios_txtB_Usua_Email">
-                                    </th>
                                     <th data-title="" style="width:10%" align="center">
                                         <div class="accion-box">
                                             <a href="" title="Editar"><span class="fas fa-search"></span></a>                                          
@@ -289,9 +285,6 @@
                                     </th>
                                     <th style="width:10%;">
                                         <a id="">Operador</a>
-                                    </th>
-                                    <th style="width:10%;">
-                                        <a id="">Frecuencia</a>
                                     </th>
                                     <th style="width:10%;">
                                         <a id=""></a>
@@ -309,7 +302,6 @@
                                         1
                                     </td>
                                     <td data-title="Cliente" style="width:10%" align="center">CLT Transporte</td>
-                                    <td data-title="Serie" style="width:10%" align="left">SEMANAL</td>
                                     <td data-title="" style="width:10%" align="center">
                                         <div class="accion-box">
                                             <a href="javascript:EditarFactura(1);" title="Editar">
@@ -325,7 +317,6 @@
                                 <tr>
                                     <td data-title="" style="width:5%" align="left">2</td>
                                     <td data-title="Cliente" style="width:10%" align="center">Transportes Figueroa</td>
-                                    <td data-title="Serie" style="width:10%" align="left">Diario</td>
                                     <td data-title="" style="width:10%" align="center">
                                         <div class="accion-box">
                                             <a href="javascript:EditarFactura(2);" title="Editar">
@@ -340,7 +331,6 @@
                                 <tr>
                                     <td data-title="Nº" style="width:5%" align="left">3</td>
                                     <td data-title="Usuario" style="width:10%" align="center">T&L Rov Sac</td>
-                                    <td data-title="Teléfono" style="width:10%" align="left">Interdiario</td>
                                     <td data-title="" style="width:10%" align="center">
                                         <div class="accion-box">
                                             <a href="javascript:EditarFactura(3);" title="Editar">
@@ -539,16 +529,7 @@
                                     <option value="21">CLT Transporte</option>
                                 </select>
                             </div>
-                            <div style="width:500px" class="cont-box">
-                                <label class="cont-box-label">Frecuencia de salida:</label>
-                                <select id="ddlPerfil" class="cont-box-select">
-                                    <option value="0">Seleccione</option>
-                                    <option value="19">Diaria</option>
-                                    <option value="20">InterDiaria</option>
-                                    <option value="21">Semanal</option>
-                                </select>
-                            </div>
-                            <div class="">
+                            <!--<div class="">
                                 <div class="cont-cont">
                                     <div class="cont-header">
                                         Lista de Fletes
@@ -585,7 +566,7 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            </div>-->
                             <div class="cont-box">
 
 

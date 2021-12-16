@@ -67,7 +67,7 @@
             <li><div class="divider"></div></li>
 			<li>
                 <a class="menu-toggle">
-                    <span class="icon-earth"></span>Rutas Maritimas<span class="menu-caret"></span>
+                    <span class="icon-earth"></span>Rutas Marítimas<span class="menu-caret"></span>
                 </a>
                 <ul class="menu-list" style="display:none;">
                     <li>
@@ -109,7 +109,6 @@
 						<ul class="menu-list" style="display:block;">
                             <li><a class="menu-option" href="RAAeropuerto.html" >Aeropuerto</a></li>
 							<li><a class="menu-option" href="RALineaA.html" style="background-color: #777;">Linea Aérea</a></li>
-                            <li><a class="menu-option" href="RAEscala.html" >Escala</a></li>
                             <li><a class="menu-option" href="RACostos.html" >Costos</a></li>
                             <li><a class="menu-option" href="RATarifa.html" >Tarifa</a></li>
 						</ul>
@@ -194,7 +193,6 @@
 						</a>
 						<ul class="menu-list" style="display:none;">
                             <li><a class="menu-option" href="DipoProduccion.html">Tipo de producción</a></li>
-							<li><a class="menu-option" href="DInsumos.html">Insumos</a></li>
 							<li><a class="menu-option" href="DModalidad.html">Modalidad de insumos</a></li>
                             <li><a class="menu-option" href="DDeclaraciónA.html">Consignación del código 13</a></li>
                         </ul>
@@ -211,7 +209,7 @@
 							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
 						</a>
 						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="CLCostos.html">Costos</a></li>
+							<li><a class="menu-option" href="CLCostos.html" >Conceptos de costos y gastos </a></li>
 							<li><a class="menu-option" href="CLFleteA.html">Flete Aéreo</a></li>
 							<li><a class="menu-option" href="CLFleteMFCL.html">Flete Marítimo FCL</a></li>
 							<li><a class="menu-option" href="CLFleteMLCL.html">Flete Marítimo LCL</a></li>
@@ -219,17 +217,7 @@
 							
 						</ul>
 					</li>
-					<li>
-						<a class="menu-toggle">
-							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
-						</a>
-						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="CLMaestrosV.html">Maestros varios</a></li>
-							<li><a class="menu-option" href="CLAeropuerto.html">Aeropuerto</a></li>
-							<li><a class="menu-option" href="CLPuerto.html">Puerto</a></li>
-							
-						</ul>
-					</li>
+					
                 </ul>
             </li>
             <li><div class="divider"></div></li>
@@ -282,8 +270,9 @@
                             <tr>
                                 <th style="width:10%;"><a id="a_RowNumber">Nº</a></th>
                                 <th style="width:35%;"><a id="a_NombreCompleto">Nombre</a></th>
-								<th style="width:10%;"><a id="a_Usua_Email">Sitio web</a></th>
 								<th style="width:10%;"><a id="a_NombreCompleto">Deposito</a></th>
+                                <th style="width:10%;"><a id="a_Usua_Email">Sitio web</a></th>
+								
 								|<!--<th style="width:10%;"><a id="a_NombreCompleto">Teléfono</a></th>
 								<th style="width:10%;"><a id="a_NombreCompleto">Dirección</a></th>
 								<th style="width:10%;"><a id="a_NombreCompleto">Persona de contacto</a></th>-->
@@ -323,8 +312,9 @@
                                 <td data-title="Nº" style="width:10%" align="center">1<input id="gridPuertos_ccG_Id_0" type="hidden" value="1##6##undefined##undefined" style="visibility:hidden">
                                 </td>
                                 <td data-title="Puerto" style="width:35%" align="left" >Federal Express</td>
-								<td data-title="Pais" style="width:10%" align="center" >www.federal.com</td>
+								
 								<td data-title="Pais" style="width:10%" align="center" >TPP</td>
+                                <td data-title="Pais" style="width:10%" align="center" >www.federal.com</td>
 								<!--<td data-title="Pais" style="width:10%" align="center" >652-3034</td>
 								<td data-title="Pais" style="width:10%" align="center" >Jr. San Pedro 458</td>
                                 <td data-title="Pais" style="width:10%" align="center" >Luis Tenorio</td>-->
@@ -341,8 +331,9 @@
                             <tr>
                                 <td data-title="Nº" style="width:10%" align="center" >2<input id="gridPuertos_ccG_Id_1" type="hidden" value="2##5##undefined##undefined" style="visibility:hidden"></td>
                                 <td data-title="Puerto" style="width:35%" align="left" >Emirates</td>
-								<td data-title="Pais" style="width:10%" align="center" >www.Emirates.com</td>
 								<td data-title="Pais" style="width:10%" align="center" >Talma</td>
+                                <td data-title="Pais" style="width:10%" align="center" >www.Emirates.com</td>
+								
 								<!--<td data-title="Pais" style="width:10%" align="center" >652-3034</td>
 								<td data-title="Pais" style="width:10%" align="center" >Jr. Risso 477</td>
                                 <td data-title="Pais" style="width:10%" align="center" >Juan Perez<</td>-->
@@ -372,14 +363,15 @@
                         <label class="cont-box-label">Nombre:</label>
                         <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
                     </div>
+                    <div class="cont-box">
+                        <label class="cont-box-label">Deposito:</label>
+                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
+                    </div>
 					<div class="cont-box">
                         <label class="cont-box-label">Sitio web:</label>
                         <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
                     </div>
-					<div class="cont-box">
-                        <label class="cont-box-label">Deposito:</label>
-                        <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">
-                    </div>
+					
 					<!--<div class="cont-box">
                         <label class="cont-box-label">Telefono:</label>
                         <input id="txtNombre" type="text" class="cont-box-input" maxlength="25">

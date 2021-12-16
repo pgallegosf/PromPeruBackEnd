@@ -66,15 +66,6 @@ $(document).ready(function () {
 
         var num = 0;
         
-
-        if (ValidarCamposPuerto() == false) {
-            return;
-        } 
-        else if ($('#idPuerto').html() == '') {
-            InsertarPuerto();
-        } else {
-            ActualizarPuerto();
-        }
     })
 
     $('#txtNombre').keyup(function () {

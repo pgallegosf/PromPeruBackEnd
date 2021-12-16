@@ -85,7 +85,7 @@
             <li><div class="divider"></div></li>
 			<li>
                 <a class="menu-toggle">
-                    <span class="icon-earth"></span>Rutas Maritimas<span class="menu-caret"></span>
+                    <span class="icon-earth"></span>Rutas Marítimas<span class="menu-caret"></span>
                 </a>
                 <ul class="menu-list" style="display:none;">
                     <li>
@@ -127,7 +127,6 @@
 						<ul class="menu-list" style="display:none;">
                             <li><a class="menu-option" href="RAAeropuerto.html" >Aeropuerto</a></li>
 							<li><a class="menu-option" href="RALineaA.html" >Linea Aérea</a></li>
-                            <li><a class="menu-option" href="RAEscala.html" >Escala</a></li>
 <li><a class="menu-option" href="RACostos.html" >Costos</a></li>
 <li><a class="menu-option" href="RATarifa.html" >Tarifa</a></li>
 						</ul>
@@ -212,7 +211,6 @@
 						</a>
 						<ul class="menu-list" style="display:none;">
                             <li><a class="menu-option" href="DipoProduccion.html">Tipo de producción</a></li>
-							<li><a class="menu-option" href="DInsumos.html">Insumos</a></li>
 							<li><a class="menu-option" href="DModalidad.html">Modalidad de insumos</a></li>
                             <li><a class="menu-option" href="DDeclaraciónA.html">Consignación del código 13</a></li>
                         </ul>
@@ -229,7 +227,7 @@
 							<span class="icon-cogs"></span>Configuración<span class="menu-caret"></span>
 						</a>
 						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="CLCostos.html">Costos</a></li>
+							<li><a class="menu-option" href="CLCostos.html" >Conceptos de costos y gastos </a></li>
 							<li><a class="menu-option" href="CLFleteA.html">Flete Aéreo</a></li>
 							<li><a class="menu-option" href="CLFleteMFCL.html">Flete Marítimo FCL</a></li>
 							<li><a class="menu-option" href="CLFleteMLCL.html">Flete Marítimo LCL</a></li>
@@ -237,17 +235,7 @@
 							
 						</ul>
 					</li>
-					<li>
-						<a class="menu-toggle">
-							<span class="icon-table"></span>Maestros<span class="menu-caret"></span>
-						</a>
-						<ul class="menu-list" style="display:none;">
-							<li><a class="menu-option" href="CLMaestrosV.html">Maestros varios</a></li>
-							<li><a class="menu-option" href="CLAeropuerto.html">Aeropuerto</a></li>
-							<li><a class="menu-option" href="CLPuerto.html">Puerto</a></li>
-							
-						</ul>
-					</li>
+					
                 </ul>
             </li>
             <li><div class="divider"></div></li>
@@ -276,6 +264,43 @@
 										<option value="3">Argentina</option>
 										<option value="4">Brasil</option>
 									</select>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Región:</label>
+                                    <select class="cont-box-input" id="ddlMaterial_Conc_Id">
+										<option value="" selected="">--Seleccione--</option>
+										<option value="1">Ancash</option>
+										<option value="2">Lima</option>
+									</select>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Provincia:</label>
+                                    <select class="cont-box-input" id="ddlMaterial_Conc_Id">
+										<option value="" selected="">--Seleccione--</option>
+										<option value="1">Lima</option>
+										<option value="2">Huacho</option>
+										<option value="3">Callao</option>
+									</select>
+                                </div>
+								
+								<div class="cont-box">
+                                    <label class="cont-box-label">Distrito:</label>
+                                    <select class="cont-box-input" id="ddlMaterial_Conc_Id">
+										<option value="" selected="">--Seleccione--</option>
+										<option value="1">Santiago de Surco</option>
+										<option value="2">Lince</option>
+										<option value="3">Rimac</option>
+									</select>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Tipo Dirección:</label>
+                                    <select class="cont-box-input" id="ddlMaterial_Conc_Id">
+										<option value="" selected="">--Seleccione--</option>
+									</select>
+                                </div>
+								<div class="cont-box">
+                                    <label class="cont-box-label">Dirección:</label>
+                                    <input type="text"  class="cont-box-input" value="">
                                 </div>
                                 <div class="cont-box">
                                     <label class="cont-box-label">Ruc:</label>
@@ -337,7 +362,7 @@
                                     </div>
                                 </div>
 								<div class="cont-box">
-                                    <label class="cont-box-label">Fecha inscripción SUNAT:</label>
+                                    <label class="cont-box-label">Fecha inicio Actividad:</label>
                                     <div class="display-flex">
                                         <input type="text"  class="cont-box-input" value="04/09/1997">
                                     </div>
@@ -365,94 +390,7 @@
                             </div>
                         </div>
 
-                        <div id="divgridMaterialDirecto">
-                            <h2 class="cont-title-h2">Personas de contacto</h2>
-                            <section id="contcheck1">
-                                <div class="section-check">
-                                    <div class="cont-table">
-                                        <table id="gridMaterialDirecto" class="cont-left tableResponsive" style="width: 100%;">
-										<thead>
-											<tr>
-												<th style="width:10%;">Nombre</th>
-												<th style="width:10%;">Apellido Paterno</th>
-												<th style="width:10%;">Apellido Materno</th>
-												<th style="width:15%;">Correo</th>
-												<th style="width:5%;"></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Omar" class="table-input">
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Moreno" class="table-input" >
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="" class="table-input">
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Legal" class="table-input">
-												</td>
-												
-												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<div class="accion-box">
-														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
-															<span class="fas fa-trash-alt"></span>
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Victor" class="table-input">
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Mercado" class="table-input" >
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Luyo" class="table-input">
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
-												</td>
-												
-												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<div class="accion-box">
-														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
-															<span class="fas fa-trash-alt"></span>
-														</a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Eli" class="table-input">
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Bustinza" class="table-input" >
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Saldivar" class="table-input">
-												</td>
-												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
-												</td>
-												
-												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
-													<div class="accion-box">
-														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
-															<span class="fas fa-trash-alt"></span>
-														</a>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-										</table>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
+                        
 						<div id="divgridMaterialDirecto">
                             <h2 class="cont-title-h2">Servicios que Brinda la Empresa</h2>
                             <section id="contcheck1">
@@ -715,6 +653,114 @@
                             </section>
                         </div>
 						<div id="divgridMaterialDirecto">
+                            <h2 class="cont-title-h2">Personas de contacto</h2>
+                            <section id="contcheck1">
+                                <div class="section-check">
+                                    <div class="cont-table">
+                                        <table id="gridMaterialDirecto" class="cont-left tableResponsive" style="width: 100%;">
+										<thead>
+											<tr>
+												<th style="width:10%;">Nombre</th>
+												<th style="width:10%;">Apellido Paterno</th>
+												<th style="width:10%;">Apellido Materno</th>
+												<th style="width:15%;">Correo</th>
+												<th style="width:15%;">Cargo</th>
+												<th style="width:15%;">Sucursal</th>
+												<th style="width:5%;"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Omar" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Moreno" class="table-input" >
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Legal" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Legal" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Legal" class="table-input">
+												</td>
+												
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Victor" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Mercado" class="table-input" >
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Luyo" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
+												</td>
+												
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Eli" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Bustinza" class="table-input" >
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Saldivar" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
+												</td>
+												<td data-title="Cantidad a exportar" style="width:10%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<input id="Cost_CantidadExportar" type="text" maxlength="50" autocomplete="off" value="Representante" class="table-input">
+												</td>
+												
+												<td data-title="" style="width:5%" align="center" onclick="ccGrid['gridMaterialDirecto'].__SeleccionarFila(this); ">
+													<div class="accion-box">
+														<a href="javascript:ccGrid['gridMaterialDirecto'].EliminarFila(1, true, '¿Está seguro de eliminar el registro?')" title="Eliminar">
+															<span class="fas fa-trash-alt"></span>
+														</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+										</table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+						<div id="divgridMaterialDirecto">
                             <h2 class="cont-title-h2">Productos Transportados y/o Gestionados</h2>
                             <section id="contcheck1">
                                 <div class="section-check">
@@ -766,7 +812,7 @@
                                 <span class="fas fa-arrow-circle-left">
                                 </span><span>Anterior</span>
                             </a>
-							<a id="btnGuardar" href="javascript:" class="cont-icons-new" style="min-width:120px">
+							<a id="" href="javascript:" class="cont-icons-new" style="min-width:120px">
                                 <span class="fas fa-save">
                                 </span><span>Guardar</span>
                             </a>
